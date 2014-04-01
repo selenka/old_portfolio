@@ -20,7 +20,8 @@ body {
 	box-shadow: 0 0 30px;
 	border-radius: 10px;
 	padding: 20px;
-	background-image: -o-radial-gradient(50% 15%, circle cover, #fff 0%, #bcbcbc 100%);
+	background: #bcbcbc;
+	background: -o-radial-gradient(50% 15%, circle cover, #fff 0%, #bcbcbc 100%);
 	background: -webkit-radial-gradient(50% 15%, circle cover, #fff 0%, #bcbcbc 100%);
 	background: -moz-radial-gradient(50% 15%, circle cover, #fff 0%, #bcbcbc 100%);
 	background: -ms-radial-gradient(50% 15%, circle cover, #fff 0%, #bcbcbc 100%);
