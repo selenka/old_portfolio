@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'MyriadPro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('MyriadPro'), local('MyriadPro-Regular'), url(MyriadPro-Regular.otf) format('opentype');
+}
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,u,inner,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0};
+.clearfix {
+	*zoom: 1;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+/*=====================================*/
+html {
+	height: 100%;
+}
+body {
+	padding: 20px;
+	text-align: center;
+	font-family: 'MyriadPro';
+	background: #bbb;
+}
+.wrapper {
+	width: 940px;
+	min-height: 800px;
+	display: inline-block;
+	box-shadow: 0 0 30px;
+	border-radius: 10px;
+	padding: 20px;
+	background: #fff;
+}
+.header {
+	padding-bottom: 85px;
+}
+.header__title {
+	font-size: 48px;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, .6);
+}
+.list {
+	display: inline-block;
+	width: 885px;
+	height: 585px;
+	padding-bottom: 65px;
+}
+.list__item {
+	float: left;
+	width: 220px;
+	border-radius: 5px;
+}
+.list__item__link {
+	display: block;
+	height: 250px;
+	text-align: center;
+	padding-top: 10px;
+	color: #000;
+}
+	.list__item__link:hover {
+		/*color: #ff9600;*/
+		color: #666;
+	}
+.list__item__link__preview {
+	display: inline-block;
+	background: url(marathon_small.jpg) no-repeat;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, .3);
+	border-radius: 5px;
+	width: 200px;
+	height: 213px;
+	margin-bottom: 10px;
+}
+	.list__item__link:hover > .list__item__link__preview {
+		box-shadow: 0px 0px 15px rgba(50, 50, 50, .3);
+	}
+.list__item__link__title {
+	display: inline-block;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.footer__link {
+	display: inline-block;
+	width: 59px;
+	height: 59px;
+	background-repeat: no-repeat;
+	margin-right: 5px;
+}
+	.footer__link-linkedin {
+		background-image: url(linkedin.png);
+	}
+	.footer__link-facebook {
+		background-image: url(facebook.png);
+	}
+	.footer__link-twitter {
+		background-image: url(twitter.png);
+	}
+	.footer__link-skype {
+		background-image: url(skype.png);
+	}
