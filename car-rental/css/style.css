@@ -404,7 +404,7 @@ footer .content {
 	position: relative;
 }
 footer .content:before {
-	content: url(../img/footer-Shadow.png);
+	content: url(../img/footer-shadow.png);
 	position: absolute;
 	top: -37px;
 }
