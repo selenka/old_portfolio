@@ -556,7 +556,7 @@ footer p {
 .bestdeals-title {
 	font: bold 16px "Segoe UI";
 	color: #193d44;
-	float: left;
+	/*float: left;*/
 }
 .bestdeals-body-matter {
 	font: bold 13px "Tahoma";
