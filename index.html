@@ -7,67 +7,97 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div class="header">
-			<h1 class="header__title">&lt;portfolio id="Lena Serebryakova"&gt;</h1>
+		<div class="header clearfix">
+				<i onclick="toggleShareBlock(this);" class="header__menu"></i>
+				<ul class="header__menu__contacts" id="test">
+						<li class="header__menu__contacts__icon-linkedin">
+							<a class="header__menu__contacts__link-linkedin" href="http://www.linkedin.com/profile/view?id=329817747" target="_blank"></a>
+						</li>
+						<li class="header__menu__contacts__icon-facebook">
+							<a class="header__menu__contacts__link-facebook" href="https://www.facebook.com/lenka.serebryakova" target="_blank"></a>
+						</li>
+						<li class="header__menu__contacts__icon-twitter">
+							<a class="header__menu__contacts__link-twitter" href="https://twitter.com/lenka_s89" target="_blank"></a>
+						</li>
+						<li class="header__menu__contacts__icon-skype">
+							<a class="header__menu__contacts__link-skype" href="skype:lenakey89?chat"></a>
+						</li>
+				</ul>
+				<script>
+					function toggleShareBlock(elt) {
+						var active = !!elt.getAttribute('active');
+						elt.setAttribute('active', active ? '' : '1');
+						elt.className = 'header__menu' + (active ? '' : ' active');
+						document.getElementById('test').style.display = active ? 'none' : 'block';
+					}
+				</script>
+							
+			<h1 class="header__title">&lt;portfolio id="<span>Lena Serebryakova</span>"&gt;</h1>
 		</div>
 
 		<ul class="list clearfix">
 			<li class="list__item">
+				<a href="/car-rental" class="list__item__link">
+					<div class="list__item__link__preview">
+						<div class="list__item__link__preview__img">
+							<img src="car_rental.png">
+						</div>
+					</div>
+					<div class="list__item__link__title">Car Rental</div>
+				</a>
+			</li>
+			<li class="list__item">
+				<a href="/clothe-store" class="list__item__link">
+					<div class="list__item__link__preview">
+						<div class="list__item__link__preview__img">
+							<img src="clothe-store.png">
+						</div>
+					</div>
+					<div class="list__item__link__title">Clothe Store</div>
+				</a>
+			</li>
+			<li class="list__item">
 				<a href="/marathon" class="list__item__link">
-					<div class="list__item__link__preview list__item__link__preview-marathon"><div class="list__item__link__preview__shadow"></div></div>
+					<div class="list__item__link__preview">
+						<div class="list__item__link__preview__img">
+							<img src="marathon_sm.png">
+						</div>
+					</div>
 					<div class="list__item__link__title">Marathon</div>
 				</a>
 			</li>
-
 			<li class="list__item">
-				<a class="list__item__link">
-					<div class="list__item__link__preview"></div>
+				<a href="" class="list__item__link">
+					<div class="list__item__link__preview">
+						<div class="list__item__link__preview__img">
+							
+						</div>
+					</div>
+					<div class="list__item__link__title">&lt;untitled/&gt;</div>
 				</a>
 			</li>
-
 			<li class="list__item">
-				<a class="list__item__link">
-					<div class="list__item__link__preview"></div>
+				<a href="" class="list__item__link">
+					<div class="list__item__link__preview">
+						<div class="list__item__link__preview__img">
+							
+						</div>
+					</div>
+					<div class="list__item__link__title">&lt;untitled/&gt;</div>
 				</a>
 			</li>
-
 			<li class="list__item">
-				<a class="list__item__link">
-					<div class="list__item__link__preview"></div>
+				<a href="" class="list__item__link">
+					<div class="list__item__link__preview">
+						<div class="list__item__link__preview__img">
+							
+						</div>
+					</div>
+					<div class="list__item__link__title">&lt;untitled/&gt;</div>
 				</a>
 			</li>
-
-			<li class="list__item">
-				<a class="list__item__link">
-					<div class="list__item__link__preview"></div>
-				</a>
-			</li>
-
-			<li class="list__item">
-				<a class="list__item__link">
-					<div class="list__item__link__preview"></div>
-				</a>
-			</li>
-
-			<li class="list__item">
-				<a class="list__item__link">
-					<div class="list__item__link__preview"></div>
-				</a>
-			</li>
-
-			<li class="list__item">
-				<a class="list__item__link">
-					<div class="list__item__link__preview"></div>
-				</a>
-			</li>
+			
 		</ul>
-
-		<div class="footer">
-			<a class="footer__link footer__link-linkedin" href="http://www.linkedin.com/profile/view?id=329817747" target="_blank"></a>
-			<a class="footer__link footer__link-facebook" href="https://www.facebook.com/lenka.serebryakova" target="_blank"></a>
-			<a class="footer__link footer__link-twitter" href="https://twitter.com/lenka_s89" target="_blank"></a>
-			<a class="footer__link footer__link-skype" href="skype:lenakey89?chat"></a>
-		</div>
 	</div>
 </body>
 </html>

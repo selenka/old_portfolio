@@ -1,0 +1,734 @@
+html, body {
+	height: 100%;
+}
+
+#container {
+	min-height: 100%;
+	margin: 0 auto -78px;
+	width: 1600px;
+}
+#wrapper {
+	padding-bottom: 78px;
+}
+footer {
+	width: 1600px;
+	height: 78px;
+	margin: 71px auto;
+}
+#subfooter {
+	width: 986px;
+	margin: auto;
+}
+
+
+/*=======================General Styles============================*/
+@font-face {
+  font-family: "Arizona";
+  src: url("../fonts/arizona.ttf") format('truetype');
+  /* src: url("../fonts/arizona-webfont.eot");
+   src: url("../fonts/arizona-webfont.eot?#iefix") format('embedded-opentype'),
+         url("../fonts/arizona-webfont.woff") format('woff'),
+         url("../fonts/arizona-webfont.svg#arizonaregular") format('svg');*/
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/Segoe UI.ttf") format('truetype');
+ /* src: url("../fonts/segoe_ui-webfont.eot");
+  src: url("../fonts/segoe_ui-webfont.eot?#iefix") format('embedded-opentype'),
+         url("../fonts/segoe_ui-webfont.woff") format('woff'),
+         url("../fonts/segoe_ui-webfont.svg#segoe_uiregular") format('svg');*/
+}
+@font-face {
+  font-family: "AvantGarde Bk BT";
+  src: url("../fonts/AvantGardeBookBT.ttf") format('truetype');
+  /*src: url("../fonts/avantgardebookbt-webfont.eot");
+  src: url("../fonts/avantgardebookbt-webfont.eot?#iefix") format('embedded-opentype'),
+         url("../fonts/avantgardebookbt-webfont.woff") format('woff'),
+         url("../fonts/avantgardebookbt-webfont.svg#avantgarde_bk_btbook") format('svg');*/
+}
+@font-face {
+	font-family: "AvantGarde LT CondMedium";
+	src: url("../fonts/ITC_Avant_Garde_Gothic_LT_Condensed_Medium.ttf") format('truetype');
+	/*src: url("../fonts/itc_avant_garde_gothic_lt_condensed_medium.eot") format('embedded-opentype'),
+         url("../fonts/itc_avant_garde_gothic_lt_condensed_medium.woff") format('woff'),
+         url("../fonts/itc_avant_garde_gothic_lt_condensed_medium.svg#AvantGardeLTCondMediumRegular") format('svg');*/
+}
+.content {
+	width: 986px;
+	margin: 0 auto;
+}
+.bold-text {
+	font: bold 14px "Segoe UI";
+	color: #193d44;
+	padding-left: 7px;
+}
+.blue-text {
+	font: 14px "Segoe UI";
+	color: #1aa1b9;
+}
+.form-style {
+	width: 440px;
+	background: rgba(0, 0, 0, .66);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	padding: 15px 29px 15px 10px;
+}
+.form-btn-style {
+	width: 8em;
+	height: 32px;
+	margin-top: 15px;
+	background: -webkit-linear-gradient(bottom, #c86b0f 0%, #ffa735 100%);
+	background:	-moz-linear-gradient(bottom, #c86b0f 0%, #ffa735 100%);
+	background:	-o-linear-gradient(bottom, #c86b0f 0%, #ffa735 100%);
+	background:	-ms-linear-gradient(bottom, #c86b0f 0%, #ffa735 100%);
+	border-radius: 5px;
+	font: 18px "AvantGarde Bk BT";
+	color: #fff;
+	cursor: pointer;
+
+}
+h3 {
+	font: 18px "AvantGarde LT CondMedium";
+	color: #2d4347;
+	text-transform: uppercase;
+	text-align: right;
+	padding-right: 29px;
+	padding-top: 11px;
+}
+
+#page-title {
+	 height: 46px;
+	 border-bottom: 1px solid #5c5b5b;
+	/* background: -webkit-linear-gradient(bottom, #383838 0%, #575555 100%);
+	 background: -moz-linear-gradient(bottom, #383838 0%, #575555 100%);
+	 background: -o-linear-gradient(bottom, #383838 0%, #575555 100%);*/
+	 background: -webkit-linear-gradient(bottom, #383838 0%, #494949 100%);
+	 background: -moz-linear-gradient(bottom, #383838 0%, #494949 100%);
+	 background: -o-linear-gradient(bottom, #383838 0%, #494949 100%);
+	 background: -ms-linear-gradient(bottom, #383838 0%, #494949 100%);
+}
+.grey-border-style {
+	border: 1px solid #cbd3d8;
+	background: #fff;
+	box-shadow: 0 0 1px 2px #f4f4f4, 0 0 1px 1px #f7f7f7;
+}
+.arrow-select {
+	width: 23px;
+	height: 23px;
+	-ms-box-shadow: 1px 1px 1px 1px #eef2f4;
+	-o-box-shadow: 1px 1px 1px 1px #eef2f4;
+	-moz-box-shadow: 1px 1px 1px 1px #eef2f4;
+	-webkit-box-shadow: 1px 1px 1px 1px #eef2f4;
+	box-shadow: 1px 1px 1px 1px #eef2f4;
+	position: relative;
+	background: #c4d0d2;
+	float: right;
+
+}
+.arrow-select:before {
+	content: url(../img/little-arrow.png);
+	position: absolute;
+}	
+.main-button {
+	text-decoration: none;
+	font: 18px "AvantGarde LT CondMedium";
+	color: #fff;
+	display: block;
+	width:94px;
+	height: 27px;
+	text-align: center;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6d7983), to(#4e575f));
+	background-image: -moz-linear-gradient(top, rgb(78,87,95) 0%, rgb(109,121,131) 100%);
+	background-image: -o-linear-gradient(top, rgb(78,87,95) 0%, rgb(109,121,131) 100%);
+	background-image: -ms-linear-gradient(top, rgb(78,87,95) 0%, rgb(109,121,131) 100%);
+	margin-top: 23px;
+	margin-left: 5px;
+	border-radius: 5px;
+	padding-top: 4px;
+}
+
+#page-content {
+	margin-top: -84px;
+}
+/*===================================================*/
+
+header {
+	height: 95px;
+	background-image: -webkit-linear-gradient(bottom, #e7ecee 3%, #f8f9fa 100%);
+	background-image: -moz-linear-gradient(bottom, #e7ecee 3%, #f8f9fa 100%);
+	background-image: -o-linear-gradient(bottom, #e7ecee 3%, #f8f9fa 100%);
+	background-image: -ms-linear-gradient(bottom, #e7ecee 3%, #f8f9fa 100%);
+	border-bottom: 2px solid #e4e8e9;
+	box-shadow: 0 0 2px 2px #fff, 0 0 0 2px #dadee0, 0 6px 4px 2px #e4e8e9;
+	margin-bottom: 8px;
+}
+header h1 {
+	font: 72px 'Arizona';
+	float: left;
+	margin-top: 10px;
+}
+header h1 a {
+	color: #2f383a;
+	text-decoration: none;
+}
+header h1 a span {
+	color: #99a4a6;
+}
+#menu {
+	float: right;
+}
+header ul {
+	text-align: right;
+	margin-top: 20px;
+}
+header ul li {
+	display: inline;
+	margin-right: 19px;
+}
+header ul li:last-child {
+	margin-right: 0;
+}
+header ul li a {
+	font: 13px "Segoe UI";
+	color: #1aa1b9;
+	text-decoration: none;
+}
+nav {
+	margin-top: 6px;
+	background: #e9eeef;
+	background: -webkit-linear-gradient(top, #d9dcdd -10%, #eeeeee 20%),
+				-moz-linear-gradient(top, #d9dcdd -10%, #eeeeee 20%),
+				-o-linear-gradient(top, #d9dcdd -10%, #eeeeee 20%);
+				-ms-linear-gradient(top, #d9dcdd -10%, #eeeeee 20%);
+	border-top: 1px solid #d4d7d8;
+	position: relative;
+
+}
+nav:before {
+	content: url(../img/menu-gradient-line.png);
+	position: absolute;
+	left: -7em;
+	top: -0.81em;
+}
+nav a {
+	/*display: inline-block;*/
+	float: left;
+	text-decoration: none;
+	font: bold 13px "Segoe UI";
+	color: #6c7273;
+	text-transform: uppercase;
+	padding: 19px 18px 12px 18px;
+	/*padding: 14px 18px 0px 18px;*/
+	/*padding: 12px 18px 5px;*/
+	background: url(../img/menu-break.png) no-repeat 0 3px;
+	/*position: relative;*/
+}
+.last-btn:after {
+	content: url(../img/menu-break.png);
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+nav a:hover {
+	color: #000;
+	background: -webkit-linear-gradient(bottom, #e9eeef 3%, #ffffff 100%);
+	background:	-moz-linear-gradient(bottom, #e9eeef 3%, #ffffff 100%);
+	background:	-o-linear-gradient(bottom, #e9eeef 3%, #ffffff 100%);
+	background:	-ms-linear-gradient(bottom, #e9eeef 3%, #ffffff 100%);
+}
+
+/*=======================Home Content============================*/
+#quote {
+	margin: 0 auto;
+	width: 1600px;
+	height: 563px;
+	background: url(../img/bg-car.png) no-repeat;
+}
+#quote h2 {
+	font: 72px "AvantGarde Bk BT";
+	text-align: center;
+	color: #fff;
+	padding-top: 17px;
+	background: -webkit-linear-gradient(top,rgba(255,255,255,0.99),rgba(239,241,242,0.99));
+		
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background: -moz-linear-gradient(top,rgba(255,255,255,0.99),rgba(239,241,242,0.99)),
+				-o-linear-gradient(top,rgba(255,255,255,0.99),rgba(239,241,242,0.99));
+				-ms-linear-gradient(top,rgba(255,255,255,0.99),rgba(239,241,242,0.99));
+}
+
+#quote form {
+	margin-top: 40px;
+	float: right;
+}
+.form-style label {
+	font: lighter 14px "Segoe UI";
+	color: #e7dfb4;
+}
+.form-style input {
+	border: 1px solid #151313;
+}
+.form-style input[type="text"] {
+	width: 34em;
+	padding: 5px;
+	font: 13px "Segoe UI";
+	color: #b1b4b5;
+}
+.form-style input[type="text"]:focus {
+	outline:none;
+}
+#quote label[for="return-location"] {
+	font: 12px "Segoe UI";
+	color: #f7f8f9;
+}
+.calendar-pick-up {
+	padding-top: 33px;
+	float: left;
+	width: 13em;
+}
+.calendar-pick-up label {
+	padding-right: 10px;
+
+}
+.calendar-drop-off {
+	padding-top: 33px;
+	width: 13em;
+	/*width: 211px;*/
+	float: right;
+}
+#quote input[name="pickDate"] {
+	/*width: 107px;*/
+	width: 8em;
+	height: 19px;
+	margin-top: 5px;
+	background: #fff url(../img/form-pickup-arrow.png) no-repeat 93% 50%;
+}
+#quote input[name="pickTime"] {
+	/*width: 75px;*/
+	width: 5em;
+	height: 19px;
+	margin-top: 5px;
+	background: #fff url(../img/form-pickup-arrow.png) no-repeat 93% 50%;
+}
+
+
+/*=======================Gradient============================*/
+#bg-gradient {
+	height: 114px;
+	background-image: -webkit-gradient(linear, 0% 50%, 0% 11%, from(#ffffff), to(#EBF0F1));
+	background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 11%, rgb(235,240,241) 50%);
+	background-image: -o-linear-gradient(bottom, rgb(255,255,255) 11%, rgb(235,240,241) 50%);
+	background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 11%, rgb(235,240,241) 50%);
+}
+/*=======================Home-Content============================*/
+#home-main {
+	margin-top: -103px;
+}
+.featured-cars {
+	position: relative;
+	margin-bottom: 35px;
+}
+.featured-cars > h3 {
+	float: left;
+}
+.featured-cars h3:after {
+	content: url(../img/divider.png);
+	position: absolute;
+	top: -11px;
+	left: 85px;
+}
+.featured-cars > div {
+	float: left;
+	/*border: 1px solid #cbd3d8;
+	background: #fff;*/
+	margin-right: 12px;
+	/*box-shadow: 0 0 1px 2px #f4f4f4, 0 0 2px 4px #f7f7f7;*/
+	height: 181px;
+	padding-bottom: 4px;
+}
+.featured-cars > div:last-child {
+	margin-right: 0;
+}
+.featured-cars img {
+	padding: 6px 6px 0px 6px;
+}
+
+.featured-cars .blue-text {
+	padding-left: 7px;
+	padding-bottom: 8px;
+}
+
+.featured-cars a {
+	float: right;
+	bottom: 35px;
+	right: 7px;
+	
+}
+.featured-cars a:before {
+	top: 4px;
+	left: -1px;
+}
+.top-locations {
+	border-top: 1px solid #c4d0d2;
+	/*margin-bottom: 71px;*/
+}
+.top-locations h3, .top-locations ul {
+	float: left;
+	padding-top: 28px;
+}
+.top-locations h3 {
+	position: relative;
+}
+.top-locations h3:after {
+	content: url(../img/divider.png);
+	position: absolute;
+	top: -1px;
+	left: 85px;
+	padding-left: 5px;
+}
+.top-locations ul li a {
+	text-decoration: none;
+	font: 14px "Segoi UI";
+	color: #1aa1b9;
+	line-height: 22px;
+}
+.top-locations ul {
+	margin-right: 70px;
+}
+.top-locations ul:last-child {
+	margin-right: 0;
+}
+/*=======================Home-Footer============================*/
+footer .content {
+	border-top: 1px solid #cbcdcd;
+	position: relative;
+}
+footer .content:before {
+	content: url(../img/footer-Shadow.png);
+	position: absolute;
+	top: -37px;
+}
+footer ul li {
+	float: left;
+	padding-right: 30px;
+	padding-top: 23px;
+	
+}
+footer a, footer p {
+	text-decoration: none;
+	font: 13px "Segoe UI";
+	color: #909596;
+}
+footer p {
+	float: right;
+	padding-top: 23px;
+}
+/*=======================VEHICLES============================*/
+#page-title h2 {
+	font: 24px "Segoe UI";
+	color: #fefefe;
+	padding-top: 7px;
+}
+
+.side-menu {
+	width: 165px;
+	float: left;
+}
+.side-menu ul {
+	list-style: none;
+	margin-right: 16px;
+}
+.side-menu ul li {
+	display: block;
+	/*border: 1px solid #cbd3d8;*/
+	margin-bottom: 6px;
+	padding: 7px 0 10px 6px;
+	/*background: #fff;*/
+}
+.side-menu a {
+	bottom: -1px;
+	right: 4px;;
+}
+.side-menu a:before {
+	top: 1px;
+	left: -1px;
+}
+.side-menu ul li:hover {
+	color: #2f383a;
+}
+.side-menu a:active {
+	background: #2f383a;
+}
+.items {
+	width: 805px;
+	float: right;
+}
+.car-item {
+	/*border: 1px solid #cbd3d8;*/
+	/*background: #fff;*/
+	/*box-shadow: 0 0 1px 2px #f4f4f4, 0 0 1px 1px #f7f7f7;*/
+	margin-bottom: 9px;
+
+}
+.car-item img {
+	float: left;
+	padding: 6px 16px 5px 6px;
+}
+.options {
+	max-width: 5.1em;
+	float: left;
+	padding-top: 32px;
+	margin-right: 49px;
+
+}
+.options span {
+	width: 26px;
+	height: 9px;
+	-o-box-shadow: 1px 1px 1px 1px #eef2f4;
+	-moz-box-shadow: 1px 1px 1px 1px #eef2f4;
+	-webkit-box-shadow: 1px 1px 1px 1px #eef2f4;
+	box-shadow: 1px 1px 1px 1px #eef2f4;
+	position: relative;
+	background: #c4d0d2;
+	display: inline-block;
+	text-align: right;
+	font: 12px "Tahoma";
+	color: #fff;
+	padding: 5px 6px 10px 6px;
+}
+.people:before {
+	content: url(../img/people.png);
+	position: absolute;
+	top: 1px;
+	left: 7px;
+}
+.doors:before {
+	content: url(../img/doors.png);
+	position: absolute;
+	top: 5px;
+	left: 7px;
+}
+.case-big:before {
+	content: url(../img/suitcase-big.png);
+	position: absolute;
+	top: 5px;
+	left: 4px;
+}
+.case-small:before {
+	content: url(../img/suitcase-small.png);
+	position: absolute;
+	top: 5px;
+	left: 6px;
+}
+.functions {
+	font: 13px "Tahoma";
+	color: #a9a4a4;
+	float: left;
+	padding-top: 27px;
+	padding-bottom: 10px;
+	line-height: 20px;
+	padding-right: 53px;
+}
+.item-price {
+	width: 104px;
+	height: 122px;
+	float: right;
+	margin-right: 5px;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 51%, from(#fefefe), to(#d7dcde));
+	background-image: -moz-linear-gradient(bottom, rgb(218,224,226) 51%, rgb(249,249,249) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(218,224,226) 51%, rgb(249,249,249) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(218,224,226) 51%, rgb(249,249,249) 100%);
+}
+.item-price span {
+	font: bold 24px "Segoe UI";
+	color: #193d44;
+	display: block;
+	padding-top: 10px;
+	text-align: center;
+}
+.item-price p {
+	font: 13px "Segoe UI";
+	color: #859497;
+	text-align: center;
+}
+
+/*=======================BEST DEALS============================*/
+.bestdeals-title {
+	font: bold 16px "Segoe UI";
+	color: #193d44;
+	float: left;
+}
+.bestdeals-body-matter {
+	font: bold 13px "Tahoma";
+	color: #797878;
+	padding-top: 15px;
+	float: left;
+}
+#best-deals .functions {
+	padding: 15px 0;
+}
+#best-deals .car-item:last-child ul {
+	margin-top: -40px;
+}
+/*=======================LOCATIONS============================*/
+#location-form {
+	height: 147px;
+	float: left;
+}
+#location-form p {
+	text-transform: uppercase;
+	font: bold 18px "Segoe UI";
+	color: #fff;
+}
+.info-side {
+	float: right;
+	width: 470px;
+}
+.info-side > div {
+	width: 470px;
+	height: 148px;
+} 
+.location-info {
+	float: right;
+	/*border: 1px solid #cbd3d8;*/
+	/*background: #fff;*/
+	/*box-shadow: 0 0 1px 2px #f4f4f4, 0 0 1px 1px #f7f7f7;*/
+	padding: 6px 5px 6px 11px;
+	margin-bottom: 11px;
+}
+.location-info p {
+	font: bold 15px "Segoe UI";
+	color: #193d44;
+}
+.location-info ul {
+	font: bold 13px "Segoe UI";
+	color: #9da0a0;
+}
+.location-info ul span {
+	color: #423f3f;
+	font-weight: bold;
+	padding-right: 5px;
+}
+.location-info ul li {
+	padding-bottom: 14px;
+}
+.location-info ul li a {
+	text-decoration: none;
+}
+.map {
+	float: right;
+	width: 238px;
+	height: 112px;
+}
+/*=======================ABOUT============================*/
+#bg-about {
+	margin-bottom: 23px;
+}
+.right{
+	width: 296px;
+	float: right;
+	margin-right: 5px;
+}
+.left {
+	width: 660px;
+	float: left;
+}
+.about-info article {
+	padding-top: 20px;
+}
+.about-info h4 {
+	font: bold 13px "Segoe UI";
+	color: #333a3e;
+
+}
+.about-info p {
+	font: 13px "Segoe UI";
+	color: #a8acae;
+	line-height: 22px;
+}
+.subscribe {
+	width: 276px;
+	height: 117px;
+	padding: 20px 14px 14px 10px;
+	margin-bottom: 13px;
+}
+.subscribe label {
+	font: bold 18px "Segoe UI";
+	color: #464545;
+}
+.subscribe input[type="text"] {
+	width: 256px;
+	outline: none;
+	padding: 6px 9px 4px;
+	margin-top: 15px;
+}
+.address-info {
+	width: 283px;
+	height: 272px;
+	margin-right: -5px;
+}
+.address-info p {
+	font: bold 15px "Segoe UI";
+	color: #193d44;
+}
+.address-info .map {
+	float: none;
+}
+/*=======================LOCATION============================*/
+.contact-info .address-info {
+	float: left;
+	height: 271px;
+}
+.contact-form {
+	float: right;
+	width: 660px;
+}
+.contact-form p {
+	font: 13px "Segoe UI";
+	color: #a8acae;
+	margin-bottom: 30px;
+}
+.contact-form form {
+	width: 584px;
+	background: rgba(0, 0, 0, .66);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	padding: 15px 29px 15px 10px;
+}
+
+.contact-form input[type="text"], .contact-form textarea {
+	width: 370px;
+	outline: none;
+	float: right;
+	padding: 12px 5px;
+	border: 1px solid #151313;
+	background: #e9e9e9;
+
+}
+.contact-info .contact-form input.phone {
+	width: 165px;
+	margin-right: 280px;
+}
+.contact-form input[type="text"] {
+	margin-right: 75px;
+}
+.contact-form textarea {
+	width: 446px;
+	height: 150px;
+}
+.contact-form label {
+	padding-top: 11px;
+	padding-left: 8px;
+	display: inline-block;
+	font: 13px "Segoe UI";
+	color: #d2d2d2;
+}
+.contact-form input[type="submit"] {
+	border: 1px solid #747171;
+	width: 6em;
+	margin-left: 118px;
+}
+.contact-form form div {
+	display: block;
+	width: 575px;
+	height: 40px;
+}

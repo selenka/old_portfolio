@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'AvantGardeLTCondMediumRegular';
+    src: url('itc_avant_garde_gothic_lt_condensed_medium.eot');
+    src: url('itc_avant_garde_gothic_lt_condensed_medium.eot') format('embedded-opentype'),
+         url('itc_avant_garde_gothic_lt_condensed_medium.woff') format('woff'),
+         url('itc_avant_garde_gothic_lt_condensed_medium.ttf') format('truetype'),
+         url('itc_avant_garde_gothic_lt_condensed_medium.svg#AvantGardeLTCondMediumRegular') format('svg');
+}
