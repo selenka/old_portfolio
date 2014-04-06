@@ -43,6 +43,7 @@ body {
 		top: 42px;
 		padding: 10px;
 		box-shadow: 6px 6px 6px rgba(0, 0, 0, .6);
+		z-index: 2;
 	}
 		.header__menu__contacts:before {
 			content:'';
@@ -128,7 +129,32 @@ body {
 	width: 243px;
 	text-align: center;
 	color: #527c9a;
-	margin-top: 1px
+	margin-top: 1px;
+	position: relative;
+}
+.list__item__link:hover > .list__item__link__info {
+	max-height: 40px;
+	padding: 15px 0;
+	overflow: visible;
+	color: #f7ce40;
+	-webkit-transition: max-height 0.4s linear, padding 0.4s linear;
+	-moz-transition: max-height 0.4s linear, padding 0.4s linear;
+	transition: max-height 0.4s linear, padding 0.4s linear;
+}
+.list__item__link__info {
+	width: 240px;
+	max-height: 0;
+	text-align: center;
+	background: #000;
+	opacity: 0.5;
+	padding: 0;
+	overflow: hidden;
+	position: absolute;
+	bottom: 1px;
+	left: 1px;
+	-webkit-transition: max-height 0.4s linear, padding 0.4s linear;
+	-moz-transition: max-height 0.4s linear, padding 0.4s linear;
+	transition: max-height 0.4s linear, padding 0.4s linear;
 }
 .list__item__link__preview {
 	display: inline-block;
