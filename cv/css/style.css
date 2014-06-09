@@ -1,0 +1,188 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+tt,
+var,
+u,
+inner,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  padding: 20px;
+  font-family: 'Courier New';
+  background: #3d3d3d;
+}
+.wrapper {
+  max-width: 1200px;
+  min-width: 900px;
+  box-shadow: 0 0 30px;
+  margin: 0 auto;
+  background: #2a2c31;
+}
+.header {
+  *zoom: 1;
+  width: 100%;
+  height: 123px;
+  background: #34373e;
+}
+.header:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.header__title {
+  font-size: 35px;
+  font-family: 'Courier New';
+  text-align: center;
+  color: #527c9a;
+  padding-top: 49px;
+}
+.header__name {
+  color: #f7ce40;
+}
+.header__portfolio {
+  float: right;
+  color: #db3e3e;
+  font-size: 24px;
+  margin: -63px 21px 0 0;
+  text-decoration: none;
+}
+.header__portfolio:hover {
+  color: #f7ce40;
+}
+.cv__info {
+  font-size: 18px;
+  padding-bottom: 30px;
+}
+.cv__info-title {
+  padding: 20px;
+  color: #f7ce40;
+}
+.cv__info-text {
+  color: #527c9a;
+  padding: 5px 0px 0px 40px;
+}
+.cv__info-name {
+  color: #80b361;
+  padding-right: 10px;
+}
+.cv__info-link {
+  text-decoration: underline;
+  color: #527c9a;
+}
+.cv__class {
+  color: #db3e3e;
+}
