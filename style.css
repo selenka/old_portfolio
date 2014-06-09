@@ -100,6 +100,17 @@ body {
 			margin-left: 5px;
 		}
 
+.cv {
+	float: right;
+	color: #db3e3e;
+	font-size: 40px;
+	margin: 50px 50px 0 0;
+	text-decoration: none;
+}
+.cv:hover {
+	color: #f7ce40;
+}
+
 .header__title {
 	font-size: 35px;
 	font-family: 'Courier New';
