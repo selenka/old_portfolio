@@ -1,0 +1,405 @@
+
+@font-face 
+	font-family "PT_Sans-Web-Bold"
+	src url('../fonts/PT_Sans-Web-Bold.ttf')
+@font-face 
+	font-family "PT_Sans-Web-BoldItalic"
+	src url('../fonts/PT_Sans-Web-BoldItalic.ttf')
+@font-face 
+	font-family "PT_Sans-Web-Italic"
+	src url('../fonts/PT_Sans-Web-Italic.ttf')
+@font-face 
+	font-family "PT_Sans-Web-Regular"
+	src url('../fonts/PT_Sans-Web-Regular.ttf')
+
+$font-b = 'PT_Sans-Web-Bold'
+$font-bi = 'PT_Sans-Web-BoldItalic'
+$font-i = 'PT_Sans-Web-Italic'
+$font-r = 'PT_Sans-Web-Regular'
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,tt,var,u,inner,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
+	border 0
+	font-size 100%
+	font inherit
+	vertical-align baseline
+	margin 0
+	padding 0
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+	display block
+
+body
+	line-height 1
+
+ol,ul
+	list-style none
+
+blockquote,q
+	quotes none
+
+blockquote:before,blockquote:after,q:before,q:after
+	content none
+
+table
+	border-collapse collapse
+	border-spacing 0
+
+clearfix()
+	*zoom 1
+
+	&:after
+		content ''
+		display table
+		clear both
+
+gradient()
+	background-image -webkit-linear-gradient(arguments)
+	background-image -moz-linear-gradient(arguments)
+	background-image -o-linear-gradient(arguments)
+	background-image linear-gradient(arguments)
+
+transform()
+	-webkit-transform (arguments)
+	-moz-transform (arguments)
+	-ms-transform (arguments)
+	-o-transform (arguments)
+	transform (arguments)
+	
+* 
+	box-sizing border-box
+	-moz-box-sizing border-box
+
+html, body 
+	height 100%
+	max-width 1920px
+	margin 0 auto
+	background #f7f6f1
+
+a 
+	cursor pointer
+	text-decoration none
+
+input, textarea, select 
+	outline none
+	border none
+
+textarea:-moz-placeholder
+	color #686868
+
+::-webkit-input-placeholder
+	color #686868
+/*++++++++++++++++++MODIFICATORS+++++++++++++++++++++*/
+
+/*+++++++++++++++++++++++++++++++++++++++*/
+.wrapper
+	clearfix()
+	width 1366px
+	margin 0 auto
+	height 100%
+	position relative
+.content
+	padding 25px
+	clearfix()
+.top-adv
+	height 30px
+	background #1a1a1a
+	&__place
+		color #fff
+		text-align center
+		line-height 28px
+.header-top
+	background #f7f7f7
+	padding 25px
+	border-bottom 1px solid #dbdad5
+	&__input-text
+		position absolute 
+		top 11px
+		left 67px
+		font 23px $font-r
+		color #686868
+	&__search
+		float left
+		width 730px
+		height 49px
+		border 1px solid #bababa
+		border-bottom 1px solid #cdcdcd
+		border-right 1px solid #e3e3e3
+		border-radius 2px 0 0 2px
+		padding  0 20px 0 250px
+		background #fff url(../images/sprite.png) no-repeat 10px 10px
+		font 23px $font-r
+		color #00b1e4
+	
+	&__select
+		float left
+		width 180px
+		height 49px
+		font 16px $font-r
+		border-top 1px solid #bababa
+		border-bottom 1px solid #cdcdcd
+		border-right 1px solid #cdcdcd
+		border-radius 0 2px 2px 0
+		padding  8px 35px 12px 14px
+		-webkit-appearance none
+		-moz-appearance none
+		text-indent 0.01px
+		text-overflow ''
+		background #fff url(../images/sprite.png) no-repeat 144px -245px
+
+	&__search-box
+		float left
+		margin-left 10px
+		width 142px
+		height 49px
+		background #c53444
+		border-radius 2px
+		position relative
+
+	&__search-icon
+		display inline-block
+		width 92px
+		height 49px
+		border-right 1px solid #9b2b38
+		background url(../images/sprite.png) no-repeat 34px -33px
+		cursor pointer
+
+	&__search-arrow
+		display none
+		
+	&__search-label:before 
+		margin-top -2px
+		content ""
+		opacity 1
+		display inline-block
+		width 49px
+		height 49px
+		background #c53444 url(../images/sprite.png) no-repeat 13px -271px
+		position absolute
+		top 2px
+		right 0
+
+	&__search-arrow:checked + .header-top__search-label:before
+		margin-top -2px
+		content ''
+		opacity 1
+		display inline-block
+		width 49px
+		height 49px
+		background #c53444 url(../images/sprite.png) no-repeat -27px -273px
+
+	&__tel
+		display inline-block
+		margin-left 51px
+		margin-top: 10px
+		font 25px $font-b
+		color #837f7a
+
+		&.red-text
+			margin 0
+			color #c53444
+
+.header-nav
+	height 80px
+	background #fff
+	padding 18px 25px
+	box-shadow  0 3px 14px -2px rgba(0, 0, 0, .3)
+	position relative
+	z-index 1
+
+	&__menu
+		float left
+
+	&__menu-item
+		float left
+		height 35px
+		padding 9px 12px
+		font 18px $font-r
+		color #353535
+
+	&__menu-item:hover
+		padding 6px 13px
+		background #c53444
+		font 18px $font-b
+		color #fff
+		border-radius 2px
+
+	&__counter-date
+		float left
+		font 16px $font-i
+		color #837f7a
+		margin 10px 10px 0 66px
+
+	&__counter-product
+		float left
+		font 16px $font-i
+		color #ff4359
+		margin-top 10px
+
+	&__social
+		float left
+		margin 8px 0 0 77px
+
+	&__social-vk,
+	&__social-fb,
+	&__social-g,
+	&__social-tw
+		display inline-block
+		width 29px
+		height 29px
+		margin-right 4px
+	&__social-vk
+		background url(../images/sprite.png) no-repeat -1px -185px
+	&__social-fb
+		background url(../images/sprite.png) no-repeat -1px -153px
+	&__social-g
+		background url(../images/sprite.png) no-repeat -1px -120px
+	&__social-tw
+		background url(../images/sprite.png) no-repeat 0px -88px
+
+	&__online-cons
+		float left
+		padding-left 32px
+		height 29px
+		background url(../images/sprite.png) no-repeat 0 -219px
+		font 18px $font-r
+		color #000
+		margin 10px 0 0 47px
+		cursor pointer
+
+.map
+	width 1366px
+	margin 0 auto
+	z-index -1
+.category
+	float left
+	width 1025px
+	clearfix()
+
+	&__link
+		display block
+		height 194px
+
+	&__item
+		float left
+		width 238px	
+		height 194px
+		margin-right 23px
+		margin-bottom 23px
+		box-shadow 1px 1px 4px 0px rgba(0,0,0, 0.3)
+		&-pic
+			width 238px
+			height 144px
+			overflow hidden
+		&-discr
+			clearfix()
+			padding 3px 13px 9px
+		&-icon
+			float left
+			width 30px
+			height 30px
+			margin-right 9px
+			margin-top 2px
+			
+		&-name
+			font 16px $font-r
+			color #000
+			line-height 16px
+			white-space nowrap
+			overflow hidden
+			text-overflow ellipsis
+
+		&-info
+			font 16px $font-r
+			color #bbb
+			line-height 16px
+
+	&__item:nth-child(4n+4)
+		margin-right 0
+	
+	&__item-icon.appliances
+		background url(../images/category-sprite.png) no-repeat 0 0
+
+	&__item-icon.home
+		background url(../images/category-sprite.png) no-repeat -30px 0
+	&__item-icon.beauty
+		background url(../images/category-sprite.png) no-repeat -60px 0
+	&__item-icon.children
+		background url(../images/category-sprite.png) no-repeat 0px -90px
+	&__item-icon.transport
+		background url(../images/category-sprite.png) no-repeat -90px 0px
+	&__item-icon.hobby
+		background url(../images/category-sprite.png) no-repeat -120px 0px
+	&__item-icon.services
+		background url(../images/category-sprite.png) no-repeat -150px 0px
+	&__item-icon.industry
+		background url(../images/category-sprite.png) no-repeat -180px 0px
+	&__item-icon.travel
+		background url(../images/category-sprite.png) no-repeat -300px 0px
+	&__item-icon.office
+		background url(../images/category-sprite.png) no-repeat -210px 0px
+	&__item-icon.city
+		background url(../images/category-sprite.png) no-repeat -240px 0px
+	&__item-icon.build
+		background url(../images/category-sprite.png) no-repeat -270px 0px
+	&__item-icon.presents
+		background url(../images/category-sprite.png) no-repeat -0px -120px
+	&__item-icon.goods
+		background url(../images/category-sprite.png) no-repeat -0px -150px
+	&__item-icon.internet-market
+		background url(../images/category-sprite.png) no-repeat -0px -180px
+	&__item-icon.animals
+		background url(../images/category-sprite.png) no-repeat -0px -210px
+			
+.col-r
+	float right
+	width 277px
+	height 100%
+	border-left 1px solid #e7e6e1
+
+	&__news
+		padding 0 25px 0 12px
+
+		&-title
+			font 25px $font-r
+			color #000
+
+		&-pic
+			width 240px
+			height 145px
+			overflow hidden
+
+		&-info
+			font 16px $font-r
+			color #00b1e4
+
+		&-date
+			font 13px $font-r
+			color #bbbbbb
+
+		&-list-item
+			border-bottom 1px dotted #c7c6c2
+			position relative
+			padding 9px 20px 9px 18px
+
+		&-list-item:first-child
+			border-top 1px dotted #c7c6c2
+
+		&-list-link
+			font 14px $font-r
+			color #000
+		&-list-link:hover 
+			color #00b1e4
+
+		&-list-link:before
+			content ''
+			position absolute
+			top 13px
+			left 0
+			display block
+			width 12px
+			height 10px
+			background url(../images/sprite.png) no-repeat -34px -88px
+		&-list-link:hover:before
+			background url(../images/sprite.png) no-repeat -34px -98px
+
+
