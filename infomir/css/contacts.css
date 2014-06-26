@@ -348,8 +348,8 @@
   background: #e41c22 url("../images/sprite2.png") no-repeat 7px -247px;
 }
 .btn-red:hover {
-  background: #717171;
+  background: #d2181d;
 }
 .submit-button.btn-red:hover.submit-button.btn-red:after {
-  background: #e41c22 url("../images/sprite2.png") no-repeat 7px -247px;
+  background: #94090d url("../images/sprite2.png") no-repeat 7px -247px;
 }
