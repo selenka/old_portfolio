@@ -1,0 +1,115 @@
+.press__title {
+  font: 50px 'PT Sans';
+  color: #010101;
+  text-align: center;
+  padding-top: 76px;
+}
+.press__l {
+  float: left;
+  width: 818px;
+  padding-bottom: 63px;
+}
+.press__l-list {
+  padding-bottom: 8px;
+}
+.press__l-title {
+  font: 25px $font;
+  color: #010101;
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 19px;
+  margin-bottom: 19px;
+  padding-top: 55px;
+}
+.press__l-item,
+.press__l-link {
+  font: 17px $font;
+  color: #414141;
+  line-height: 32px;
+}
+.press__l-link:hover {
+  text-decoration: underline;
+}
+.press__l-link {
+  display: block;
+  overflow: hidden;
+}
+.press__l-date {
+  color: #acacac;
+  padding-right: 20px;
+  float: left;
+}
+.press__l-allnews {
+  float: right;
+  font: 15px $font;
+  color: #2f8ad1;
+  text-decoration: underline;
+}
+.press__l-allnews:hover {
+  text-decoration: none;
+}
+.press__r {
+  float: left;
+  margin-left: 51px;
+  width: 272px;
+}
+.press__r-title {
+  font: 25px $font;
+  color: #010101;
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 19px;
+  margin-bottom: 19px;
+  padding-top: 55px;
+}
+.press__r-icon {
+  float: left;
+  display: inline-block;
+  margin-right: 10px;
+}
+.press__r-icon.name {
+  background: url("../images/sprite2.png") no-repeat -48px -671px;
+  width: 21px;
+  height: 22px;
+}
+.press__r-icon.tel {
+  background: url("../images/sprite2.png") no-repeat -53px -697px;
+  width: 15px;
+  height: 22px;
+  margin-top: 3px;
+}
+.press__r-icon.mail {
+  background: url("../images/sprite2.png") no-repeat -48px -721px;
+  width: 22px;
+  height: 16px;
+  margin-top: 7px;
+}
+.press__r-link.mail {
+  font: 17px $font;
+  color: #2f8ad1;
+  text-decoration: none;
+}
+.press__r-link.mail:hover {
+  text-decoration: underline;
+}
+.press__r-contact {
+  font: 17px $font;
+  color: #414141;
+  line-height: 32px;
+}
+.press__r-item {
+  background: #f4f4f4;
+  height: 38px;
+  border-left: 2px solid #e8e8e8;
+  margin-bottom: 2px;
+  padding: 10px 0 0 18px;
+  cursor: pointer;
+}
+.press__r-item:hover {
+  background: #000;
+}
+.press__r-link {
+  font: 17px $font;
+  color: #414141;
+}
+.press__r-item:hover > .press__r-link {
+  color: #fff;
+}
