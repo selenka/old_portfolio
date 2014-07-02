@@ -138,31 +138,53 @@
 				<div class="feature__mware">
 					<div class="feature__mware-title">Дополнительные сервисы</div>
 					<ul class="feature__mware-tabslist">
-						<li class="feature__mware-tab">Уведомления</li>
-						<li class="feature__mware-tab">Караоке</li>
-						<li class="feature__mware-tab">Онлайн-радио</li>
-						<li class="feature__mware-tab">Игры</li>
+						<li class="feature__mware-tab" id="tab1" onclick="showTab(1)">Уведомления</li>
+						<li class="feature__mware-tab" id="tab2" onclick="showTab(2)">Караоке</li>
+						<li class="feature__mware-tab active-t" id="tab3" onclick="showTab(3)">Онлайн-радио</li>
+						<li class="feature__mware-tab" id="tab4" onclick="showTab(4)">Игры</li>
 					</ul>
-					<div>
-						
+					<div class="feature__mware-tabscontent">
+						<div  class="feature__mware-tabscontent__info" id="t-content1">CONTENT1</div>
+						<div class="feature__mware-tabscontent__info" id="t-content2">CONTENT2</div>
+						<div class="feature__mware-tabscontent__info" id="t-content3">
+							<p class="feature__mware-tabscontent__text">Сервис Онлайн-радио порадует меломанов разнообразием станций для всех музыкальных  стилей. </p>
+						</div>
+						<div class="feature__mware-tabscontent__info" id="t-content4">CONTENT4</div>
 					</div>
 
 				</div>
+					<script type="text/javascript">
+
+					function showTab(n) {
+						for (var i = 1; i < 5; i++) {
+							var tab = document.getElementById("t-content" + i);
+							var tabs = document.getElementById("tab" + i);
+						
+							if (i == n) {
+								tab.style.display = "block";
+								tabs.className = "feature__mware-tab active-t";
+							} else {
+								tab.style.display = "none";
+								tabs.className = "feature__mware-tab";
+							}
+						}
+					}
+					</script>
 
 				<ul class="feature__list midware">
 					<li class="feature__list-item user-icon" >
-						<span class="feature__item-title">User Benefits</span>
-						<p class="feature__item-text">Middleware Stalker - an interface intuitive user convenient and concise ...</p>
+						<span class="feature__item-title">Преимущества пользователя</span>
+						<p class="feature__item-text">Middleware Stalker – это интерфейс, интуитивно понятный пользователю, удобный и лаконичный...</p>
 						<a class="feature__item-link" href="">Learn more</a>
 					</li>
 					<li class="feature__list-item settings-icon" >
-						<span class="feature__item-title">User Benefits</span>
-						<p class="feature__item-text">Middleware Stalker - an interface intuitive user convenient and concise ...</p>
+						<span class="feature__item-title">Простота эксплуатации</span>
+						<p class="feature__item-text">Инженеры и дизайнеры компании Infomir тщательно продумали все детали взаимодействия с пользователями...</p>
 						<a class="feature__item-link" href="">Learn more</a>
 					</li>
 					<li class="feature__list-item hand-icon" >
-						<span class="feature__item-title">User Benefits</span>
-						<p class="feature__item-text">Middleware Stalker - an interface intuitive user convenient and concise ...</p>
+						<span class="feature__item-title">Начать использовать</span>
+						<p class="feature__item-text">Мы предлагаем специальный онлайн-тур, который разъясняет все шаги, необходимые для запуска услуг IPTV...</p>
 						<a class="feature__item-link" href="">Learn more</a>
 					</li>
 				</ul>

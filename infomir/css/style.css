@@ -161,7 +161,7 @@ table {
 }
 @font-face {
   font-family: "Myriad Pro";
-  src: url("../fonts/Myriad Pro.otf") format('opentype');
+  src: url("../fonts/font2/Myriad Pro.otf") format('opentype');
 }
 * {
   box-sizing: border-box;
@@ -1739,6 +1739,9 @@ footer {
 .feature__item-link:hover {
   text-decoration: underline;
 }
+#t-content3 {
+  display: block;
+}
 .feature {
   text-align: center;
   padding-top: 76px;
@@ -1759,6 +1762,7 @@ footer {
   border-top: 1px solid #dcdcdc;
   border-bottom: 1px solid #dcdcdc;
   padding: 48px 0;
+  text-align: center;
 }
 .feature__mware:after {
   content: '';
@@ -1823,10 +1827,12 @@ footer {
   font: 17px 'Myriad Pro';
   color: #414141;
 }
-.feature__mware-tablist {
+.feature__mware-tabslist {
   *zoom: 1;
+  display: inline-block;
+  padding-top: 38px;
 }
-.feature__mware-tablist:after {
+.feature__mware-tabslist:after {
   content: '';
   display: table;
   clear: both;
@@ -1835,7 +1841,34 @@ footer {
   float: left;
   border-right: 1px solid #f0f0f0;
   border-left: 1px solid #f0f0f0;
-  padding: 12px 57px;
+  padding: 8px 57px;
+  font: 20px 'Myriad Pro';
+  color: #262626;
+  cursor: pointer;
+}
+.feature__mware-tab:hover,
+.feature__mware-tab.active-t {
+  border-top: 2px solid #e72d45;
+  color: #e72d45;
+  padding: 6px 57px 10px;
+  border-right: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+  box-shadow: 0px 0 0 1px #fff;
+}
+.feature__mware-tabscontent {
+  border-top: 1px solid #d8d8d8;
+  height: 258px;
+  margin-top: -3px;
+}
+.feature__mware-tabscontent__info {
+  display: none;
+}
+.feature__mware-tabscontent__text {
+  font: 17px 'Myriad Pro';
+  color: #262626;
+  padding: 90px 501px 120px 184px;
+  background: url("../images/tv-radio.png") no-repeat 765px 41px;
+  line-height: 27px;
 }
 .feature__list {
   *zoom: 1;
@@ -2024,7 +2057,7 @@ footer {
   border-radius: 8px;
   float: left;
 }
-.content__types-left__name /*-------------------------------------------------*/ {
+.content__types-left__name {
   position: relative;
   padding-left: 29px;
   cursor: pointer;
