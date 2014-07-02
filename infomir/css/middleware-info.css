@@ -77,30 +77,28 @@
 }
 .feature__mware-tabslist {
   display: inline-block;
-  padding-top: 25px;
+  padding-top: 38px;
 }
 .feature__mware-tab {
   float: left;
   border-right: 1px solid #f0f0f0;
   border-left: 1px solid #f0f0f0;
-  padding: 10px 57px;
+  padding: 8px 57px;
   font: 20px $font;
   color: #262626;
   cursor: pointer;
-  height: 43px;
 }
 .feature__mware-tab:hover,
 .feature__mware-tab.active-t {
   border-top: 2px solid #e72d45;
   color: #e72d45;
-  padding: 8px 57px;
+  padding: 6px 57px 10px;
   border-right: 1px solid #d8d8d8;
   border-left: 1px solid #d8d8d8;
   box-shadow: 0px 0 0 1px #fff;
 }
 .feature__mware-tabscontent {
   border-top: 1px solid #d8d8d8;
-  border-bottom: 1px solid #d8d8d8;
   height: 258px;
   margin-top: -3px;
 }
@@ -111,7 +109,7 @@
   font: 17px $font;
   color: #262626;
   padding: 90px 501px 120px 184px;
-  background: url("../images/tv-radio.png") no-repeat 738px 44px;
+  background: url("../images/tv-radio.png") no-repeat 765px 41px;
   line-height: 27px;
 }
 .feature__list {

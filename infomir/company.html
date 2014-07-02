@@ -14,13 +14,14 @@
 			document.createElement('footer');
 		</script>
 		<![endif]-->
+
 	</head>
 	<body>
 		<header>
 			<div class="header-up">
 				<div class="wrapper">
 					<ul class="header-up__top-menu">
-						<li class="header-up__item"><a class="header-up__link" href="">Contact Sales</a></li>
+						<li class="header-up__item"><a class="header-up__link" id="contacts" onclick="showForm()"  href="#">Contact Sales</a></li>
 						<li class="header-up__item"><a class="header-up__link" href="">Choose your MAG</a><a class="header-up__more">&#8250;</a></li>
 						<li class="header-up__item"><a class="header-up__link" href="">English<i class="header-up__flag"></i></a></li>
 					</ul>
@@ -96,6 +97,7 @@
 					</nav>
 					<input class="header-low__search" placeholder="Search on site" type="text">
 				</div>
+
 			</div>
 		</header>
 
@@ -103,9 +105,9 @@
 
 
 				<!--CONTACT POP-UP START-->
-					<div class="contacts">
+					<div class="contacts" id="contactForm" style="display:none">
 						<div class="contact-form">
-							<i class="contact-form__close"></i>	
+							<i class="contact-form__close" id="closeForm" onclick="closeF()"></i>	
 							<h3 class="contact-form__name">Contact Sales</h3>
 							<div >
 								<h4 class="contact-form__title">Select Country</h4>
@@ -229,9 +231,38 @@
 
 							</ul>
 						</div>
+
+						
 					</div>
 				<!--CONTACT POP-UP END-->
+				<script type="text/javascript">
 
+							function showForm(f) {
+
+								var cForm = document.getElementById("contactForm");
+								var closeForm = document.getElementById("closeForm");
+
+									if(cForm.style.display == "none") {
+
+										cForm.style.display = "block";
+
+									}
+
+							}
+							function closeF(f) {
+
+								var cForm = document.getElementById("contactForm");
+								var closeForm = document.getElementById("closeForm");
+
+									if(cForm.style.display == "block") {
+
+										cForm.style.display = "none";
+
+									}
+
+							}
+							
+						</script>
 			<!-- !!! content !!! -->
 			<div class="buy-now">
 				<div class="wrapper">

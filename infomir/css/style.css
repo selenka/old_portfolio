@@ -1259,6 +1259,7 @@ footer {
   display: block;
 }
 .contacts {
+  display: none;
   position: relative;
   width: 1161px;
   margin: 0 auto;
@@ -1524,7 +1525,7 @@ footer {
   color: #393939;
 }
 .contact-form__field-select:focus {
-  background: #f9f9f9;
+  background: #f9f9f9 url("../images/sprite2.png") no-repeat 281px -660px;
   border-color: #b5b5b5;
 }
 .contact-form__field-text {
@@ -1608,12 +1609,6 @@ footer {
 .submit-button.btn-red:hover.submit-button.btn-red:after {
   background: #94090d url("../images/sprite2.png") no-repeat 7px -247px;
 }
-.slide-left {
-  background: url("../images/sprite2.png") no-repeat 0px -426px;
-}
-.slide-right {
-  background: url("../images/sprite2.png") no-repeat -26px -426px;
-}
 .feature {
   text-align: center;
   padding-top: 76px;
@@ -1659,10 +1654,12 @@ footer {
 .feature__l.slide-left {
   left: -93px;
   top: 226px;
+  background: url("../images/sprite2.png") no-repeat 0px -426px;
 }
 .feature__r.slide-right {
   right: -93px;
   top: 226px;
+  background: url("../images/sprite2.png") no-repeat -26px -426px;
 }
 .feature__list {
   *zoom: 1;
@@ -2610,8 +2607,8 @@ div[id ^= "tab-content"] {
   display: block;
   width: 27px;
   height: 27px;
-  border-radius: 50%;
   background: #268409 url("../images/sprite2.png") no-repeat 13px -241px;
+  border-radius: 50%;
   position: absolute;
   top: 14px;
   right: 11px;
