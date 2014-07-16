@@ -106,7 +106,7 @@
 			<div class="feature">
 				<h1 class="feature__title">User benefits</h1>
 
-				<ul class="feature__text-block">
+				<ul id="lightSlider2" class="feature__text-block">
 					<li class="feature__text-content">
 						<span class="feature__tag-line">FullHD</span>
 						<p class="feature__text">No detail will escape you with the bright, rich and realistic image in FullHD quality.</p>
@@ -143,18 +143,21 @@
 					<script type="text/javascript">
 					  $(document).ready(function() {
 					    var slider = $("#lightSlider").lightSlider();
+					    var slidertext = $('#lightSlider2').lightSlider();
 
 						$('#goToPrevSlide').click(function(){
-							slider.goToPrevSlide(); 
+							slider.goToPrevSlide();
+							slidertext.goToPrevSlide(); 
 						});
 						
 						$('#goToNextSlide').click(function(){
-							slider.goToNextSlide(); 
+							slider.goToNextSlide();
+							slidertext.goToNextSlide(); 
 						});
 					  });
 
 					</script>
-
+<!--
 					<hr class="feature__separator">
 
 
@@ -230,6 +233,7 @@
 
 			
 			</div>
+-->
 
 			<!-- !!! /content !!! -->
 
