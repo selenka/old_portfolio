@@ -28,8 +28,8 @@ div[id ^= "tab-content"] {
   display: block;
   width: 27px;
   height: 27px;
-  border-radius: 50%;
   background: #268409 url("../images/sprite2.png") no-repeat 13px -241px;
+  border-radius: 50%;
   position: absolute;
   top: 14px;
   right: 11px;

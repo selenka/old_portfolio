@@ -1618,6 +1618,13 @@ footer {
   color: #1a1a1a;
   padding-bottom: 30px;
 }
+.feature__text-block {
+  overflow: hidden;
+  height: 160px;
+}
+.feature__text-content {
+  height: 160px;
+}
 .feature__tag-line {
   display: inline-block;
   font: 25px 'PT Sans Narrow';
@@ -1650,6 +1657,7 @@ footer {
   width: 14px;
   height: 24px;
   position: absolute;
+  cursor: pointer;
 }
 .feature__l.slide-left {
   left: -93px;
@@ -2054,7 +2062,7 @@ footer {
   border-radius: 8px;
   float: left;
 }
-.content__types-left__name {
+.content__types-left__name /*-------------------------------------------------*/ {
   position: relative;
   padding-left: 29px;
   cursor: pointer;

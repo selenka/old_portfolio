@@ -1,9 +1,3 @@
-.slide-left {
-  background: url("../images/sprite2.png") no-repeat 0px -426px;
-}
-.slide-right {
-  background: url("../images/sprite2.png") no-repeat -26px -426px;
-}
 /*================================================================*/
 .feature {
   text-align: center;
@@ -13,6 +7,13 @@
   font: 50px 'PT Sans';
   color: #1a1a1a;
   padding-bottom: 30px;
+}
+.feature__text-block {
+  overflow: hidden;
+  height: 160px;
+}
+.feature__text-content {
+  height: 160px;
 }
 .feature__tag-line {
   display: inline-block;
@@ -46,14 +47,17 @@
   width: 14px;
   height: 24px;
   position: absolute;
+  cursor: pointer;
 }
 .feature__l.slide-left {
   left: -93px;
   top: 226px;
+  background: url("../images/sprite2.png") no-repeat 0px -426px;
 }
 .feature__r.slide-right {
   right: -93px;
   top: 226px;
+  background: url("../images/sprite2.png") no-repeat -26px -426px;
 }
 .feature__list {
   margin-bottom: 95px;

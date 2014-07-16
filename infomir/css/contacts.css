@@ -4,6 +4,7 @@
 }
 /*================================*/
 .contacts {
+  display: none;
   position: relative;
   width: 1161px;
   margin: 0 auto;
