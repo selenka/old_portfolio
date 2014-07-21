@@ -4,27 +4,24 @@
   padding-top: 76px;
 }
 .feature__title {
-  font: 50px 'PT Sans';
+  font: 50px $font;
   color: #1a1a1a;
   padding-bottom: 30px;
-}
-.feature__text-block {
-  overflow: hidden;
-  height: 160px;
 }
 .feature__text-content {
   height: 160px;
 }
 .feature__tag-line {
   display: inline-block;
-  font: 25px 'PT Sans Narrow';
+  font: 25px $font;
   color: #262626;
   padding-bottom: 17px;
 }
 .feature__text {
-  font: 17px 'PT Sans';
+  font: 17px $font;
   color: #414141;
   padding-bottom: 80px;
+  Line-height: 25px;
 }
 .feature__slider {
   width: 831px;
@@ -33,7 +30,7 @@
   margin: 0 auto;
   padding-top: 3px;
   position: relative;
-  margin-bottom: 43px;
+  margin-bottom: 80px;
 }
 .feature__slider-box {
   width: 827px;
@@ -109,17 +106,17 @@
   background: #e41c22 url("../images/sprite2.png") no-repeat 18px -538px;
 }
 .feature__item-title {
-  font: 25px 'PT Sans Narrow';
+  font: 25px $font;
   color: #262626;
 }
 .feature__item-text {
-  font: 15px 'PT Sans';
+  font: 15px $font;
   color: #5b5b5b;
   display: inline-block;
   padding-top: 23px;
 }
 .feature__item-link {
-  font: 15px 'PT Sans';
+  font: 15px $font;
   color: #e41c22;
   text-decoration: none;
   display: inline-block;

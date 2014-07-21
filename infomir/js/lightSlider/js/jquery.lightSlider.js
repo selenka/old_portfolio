@@ -20,13 +20,13 @@
         speed: 1000, //ms'
         easing: '', //'ex cubic-bezier(0.25, 0, 0.25, 1)',//
         auto: false,
-        pause: 3000,
+        pause: 1000,
         loop: true,
         controls: false,
         prevHtml: '',
         nextHtml: '',
         keyPress: true,
-        pager: false,
+        pager: true,
         gallery: false,
         thumbWidth: 50,
         thumbMargin: 3,
