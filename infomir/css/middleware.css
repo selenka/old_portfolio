@@ -32,6 +32,12 @@
   position: relative;
   margin-bottom: 80px;
 }
+.feature__slider__item {
+  float: left;
+}
+.feature__slider__item.youtube {
+  display: block;
+}
 .feature__slider-box {
   width: 827px;
   height: 464px;

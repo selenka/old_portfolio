@@ -458,6 +458,9 @@ footer {
 }
 .footer-left__rights__link {
   color: #da1d23;
+  text-decoration: none;
+}
+.footer-left__rights__link:hover {
   text-decoration: underline;
 }
 .footer-right {
@@ -1642,6 +1645,12 @@ footer {
   position: relative;
   margin-bottom: 80px;
 }
+.feature__slider__item {
+  float: left;
+}
+.feature__slider__item.youtube {
+  display: block;
+}
 .feature__slider-box {
   width: 827px;
   height: 464px;
@@ -2461,6 +2470,9 @@ footer {
   color: #e41c22;
 }
 .content__seller__mail {
+  text-decoration: none;
+}
+.content__seller__mail:hover {
   text-decoration: underline;
 }
 .content__seller__skype {
@@ -2566,22 +2578,22 @@ footer {
   height: 100%;
 }
 .feature__list-item.comm-icon:after {
-  background: #ccc url("../images/sprite2.png") no-repeat 7px -1695px;
+  background: #ccc url("../images/sprite2.png") no-repeat 18px -313px;
 }
 .feature__list-item.comm-icon:hover:after {
-  background: #252525 url("../images/sprite2.png") no-repeat 7px -1695px;
+  background: #252525 url("../images/sprite2.png") no-repeat 18px -313px;
 }
 .feature__list-item.faq-icon:after {
-  background: #ccc url("../images/sprite2.png") no-repeat 13px -1596px;
+  background: #ccc url("../images/sprite2.png") no-repeat 18px -462px;
 }
 .feature__list-item.faq-icon:hover:after {
-  background: #252525 url("../images/sprite2.png") no-repeat 13px -1596px;
+  background: #252525 url("../images/sprite2.png") no-repeat 18px -462px;
 }
 .feature__list-item.contact-icon:after {
-  background: #ccc url("../images/sprite2.png") no-repeat 15px -1503px;
+  background: #ccc url("../images/sprite2.png") no-repeat 18px -538px;
 }
 .feature__list-item.contact-icon:hover:after {
-  background: #252525 url("../images/sprite2.png") no-repeat 15px -1503px;
+  background: #252525 url("../images/sprite2.png") no-repeat 18px -538px;
 }
 div[id ^= "tab-content"] {
   display: none;

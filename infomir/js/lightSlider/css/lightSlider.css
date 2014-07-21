@@ -66,20 +66,22 @@
 	padding: 0 5px;
 }
 .csSlideOuter .csPager.cSpg > li a {
-	background-color: #222222;
+	background-color: #f3f3f3;
 	border-radius: 30px;
 	display: inline-block;
-	height: 8px;
+	height: 11px;
 	overflow: hidden;
 	text-indent: -999em;
-	width: 8px;
+	width: 11px;
+	border: 1px solid #cecece;
 	position: relative;
 	z-index: 99;
 	-webkit-transition: all 0.5s linear 0s;
 	transition: all 0.5s linear 0s;
 }
 .csSlideOuter .csPager.cSpg > li:hover a, .csSlideOuter .csPager.cSpg > li.active a {
-	background-color: #428bca;
+	background-color: #e41c22;
+	border: 1px solid #e41c22;
 }
 .csSlideOuter .media {
 	opacity: 0.8;

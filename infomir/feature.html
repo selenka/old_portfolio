@@ -174,7 +174,17 @@
 				<div class="feature__slider">
 					<div class="feature__slider-box">
 						<ul>
-							<li><img src="images/stalker2.jpg" alt=""></li>
+							<li class="feature__slider__item youtube-img"><img src="images/stalker2.jpg" alt=""></li>
+							<li class="feature__slider__item ex-img"><img src="images/stalker2-1.jpg" alt=""></li>
+							<li class="feature__slider__item megogo-img"><img src="images/stalker2-2.jpg" alt=""></li>
+							<li class="feature__slider__item oll-img"><img src="images/stalker2-3.jpg" alt=""></li>
+							<li class="feature__slider__item vidi-img"><img src="images/stalker2.jpg" alt=""></li>
+							<li class="feature__slider__item picasa-img"><img src="images/stalker2-1.jpg" alt=""></li>
+							<li class="feature__slider__item br-img"><img src="images/stalker2-2.jpg" alt=""></li>
+							<li class="feature__slider__item radio-img"><img src="images/stalker2-3.jpg" alt=""></li>
+							<li class="feature__slider__item karaoke-img"><img src="images/stalker2-1.jpg" alt=""></li>
+							<li class="feature__slider__item games-img"><img src="images/stalker2-2.jpg" alt=""></li>
+							<li class="feature__slider__item widgets-img"><img src="images/stalker2-3.jpg" alt=""></li>
 						</ul>
 					</div>
 				</div>
@@ -197,11 +207,18 @@
 				<script type="text/javascript">
 
 					$(document).ready(function() {
-						$(".feature__icon-item").click(function(){
+						$(".feature__icon-item").mouseover(function(){
 							$(".feature__icon-item").removeClass('active-i');
 							$(this).closest(".feature__icon-item").addClass('active-i');
 						});
-
+						var items = ['youtube', 'ex','megogo', 'oll', 'vidi', 'picasa', 'br', 'radio', 'karaoke', 'games', 'widgets'];
+						
+						$(items).each(function(i, curItem) {
+							$(".feature__icon-item." + curItem).mouseover(function(){
+								$(".feature__slider__item").css('display', 'none');
+								$(".feature__slider__item." + curItem + "-img").css("display", "block").fadeIn("slow");
+							});
+						});
 
 					});
 
