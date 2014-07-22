@@ -5,8 +5,8 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/style.css">
 		<script src="js/jquery-1.11.1.js"></script>
-		<link type="text/css" rel="stylesheet" href="js/bxslider/jquery.bxslider.css">  
-		<script src="js/bxslider/jquery.bxslider.js"></script>
+		<link type="text/css" rel="stylesheet" href="js/lightSlider/css/lightSlider.css">
+		<script src="js/lightSlider/js/jquery.lightSlider.js"></script>
 		<!--[if lt IE 9]>
 		<script>
 			document.createElement('header');
@@ -294,7 +294,7 @@
 					<img class="set-top__tv-mag-pic"src="images/mag250.png" alt="">
 				</div>
 				<div class="set-top__tv-listblock">
-					<ul class="set-top__tv-list">
+					<ul id="lightSlider" class="set-top__tv-list">
 						<li class="set-top__tv-list-item">
 							<a class="set-top__tv-list-link" href="">
 								<span class="set-top__tv-list-title">MAG255</span>
@@ -315,11 +315,43 @@
 								<p class="set-top__tv-list-discr">MAG260 was designed for developers of Android-based applications. </p>
 							</a>
 						</li>
+						<li class="set-top__tv-list-item">
+							<a class="set-top__tv-list-link" href="">
+								<span class="set-top__tv-list-title">MAG255</span>
+								<p class="set-top__tv-list-discr">Based on the basic MAG250 model, MAG255 is a modernised version with a faster and more powerful processor. </p>
+							</a>
+						</li>
+						<li class="set-top__tv-list-item">
+							<a class="set-top__tv-list-link" href="">
+								<span class="set-top__tv-list-title">MAG255</span>
+								<p class="set-top__tv-list-discr">Based on the basic MAG250 model, MAG255 is a modernised version with a faster and more powerful processor. </p>
+							</a>
+						</li>
 
 					</ul>
-					<i id="slider-prev" class="set-top__tv-listblock slide-left"></i>
-					<i id="slider-next" class="set-top__tv-listblock slide-right"></i> 
+					<i id="goToPrevSlide" class="set-top__tv-listblock slide-left"></i>
+					<i id="goToNextSlide" class="set-top__tv-listblock slide-right"></i> 
 				</div>
+				<script>
+					$(document).ready(function() {
+
+						var slider = $("#lightSlider").lightSlider({
+							slideWidth: 380,
+							pager: false,
+							slideMove: 1,
+							minSlide: 2,
+							maxSlide: 4,
+							mode: "slide"
+						 });
+						$('#goToPrevSlide').click(function(){
+							slider.goToPrevSlide();
+						});
+						
+						$('#goToNextSlide').click(function(){
+							slider.goToNextSlide();
+						});
+					 });
+				</script>
 				<a class="set-top__button btn-red" href="">Choose your MAG</a>
 			</div>
 			<div class="free-middle">

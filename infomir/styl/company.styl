@@ -149,10 +149,13 @@
 
 	&__tv-listblock
 		position relative
+		margin-top -40px
+
 	&__tv-list
 		clearfix()
 		height 200px
-		margin-bottom 40px
+		margin-bottom 80px
+		padding-top 40px
 		
 
 	&__tv-listblock.slide-left,
@@ -161,14 +164,15 @@
 		width 9px
 		height 19px
 		position absolute
+		cursor pointer
 
 	&__tv-listblock.slide-left
 			left -57px
-			top 92px
+			top 160px
 		
 	&__tv-listblock.slide-right
 		right -60px
-		top 90px
+		top 160px
 
 
 	&__tv-list-item
@@ -177,7 +181,7 @@
 		height 197px
 		border 1px solid #e4e4e4
 		border-radius 9px
-		border-right none
+		border-left none
 		box-shadow 0px 4px 10px -6px rgba(0,0,0, .3)
 		position relative
 	&__curr-product
@@ -243,7 +247,7 @@
 		transform(rotate(180deg))
 
 	&__tv-list-item:last-child
-		border-right 1px solid #e4e4e4
+		border-left 1px solid #e4e4e4
 	&__tv-list-link
 		display block
 		width 380px
