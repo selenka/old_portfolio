@@ -21,6 +21,8 @@
 .btn-black:after
 	// .btn-red:active:after
 	background #e41c22 url(../images/sprite2.png) no-repeat 13px -241px
+
+
 */
 /*============================================================================================*/
 /*================================SLIDERS-HOVERS====================================================*/
@@ -169,6 +171,9 @@
 .set-top__tv-listblock {
   position: relative;
   margin-top: -40px;
+}
+.set-top__tv-listblock > .csSlideOuter {
+  width: 1140px;
 }
 .set-top__tv-list {
   height: 200px;

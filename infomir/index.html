@@ -4,6 +4,9 @@
 		<title>Infomir</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-1.11.1.js"></script>
+		<link type="text/css" rel="stylesheet" href="js/lightSlider/css/lightSlider.css">
+		<script src="js/lightSlider/js/jquery.lightSlider.js"></script>
 		<!--[if lt IE 9]>
 		<script>
 			document.createElement('header');
@@ -125,43 +128,84 @@
 						</li>
 					</ul>
 				</div>
-				<ul class="content__types-right">
-					<li class="content__types-right__item">
-						<img class="content__types-right__pic" src="images/pic.jpg" alt="">
-						<h3 class="content__types-right__name">MAG-250 Micro</h3>
-						<span class="content__types-right__discr">Easy Start to your IPTV/OTT business</span>
-						<a class="content__types-right__more" href="">learn more</a><br>
-						<span class="content__types-right__status instock">In stock</span>
-						<i class="content__types-right__close" >&#10005;</i>
-					</li>
-					<li class="content__types-right__item">
-						<img class="content__types-right__pic" src="images/pic.jpg" alt="">
-						<h3 class="content__types-right__name">MAG-260</h3>
-						<span class="content__types-right__discr">Instant Slieaming</span>
-						<a class="content__types-right__more" href="">learn more</a><br>
-						<span class="content__types-right__status instock">In stock</span>
-						<i class="content__types-right__close" >&#10005;</i>
-					</li>
-					<li class="content__types-right__item">
-						<img class="content__types-right__pic" src="images/pic.jpg" alt="">
-						<h3 class="content__types-right__name">MAG-250 Micro</h3>
-						<span class="content__types-right__discr">Easy Start to your IPTV/OTT business</span>
-						<a class="content__types-right__more" href="">learn more</a><br>
-						<span class="content__types-right__status preorder">Pre Order</span>
-						<i class="content__types-right__close" >&#10005;</i>
-					</li>
-					<li class="content__types-right__item">
-						<img class="content__types-right__pic" src="images/pic.jpg" alt="">
-						<h3 class="content__types-right__name">MAG-270 Android</h3>
-						<span class="content__types-right__discr">1080px HD Video</span>
-						<a class="content__types-right__more" href="">learn more</a><br>
-						<span class="content__types-right__status instock">In stock</span>
-						<i class="content__types-right__close" >&#10005;</i>
-					</li>
-				</ul>
-				<a class="content__types-right slide-left"  href=""></a>
-				<a class="content__types-right slide-right" href=""></a>
+				<div class="content__types-right">
+					<ul id="lightSlider" class="content__types-right__slider">
+						<li class="content__types-right__item">
+							<img class="content__types-right__pic" src="images/pic.jpg" alt="">
+							<h3 class="content__types-right__name">MAG-250 Micro</h3>
+							<span class="content__types-right__discr">Easy Start to your IPTV/OTT business</span>
+							<a class="content__types-right__more" href="">learn more</a><br>
+							<span class="content__types-right__status instock">In stock</span>
+							<i class="content__types-right__close" >&#10005;</i>
+						</li>
+						<li class="content__types-right__item">
+							<img class="content__types-right__pic" src="images/pic.jpg" alt="">
+							<h3 class="content__types-right__name">MAG-260</h3>
+							<span class="content__types-right__discr">Instant Slieaming</span>
+							<a class="content__types-right__more" href="">learn more</a><br>
+							<span class="content__types-right__status instock">In stock</span>
+							<i class="content__types-right__close" >&#10005;</i>
+						</li>
+						<li class="content__types-right__item">
+							<img class="content__types-right__pic" src="images/pic.jpg" alt="">
+							<h3 class="content__types-right__name">MAG-250 Micro</h3>
+							<span class="content__types-right__discr">Easy Start to your IPTV/OTT business</span>
+							<a class="content__types-right__more" href="">learn more</a><br>
+							<span class="content__types-right__status preorder">Pre Order</span>
+							<i class="content__types-right__close" >&#10005;</i>
+						</li>
+						<li class="content__types-right__item">
+							<img class="content__types-right__pic" src="images/pic.jpg" alt="">
+							<h3 class="content__types-right__name">MAG-270 Android</h3>
+							<span class="content__types-right__discr">1080px HD Video</span>
+							<a class="content__types-right__more" href="">learn more</a><br>
+							<span class="content__types-right__status instock">In stock</span>
+							<i class="content__types-right__close" >&#10005;</i>
+						</li>
+						<li class="content__types-right__item">
+							<img class="content__types-right__pic" src="images/pic.jpg" alt="">
+							<h3 class="content__types-right__name">MAG-270 Android</h3>
+							<span class="content__types-right__discr">1080px HD Video</span>
+							<a class="content__types-right__more" href="">learn more</a><br>
+							<span class="content__types-right__status instock">In stock</span>
+							<i class="content__types-right__close" >&#10005;</i>
+						</li>
+						<li class="content__types-right__item">
+							<img class="content__types-right__pic" src="images/pic.jpg" alt="">
+							<h3 class="content__types-right__name">MAG-270 Android</h3>
+							<span class="content__types-right__discr">1080px HD Video</span>
+							<a class="content__types-right__more" href="">learn more</a><br>
+							<span class="content__types-right__status instock">In stock</span>
+							<i class="content__types-right__close" >&#10005;</i>
+						</li>
+					</ul>
+					<i id="goToPrevSlide" class="content__types-right slide-left"></i>
+					<i id="goToNextSlide" class="content__types-right slide-right"></i>
+				</div>
 			</div>
+			<script>
+					$(document).ready(function() {
+
+						var slider = $("#lightSlider").lightSlider({
+							slideWidth: 160,
+							pager: false,
+							slideMove: 1,
+							minSlide: 4,
+							maxSlide: 5,
+							slideMargin: 10,
+							mode: "slide"
+						 });
+
+						$('#goToPrevSlide').click(function(){
+							slider.goToPrevSlide();
+						});
+						
+						$('#goToNextSlide').click(function(){
+							slider.goToNextSlide();
+						});
+						
+					 });
+			</script>
 			<div class="content__specs">
 				<h4 class="content__specs__title">Specifications</h4>
 				<ul class="content__specs__table">
