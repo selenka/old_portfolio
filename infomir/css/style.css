@@ -534,6 +534,9 @@ footer {
 .btn-red:hover.btn-red:after {
   background: #94090d url("../images/sprite2.png") no-repeat 13px -241px;
 }
+.csSlideOuter {
+  width: 1140px;
+}
 .slide-left {
   background: url("../images/sprite2.png") no-repeat 0px -92px;
 }
