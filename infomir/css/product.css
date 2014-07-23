@@ -80,14 +80,11 @@
   padding-top: 5px;
   position: relative;
 }
-.content__types-right__slider {
-  width: 854px;
-}
 .content__types-right__item {
   float: left;
   width: 160px;
   height: 246px;
-  margin-left: 39px;
+  margin-left: 30px;
   text-align: center;
   position: relative;
 }

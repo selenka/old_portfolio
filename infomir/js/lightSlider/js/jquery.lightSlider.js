@@ -9,7 +9,7 @@
 (function ($, undefined) {
     "use strict";
     var defaults = {
-        slideWidth: 824,
+        slideWidth: 831,
         slideMargin: 0,
         slideMove: 1,
         minSlide: 1,

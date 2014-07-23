@@ -1641,7 +1641,6 @@ footer {
 .feature__slider {
   width: 831px;
   height: 548px;
-  background: url("../images/tv-big.png") no-repeat;
   margin: 0 auto;
   padding-top: 3px;
   position: relative;
@@ -1649,6 +1648,10 @@ footer {
 }
 .feature__slider__item {
   float: left;
+  background: url("../images/tv-big.png") no-repeat;
+  width: 831px;
+  height: 548px;
+  padding-top: 3px;
 }
 .feature__slider__item.youtube {
   display: block;
