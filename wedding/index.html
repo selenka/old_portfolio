@@ -4,9 +4,13 @@
 		<title>Pasha and Lena Wedding</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/style.css">
+		<script type="text/javascript" language="javascript">
+			function moveWindow (){window.location.hash="anchor";}
+		</script>
 	</head>
-	<body>
+	<body onload="moveWindow()">
 		<div class="upper">
+			
 			<div class="upper__wrap">
 				<hr class="upper__line">
 
@@ -20,7 +24,7 @@
 
 			</div>
 		</div>
-		<div class="main">
+		<div id="anchor" class="main">
 			<div class="main__wrap">
 				<hr class="main__line">
 				<div class="main__history">
@@ -39,6 +43,7 @@
 				</div>
 			</div>
 		</div>
+	
 		<div class="photo">
 			<div class="photo__wrap">
 				<hr class="photo__line">
