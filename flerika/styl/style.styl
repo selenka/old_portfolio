@@ -1,0 +1,848 @@
+@font-face
+	font-family 'Corbel'
+	src url('../fonts/Corbel.ttf') format('truetype')
+
+
+
+
+
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,tt,var,u,inner,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
+	border 0
+	font-size 100%
+	font inherit
+	vertical-align baseline
+	margin 0
+	padding 0
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+	display block
+
+body
+	line-height 1
+
+ol,ul
+	list-style none
+
+blockquote,q
+	quotes none
+
+blockquote:before,blockquote:after,q:before,q:after
+	content none
+
+table
+	border-collapse collapse
+	border-spacing 0
+
+clearfix()
+	*zoom 1
+
+	&:after
+		content ''
+		display table
+		clear both
+
+gradient()
+	background-image -webkit-linear-gradient(arguments)
+	background-image -moz-linear-gradient(arguments)
+	background-image -o-linear-gradient(arguments)
+	background-image linear-gradient(arguments)
+
+transform()
+	-webkit-transform (arguments)
+	-moz-transform (arguments)
+	-ms-transform (arguments)
+	-o-transform (arguments)
+	transform (arguments)
+
+$font = 'Corbel'
+$font-or = 'Arial'
+$font-PT = 'PT Sans'
+	
+
+* 
+	box-sizing border-box
+	-moz-box-sizing border-box
+
+
+html, body 
+	width 100%
+	height 100%
+	background #fff
+
+
+a 
+	cursor pointer
+	text-decoration none
+
+input, textarea, select 
+	outline none
+	border none
+
+
+
+/*-----------------------------------------*/
+#custom-caption
+	position absolute
+	top 259px
+	left 100px
+
+.add-item
+	clearfix()
+	width 573px
+	height 458px
+	background #f7f7f7
+	margin 210px auto 0
+	display none
+	padding 24px 51px 33px 48px
+	position relative
+
+	&__title
+		display block
+		font 24px $font
+		color #000
+		padding-bottom 20px
+	
+	&__img
+		width 170px
+		height 176px
+		overflow hidden
+		border 1px solid #cacaca
+		float left
+		margin-right 29px
+
+	&__info
+		width 270px
+		height 60px
+		box-shadow inset 1px 3px 19px 1px #dbdbdb
+		border-radius 3px
+		font 14px $font
+		color #000
+		padding 10px 17px
+		resize none
+		margin-bottom 20px
+
+	&__pricebox
+		font 18px $font
+		color #000
+		margin-bottom 23px
+
+	&__pricesign
+		font 24px 'Segoe UI'
+		color #000
+		padding-left 7px
+
+	&__priceinput
+		width 170px
+		height 30px
+		box-shadow inset 1px 3px 19px 1px #dbdbdb
+		border-radius 3px
+		font 18px 'Arial Narrow'
+		color #000
+		padding 10px 17px
+
+
+	&__choice
+		display inline-block
+		width 81px
+		height 39px
+		border 2px solid #00b0f0
+		text-transform uppercase
+		font bold 16px $font
+		color #00b0f0
+		text-align center
+		padding-top 8px
+		cursor pointer
+		margin-right 8px
+
+		&.like
+			position relative
+
+		&:hover
+			background #00b0f0
+			color #fff
+			cursor pointer
+
+		&.want
+			background url(../images/sprite.png) no-repeat 4px -303px
+			padding-left 19px
+		&.have
+			background url(../images/sprite.png) no-repeat 4px -335px
+			padding-left 24px
+
+		&.like:hover:after
+			content 'you like this'
+			font italic 12px $font
+			color #000
+			position absolute
+			text-transform lowercase
+			top 40px
+			right 9px
+			
+		&.want:hover
+			background #00b0f0 url(../images/sprite.png) no-repeat -35px -304px
+		&.have:hover
+			background #00b0f0 url(../images/sprite.png) no-repeat -31px -333px
+
+	&__prev
+		display inline-block
+		width 9px
+		height 17px
+		background url(../images/sprite.png) no-repeat -7px -379px
+		position absolute
+		top 258px
+		left 68px
+		cursor pointer
+
+	&__next
+		display inline-block
+		width 9px
+		height 17px
+		background url(../images/sprite.png) no-repeat -20px -379px
+		position absolute
+		top 258px
+		left 184px
+		cursor pointer
+
+	&__category
+		font 18px $font
+		color #000
+		padding-top 42px
+		padding-bottom 19px
+
+	&__submit
+		float right
+		width 166px
+		height 49px
+		background #59ca30
+		font 24px $font
+		color #fff
+		text-align center
+		padding-top 8px
+		margin-top 20px
+
+/*---------------------------------------------*/
+header
+	width 100%
+	height 65px
+	background #313131
+
+.top
+	clearfix()
+	width 1280px
+	background #313131
+	padding 23px 55px 0
+	margin 0 auto
+
+	&__m
+		width 30px
+		height 50px
+		position absolute
+
+	&__m:hover > .top__menu > .top__menu-drop
+			display block
+	&__menu
+		float left
+		width 29px
+		height 19px
+		background url(../images/sprite.png) no-repeat
+		cursor pointer
+		// margin-right 20px
+		position relative
+
+		
+
+		&-drop
+			position absolute
+			top 42px
+			display none
+
+			&__item
+				width 171px
+				height 35px
+				text-align center
+				cursor pointer
+				background-color rgba(31,31,31,0.8)
+				padding-top 6px
+				border-bottom 1px solid #171717
+
+				&:first-child
+					height 44px
+					padding-top 14px
+
+				&:hover
+					background #f8f8f8
+				&:hover > .top__menu-drop__link
+					color #000
+
+
+			&__link
+				font 18px $font
+				color #fff
+
+
+	&__logo
+		font 41.06px $font
+		color #fafafa
+		float left
+		margin -8px 22px 0 20px
+
+		&-f
+			color #61d6ff
+	&__nav
+		clearfix()
+		float left
+
+		&-item
+			float left
+			text-transform uppercase
+			font 18px $font-or
+			color #fff
+			margin-right 40px
+			letter-spacing -2px
+
+
+	&__add-item
+		float left
+		clearfix()
+		padding 0 0 0 55px
+
+		&__input
+			float left
+			width 187px
+			height 23px
+			color #939393
+			font 12px $font
+			padding 6px 14px
+		&__btn
+			display inline-block
+			text-align center
+			width 23px
+			height 23px
+			font 18px $font-PT 
+			color #fff
+			background #565656
+			cursor pointer
+
+	&__services
+		clearfix()
+		float right
+
+		&-item
+			float left
+			margin-left 21px
+			width 21px
+			height 21px
+
+			&.chat
+				background url("../images/sprite.png") no-repeat -76px -1px
+				cursor pointer
+				position relative
+
+			&.unread-m
+				display block
+				position absolute
+				width 15px
+				height 15px
+				background #ea4a34
+				opacity 0.88
+				border-radius 50%
+				color #fff
+				font 12px $font-PT
+				text-align center
+				top -5px
+				right -5px
+
+			&.notify
+				background url("../images/sprite.png") no-repeat 1px -22px
+				cursor pointer
+
+			&.points
+				background url("../images/sprite.png") no-repeat -52px 0px
+				cursor pointer
+				margin-right 45px
+				&-count
+					font 11px $font-PT
+					color #fff
+					text-decoration underline
+					float left
+					padding-left 4px
+					line-height 11px
+
+			&.search
+				background url("../images/sprite.png") no-repeat -29px 0px
+				cursor pointer
+				margin 0 3px 0 24px
+				position relative
+			&.search:hover > .top__services-item__search
+				display block
+
+			&__search
+				display none
+				clearfix()
+				position absolute
+				width 832px
+				height 79px
+				background #e4e4e4
+				top 56px
+				left -789px
+				padding 20px
+				&:after
+					content ''
+					position absolute
+					width 0
+					height 0
+					border-style solid
+					border-width 0 15px 28px 15px
+					border-color transparent transparent #e4e4e4 transparent
+					padding-top 20px
+					top -36px
+					right 16px
+
+				&-input
+					width 658px
+					height 39px
+					padding 10px 14px
+					float left
+					box-shadow inset 1px 1px 3px 2px #ded9d6
+					font 14px $font
+					color #8b8b8b
+
+				&-btn
+					float left
+					width 112px
+					height 39px
+					background #32c832
+					cursor pointer
+					text-align center
+					text-transform uppercase
+					color #fff
+					font bold 18px $font
+					padding-top 9px
+
+			&.info
+				background url("../images/sprite.png") no-repeat -24px -21px
+				cursor pointer
+.main
+	width 100%
+	background #313131
+
+	&__welcome
+		margin 0 auto
+		width 1280px
+		height 816px
+		background url(../images/welcome.jpg) no-repeat 0 0
+		text-align center
+		padding-top 138px
+
+		&-title
+			font 100px $font
+			color #fff
+		&-f
+			color #61d6ff
+		&-text
+			font 48px $font
+			color #fff
+			text-transform uppercase
+			margin-top -12px
+		&-text-i
+			font italic 36px $font
+			color #fff
+
+		&-fb
+			clearfix()
+			display block
+			width 337px
+			height 59px
+			background #4c629e
+			font 24px $font
+			color #fff
+			text-transform uppercase
+			cursor pointer
+			line-height 65px
+			margin 24px auto 20px
+
+		&-fbtitle
+			font 30px $font
+			text-transform lowercase
+
+		&-fbicon
+			float left
+			width 50px
+			height 59px
+			background url("../images/sprite.png") no-repeat 18px -43px
+			border-right solid 1px #425383
+
+		&-g,
+		&-tw
+			display block
+			clearfix()
+			display inline-block
+			width 158px
+			height 63px
+			border 1px solid #fff
+			font 24px $font
+			color #fff
+			text-transform uppercase
+			cursor pointer
+			padding 16px 22px 0 0 
+
+		&-g
+			margin-right 16px
+
+		&-gicon
+			float right
+			width 32px
+			height 33px
+			background url("../images/sprite.png") no-repeat -34px -105px
+
+		&-twicon
+			float right
+			width 33px
+			height 33px
+			background url("../images/sprite.png") no-repeat 0 -105px
+
+		&-reg
+			display block
+			margin 0 auto
+			width 339px
+			height 65px
+			background #59ca30
+			font 30px $font
+			color #fff
+			text-transform uppercase
+			text-align center
+			cursor pointer
+			padding-top 15px
+			margin 13px auto 13px
+
+		&-login
+			margin 0 auto
+			font 24px $font
+			color #fff
+
+			&-link
+				font-weight bold
+				text-decoration underline
+				font-style normal
+				cursor pointer
+				color #fff
+
+		&-arrow
+			display inline-block
+			margin 85px auto 0
+			width 26px
+			height 48px
+			border 1px solid #fff
+			border-radius 14px
+			font-size  41px
+			color #fff
+			line-height 1px
+			padding 0 9px
+			position relative
+			cursor pointer
+
+			&:before
+				content ''
+				position absolute
+				display block
+				width 17px
+				height 17px
+				border 1px solid #fff
+				border-top-color transparent
+				border-right-color transparent
+				transform(rotate(-45deg))
+				top 41px
+				right 2px
+
+			&:after
+				content ''
+				position absolute
+				display block
+				width 17px
+				height 17px
+				border 1px solid #fff
+				border-top-color transparent
+				border-right-color transparent
+				transform(rotate(-45deg))
+				top 51px
+				right 2px
+
+.m-items
+	width 100%
+	background #f7f7f7
+
+	&__list
+		clearfix()
+		width 1280px
+		background #f7f7f7
+		padding 33px 55px 0
+		margin 0 auto
+		padding-bottom 17px
+
+		&-item
+			float left
+			margin-bottom 31px
+			margin-right 30px
+
+		&-item:nth-child(4n+4)
+			margin-right 0
+
+		&-wrap
+			width 270px
+			height 321px
+			overflow hidden
+
+		&-info
+			clearfix()
+			width 270px
+			height 78px
+			border 1px solid #e9e9e9
+			padding-top 17px
+			margin-top -2px
+
+		&-avatar
+			float left
+			width 40px
+			height 40px
+			overflow hidden
+			margin 0 15px 0 14px
+
+		&-title 
+			font bold 14px $font
+			color #040404
+
+		&-text
+			font bold 11px $font			
+			color #9a9a9a
+
+footer
+	width 100%
+	height 239px
+	background #111111
+
+.footer
+	clearfix()
+	width 1280px
+	background #111111
+	padding 32px 55px 0
+	margin 0 auto
+
+	&__logo-m
+		float left
+		width 98px
+		height 103px
+		background url(../images/sprite.png) no-repeat 0 -141px
+		margin-right 57px
+		text-indent -9999px
+
+	&__list-all
+		clearfix()
+		float left
+
+	&__list
+		float left
+		padding-right 63px
+
+		&:last-child
+			padding-right 0
+
+		&-title
+			text-transform uppercase
+			font 14px $font
+			color #b5b5b5
+			padding-bottom 9px
+
+		&-item,
+		&-link
+			font 14px $font-PT
+			color #7c7c7c
+			padding-bottom 5px
+
+		&-item.apple
+			background url("../images/sprite.png") no-repeat -84px -51px
+			padding-left 17px
+		&-item.android
+			background url("../images/sprite.png") no-repeat -84px -79px
+			padding-left 17px
+
+
+	&__social
+		float right
+		clearfix()
+		margin-top 18px
+
+		&-close
+			float right
+			cursor pointer
+			width 10px
+			height 11px
+			background url("../images/sprite.png") no-repeat -79px -27px
+
+		&-icon
+			display inline-block
+			cursor pointer
+			width 20px
+			height 19px
+			margin-top: 15px
+
+			&.pinterest
+				background url("../images/sprite.png") no-repeat 0px -255px
+			&.play
+				background url("../images/sprite.png") no-repeat -25px -255px
+			&.fb
+				background url("../images/sprite.png") no-repeat -51px -255px
+			&.twitter
+				background url("../images/sprite.png") no-repeat -78px -255px
+			&.google
+				background url("../images/sprite.png") no-repeat 0px -277px
+			&.linkedin
+				background url("../images/sprite.png") no-repeat -28px -277px
+
+	&__fb-block
+		float right
+		margin-top 10px
+		clearfix()
+
+		&__img
+			overflow hidden
+			width 38px
+			height 39px
+			border-radius 2px
+			margin-right 5px
+			float right
+
+		&__info
+			font 14px $font
+			color #636363
+			float left
+		&__icon
+			display inline-block
+			width 20px
+			height 20px
+			background url("../images/sprite.png") no-repeat -50px -23px
+			margin 6px 7px 0 0
+			cursor pointer
+
+	&__copyright
+		font 14px $font-PT
+		color #636363
+		float left
+		padding 32px 0 0 269px
+
+// @media only screen and (min-width: 320px)
+
+// 	header
+// 		height 65px
+
+// 	.top__nav-item
+// 		float left
+
+
+@media only screen and (max-width: 320px)
+
+	header
+		height 245px
+
+	.top
+		width 320px
+		padding 23px 16px 0
+
+	.top__m
+		display none
+
+	.top__logo
+		margin-bottom 10px
+		float none
+		display block
+		text-align center
+
+	.top__nav 
+		clear both
+		float none
+		padding-left 10px
+
+	.top__nav-item
+		float none
+		display inline-block
+		width 96px
+		height 40px
+		text-align center
+
+	.top__add-item
+		float none
+		padding 0
+		margin-bottom 30px
+		padding-left 30px
+
+
+	.top__services
+		float none
+
+	.main__welcome
+		padding-top 18px
+		width 320px
+		height 450px
+
+	.main__welcome-title
+		display none
+
+	.main__welcome-text
+		font-size 25px
+
+	.main__welcome-text-i
+		font-size 15px
+
+	.main__welcome-fb
+		width 200px
+		font-size 11px
+
+	.main__welcome-fbtitle
+		font-size 18px
+
+	.main__welcome-g
+	.main__welcome-tw
+		width 100px
+		font-size 16px
+		padding 21px 9px 0 0
+
+	.main__welcome-reg
+		width 200px
+
+	.main__welcome-arrow
+		margin 10px auto 0
+
+	.m-items__list
+		width 320px
+		padding 16px
+
+	.footer
+		width 320px
+	.footer__logo-m
+		display none
+
+	.footer__list-all
+		text-align center
+
+	.footer__list
+		float none
+		padding-right 0
+		padding-bottom 10px
+
+	.footer__list-title
+		font-size 20px
+
+	.footer__copyright
+		display none
+
+	.footer__social
+	.footer__fb-block
+		margin-right 36px
+
+	.footer__list-item.apple
+		background-position -48px -51px
+
+	.footer__list-item.android
+		background-position -23px -79px
+
+	

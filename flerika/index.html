@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Flerika</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="js/brianreavis-selectize.js-f293d8b/dist/css/selectize.css">
+		<script src="js/jquery-1.11.1.js"></script>
+		<script src="js/jquery.bpopup.min.js"></script>
+		<script src="js/jquery.cycle2.min.js"></script>
+		<script src="js/selectize.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<header>
+			<div class="top">
+			<div class="top__m">
+				<i class="top__menu">
+					<ul id="dropDown" class="top__menu-drop">
+						<li class="top__menu-drop__item"><a class="top__menu-drop__link" href="#">My Feed</a>
+						<li class="top__menu-drop__item"><a class="top__menu-drop__link" href="#">My Relations</a>
+						<li class="top__menu-drop__item"><a class="top__menu-drop__link" href="#">Collections</a>
+						<li class="top__menu-drop__item"><a class="top__menu-drop__link" href="#">My Rewards</a>
+					</ul>
+				</i>
+			</div>
+				<a class="top__logo" href="#"><h1 class="top__logo"><span class="top__logo-f">f</span>lerika</h1></a>
+				<nav class="top__nav">
+					<a href="#" class="top__nav-item">items</a>
+					<a href="#" class="top__nav-item">stores</a>
+					<a href="#" class="top__nav-item">trending</a>
+					<a href="#" class="top__nav-item">people</a>
+				</nav>
+				<div class="top__add-item">
+					<input class="top__add-item__input" placeholder="Add item URL" type="text">
+					<i id="add-item-btn" class="top__add-item__btn">+</i>
+						<div class="add-item">
+							<span class="add-item__title">Add an item</span>
+							<div class="add-item__img mySlideshows"
+								class="cycle-slideshow" 
+								data-cycle-fx=scrollHorz
+								data-cycle-timeout=2000
+								data-loop="-1"
+								data-paused=true
+								data-cycle-caption="#custom-caption"
+								data-cycle-caption-template="{{slideNum}} out of {{slideCount}}"
+							>
+								<img src="http://lorempixel.com/170/176/fashion/" alt="item">
+								<img src="http://lorempixel.com/170/176/city/" alt="item">
+								<img src="http://lorempixel.com/170/176/people/" alt="item">
+								<img src="http://lorempixel.com/170/176/sports/" alt="item">
+							</div>
+							<div id="custom-caption" class="center"></div>
+							<a class="add-item__prev" onclick="$('.mySlideshows').cycle('prev');"></a>
+							<a class="add-item__next" onclick="$('.mySlideshows').cycle('next');"></a>
+							<script>
+								$( '.mySlideshows' ).cycle();
+							</script>
+
+							<textarea class="add-item__info" placeholder="type your discription here"></textarea>
+							<div class="add-item__pricebox">Edit price <span class="add-item__pricesign"> $</span>
+								<input class="add-item__priceinput" type="text">
+							</div>
+							<span class="add-item__choice like">liked</span>
+							<span class="add-item__choice want">want</span>
+							<span class="add-item__choice have">have</span>
+							<div class="add-item__category">Select a category</div>
+							
+							<input type="text" id="input-tags3">
+
+							<script>
+								$('#input-tags3').selectize({
+									plugins: ['remove_button'],
+									delimiter: ',',
+									persist: false,
+									create: function(input) {
+										return {
+											value: input,
+											text: input
+										}
+									}
+								});
+							</script>
+							
+							<a href="#" class="add-item__submit" type="submit">Add to flerica</a>
+
+
+					</div>
+					<script>
+						;(function($) {
+								$(function() {
+									$('#add-item-btn').bind('click', function(e) {
+										$('.add-item').bPopup();
+									});
+								});
+							})(jQuery);
+						
+					</script>
+				</div>
+				<ul class="top__services">
+					<li class="top__services-item chat"><i class="top__services-item unread-m">5</i></li>
+					<li class="top__services-item notify">
+						<div  class="top__services-item__notify">
+							
+						</div>
+					</li>
+					<li class="top__services-item points"><span class="top__services-item points-count">0 points</span></li>
+					<li class="top__services-item search">
+						<div class="top__services-item__search">
+							<input placeholder="search items, stores or people" class="top__services-item__search-input" type="text"><a class="top__services-item__search-btn" href="#">Search</a>
+						</div>
+					</li>
+					<li class="top__services-item info"></li>
+				</ul>
+			</div>
+		</header>
+		<div class="main">
+			<div class="main__welcome">
+				<h2 class="main__welcome-title"><span class="main__welcome-f">f</span>lerika</h2>
+				<div class="main__welcome-text">social shopping club</div>
+				<div class="main__welcome-text-i">shop, network, socialize and earn points</div>
+				<a href="#" class="main__welcome-fb"><i class="main__welcome-fbicon"></i>sign up with <span class="main__welcome-fbtitle">facebook</span></a>
+				<a href="#" class="main__welcome-g">with<i class="main__welcome-gicon"></i></a>
+				<a href="#" class="main__welcome-tw">with<i class="main__welcome-twicon"></i></a>
+				<a href="#" class="main__welcome-reg">register</a>
+				<div class="main__welcome-login">Already on flerika?<a href="#" class="main__welcome-login-link">Log in</a></div>
+				<i class="main__welcome-arrow">.</i>
+			</div>
+		</div>
+		<div class="m-items">
+			<ul class="m-items__list">
+				<li class="m-items__list-item">
+					<a class="m-items__list-link" href="#">
+						<div class="m-items__list-wrap">
+							<img class="m-items__list-pic" src="http://lorempixel.com/270/321/city/" alt="toy">
+						</div>
+						<div class="m-items__list-info">
+							<div class="m-items__list-avatar">
+								<img src="http://lorempixel.com/40/40/people/" alt="avatar">
+							</div>
+							<div class="m-items__list-title">Toy</div>
+							<span class="m-items__list-text">Mariana Popovich</span>
+						</div>
+					</a>
+				</li>
+				<li class="m-items__list-item">
+					<a class="m-items__list-link" href="#">
+						<div class="m-items__list-wrap">
+							<img class="m-items__list-pic" src="http://lorempixel.com/270/321/city/" alt="toy">
+						</div>
+						<div class="m-items__list-info">
+							<div class="m-items__list-avatar">
+								<img src="http://lorempixel.com/40/40/people/" alt="avatar">
+							</div>
+							<div class="m-items__list-title">Toy</div>
+							<span class="m-items__list-text">Mariana Popovich</span>
+						</div>
+					</a>
+				</li>
+				<li class="m-items__list-item">
+					<a class="m-items__list-link" href="#">
+						<div class="m-items__list-wrap">
+							<img class="m-items__list-pic" src="http://lorempixel.com/270/321/city/" alt="toy">
+						</div>
+						<div class="m-items__list-info">
+							<div class="m-items__list-avatar">
+								<img src="http://lorempixel.com/40/40/people/" alt="avatar">
+							</div>
+							<div class="m-items__list-title">Toy</div>
+							<span class="m-items__list-text">Mariana Popovich</span>
+						</div>
+					</a>
+				</li>
+				<li class="m-items__list-item">
+					<a class="m-items__list-link" href="#">
+						<div class="m-items__list-wrap">
+							<img class="m-items__list-pic" src="http://lorempixel.com/270/321/city/" alt="toy">
+						</div>
+						<div class="m-items__list-info">
+							<div class="m-items__list-avatar">
+								<img src="http://lorempixel.com/40/40/people/" alt="avatar">
+							</div>
+							<div class="m-items__list-title">Toy</div>
+							<span class="m-items__list-text">Mariana Popovich</span>
+						</div>
+					</a>
+				</li>
+				<li class="m-items__list-item">
+					<a class="m-items__list-link" href="#">
+						<div class="m-items__list-wrap">
+							<img class="m-items__list-pic" src="http://lorempixel.com/270/321/city/" alt="toy">
+						</div>
+						<div class="m-items__list-info">
+							<div class="m-items__list-avatar">
+								<img src="http://lorempixel.com/40/40/people/" alt="avatar">
+							</div>
+							<div class="m-items__list-title">Toy</div>
+							<span class="m-items__list-text">Mariana Popovich</span>
+						</div>
+					</a>
+				</li>
+				<li class="m-items__list-item">
+					<a class="m-items__list-link" href="#">
+						<div class="m-items__list-wrap">
+							<img class="m-items__list-pic" src="http://lorempixel.com/270/321/city/" alt="toy">
+						</div>
+						<div class="m-items__list-info">
+							<div class="m-items__list-avatar">
+								<img src="http://lorempixel.com/40/40/people/" alt="avatar">
+							</div>
+							<div class="m-items__list-title">Toy</div>
+							<span class="m-items__list-text">Mariana Popovich</span>
+						</div>
+					</a>
+				</li>
+				<li class="m-items__list-item">
+					<a class="m-items__list-link" href="#">
+						<div class="m-items__list-wrap">
+							<img class="m-items__list-pic" src="http://lorempixel.com/270/321/city/" alt="toy">
+						</div>
+						<div class="m-items__list-info">
+							<div class="m-items__list-avatar">
+								<img src="http://lorempixel.com/40/40/people/" alt="avatar">
+							</div>
+							<div class="m-items__list-title">Toy</div>
+							<span class="m-items__list-text">Mariana Popovich</span>
+						</div>
+					</a>
+				</li>
+				<li class="m-items__list-item">
+					<a class="m-items__list-link" href="#">
+						<div class="m-items__list-wrap">
+							<img class="m-items__list-pic" src="http://lorempixel.com/270/321/city/" alt="toy">
+						</div>
+						<div class="m-items__list-info">
+							<div class="m-items__list-avatar">
+								<img src="http://lorempixel.com/40/40/people/" alt="avatar">
+							</div>
+							<div class="m-items__list-title">Toy</div>
+							<span class="m-items__list-text">Mariana Popovich</span>
+						</div>
+					</a>
+				</li>
+				<li class="m-items__list-item">
+					<a class="m-items__list-link" href="#">
+						<div class="m-items__list-wrap">
+							<img class="m-items__list-pic" src="http://lorempixel.com/270/321/city/" alt="toy">
+						</div>
+						<div class="m-items__list-info">
+							<div class="m-items__list-avatar">
+								<img src="http://lorempixel.com/40/40/people/" alt="avatar">
+							</div>
+							<div class="m-items__list-title">Toy</div>
+							<span class="m-items__list-text">Mariana Popovich</span>
+						</div>
+					</a>
+				</li>
+				<li class="m-items__list-item">
+					<a class="m-items__list-link" href="#">
+						<div class="m-items__list-wrap">
+							<img class="m-items__list-pic" src="http://lorempixel.com/270/321/city/" alt="toy">
+						</div>
+						<div class="m-items__list-info">
+							<div class="m-items__list-avatar">
+								<img src="http://lorempixel.com/40/40/people/" alt="avatar">
+							</div>
+							<div class="m-items__list-title">Toy</div>
+							<span class="m-items__list-text">Mariana Popovich</span>
+						</div>
+					</a>
+				</li>
+				<li class="m-items__list-item">
+					<a class="m-items__list-link" href="#">
+						<div class="m-items__list-wrap">
+							<img class="m-items__list-pic" src="http://lorempixel.com/270/321/city/" alt="toy">
+						</div>
+						<div class="m-items__list-info">
+							<div class="m-items__list-avatar">
+								<img src="http://lorempixel.com/40/40/people/" alt="avatar">
+							</div>
+							<div class="m-items__list-title">Toy</div>
+							<span class="m-items__list-text">Mariana Popovich</span>
+						</div>
+					</a>
+				</li>
+				<li class="m-items__list-item">
+					<a class="m-items__list-link" href="#">
+						<div class="m-items__list-wrap">
+							<img class="m-items__list-pic" src="http://lorempixel.com/270/321/city/" alt="toy">
+						</div>
+						<div class="m-items__list-info">
+							<div class="m-items__list-avatar">
+								<img src="http://lorempixel.com/40/40/people/" alt="avatar">
+							</div>
+							<div class="m-items__list-title">Toy</div>
+							<span class="m-items__list-text">Mariana Popovich</span>
+						</div>
+					</a>
+				</li>
+				<li class="m-items__list-item">
+					<a class="m-items__list-link" href="#">
+						<div class="m-items__list-wrap">
+							<img class="m-items__list-pic" src="http://lorempixel.com/270/321/city/" alt="toy">
+						</div>
+						<div class="m-items__list-info">
+							<div class="m-items__list-avatar">
+								<img src="http://lorempixel.com/40/40/people/" alt="avatar">
+							</div>
+							<div class="m-items__list-title">Toy</div>
+							<span class="m-items__list-text">Mariana Popovich</span>
+						</div>
+					</a>
+				</li>
+				<li class="m-items__list-item">
+					<a class="m-items__list-link" href="#">
+						<div class="m-items__list-wrap">
+							<img class="m-items__list-pic" src="http://lorempixel.com/270/321/city/" alt="toy">
+						</div>
+						<div class="m-items__list-info">
+							<div class="m-items__list-avatar">
+								<img src="http://lorempixel.com/40/40/people/" alt="avatar">
+							</div>
+							<div class="m-items__list-title">Toy</div>
+							<span class="m-items__list-text">Mariana Popovich</span>
+						</div>
+					</a>
+				</li>
+				<li class="m-items__list-item">
+					<a class="m-items__list-link" href="#">
+						<div class="m-items__list-wrap">
+							<img class="m-items__list-pic" src="http://lorempixel.com/270/321/city/" alt="toy">
+						</div>
+						<div class="m-items__list-info">
+							<div class="m-items__list-avatar">
+								<img src="http://lorempixel.com/40/40/people/" alt="avatar">
+							</div>
+							<div class="m-items__list-title">Toy</div>
+							<span class="m-items__list-text">Mariana Popovich</span>
+						</div>
+					</a>
+				</li>
+				<li class="m-items__list-item">
+					<a class="m-items__list-link" href="#">
+						<div class="m-items__list-wrap">
+							<img class="m-items__list-pic" src="http://lorempixel.com/270/321/city/" alt="toy">
+						</div>
+						<div class="m-items__list-info">
+							<div class="m-items__list-avatar">
+								<img src="http://lorempixel.com/40/40/people/" alt="avatar">
+							</div>
+							<div class="m-items__list-title">Toy</div>
+							<span class="m-items__list-text">Mariana Popovich</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<footer>
+			<div class="footer">
+				<a class="footer__logo-m" href="#">Flerika</a>
+					<ul class="footer__list-all">
+						<li class="footer__list">
+							<h3 class="footer__list-title">about us</h3>
+							<ul>
+								<li class="footer__list-item"><a class="footer__list-link" href="#">Our Story</a></li>
+								<li class="footer__list-item"><a class="footer__list-link" href="#">Press</a></li>
+								<li class="footer__list-item"><a class="footer__list-link" href="#">Contact us</a></li>
+							</ul>
+						</li>
+						<li class="footer__list">
+							<h3 class="footer__list-title">Legal information</h3>
+							<ul>
+								<li class="footer__list-item"><a class="footer__list-link" href="#">Privacy</a></li>
+								<li class="footer__list-item"><a class="footer__list-link" href="#">Press</a></li>
+							</ul>
+						</li>
+						<li class="footer__list">
+							<h3 class="footer__list-title">aFFILIATE PROGRAM</h3>
+							<ul>
+								<li class="footer__list-item"><a class="footer__list-link" href="#">For Stores</a></li>
+								<li class="footer__list-item"><a class="footer__list-link" href="#">For Bloggers</a></li>
+							</ul>
+						</li>
+						<li class="footer__list">
+							<h3 class="footer__list-title">Tools</h3>
+							<ul>
+								<li class="footer__list-item"><a class="footer__list-link" href="#">Flerika button</a></li>
+								<li class="footer__list-item"><a class="footer__list-link" href="#">Help</a></li>
+							</ul>
+						</li>
+						<li class="footer__list">
+							<h3 class="footer__list-title">APPS</h3>
+							<ul>
+								<li class="footer__list-item apple"><a class="footer__list-link" href="#">iPad and iPhone</a></li>
+								<li class="footer__list-item android"><a class="footer__list-link" href="#">Android</a></li>
+							</ul>
+						</li>
+					</ul>
+				<div class="footer__social">
+					<i class="footer__social-close"></i>
+					<a class="footer__social-icon pinterest" href="#"></a>
+					<a class="footer__social-icon play" href="#"></a>
+					<a class="footer__social-icon fb" href="#"></a>
+					<a class="footer__social-icon twitter" href="#"></a>
+					<a class="footer__social-icon google" href="#"></a>
+					<a class="footer__social-icon linkedin" href="#"></a>					
+				</div>
+				<div class="footer__fb-block">
+					<img class="footer__fb-block__img" src="http://lorempixel.com/39/38/people/" alt="fb-avatar">
+					<img class="footer__fb-block__img" src="http://lorempixel.com/39/38/people/" alt="fb-avatar">
+					<img class="footer__fb-block__img" src="http://lorempixel.com/39/38/people/" alt="fb-avatar">
+					<img class="footer__fb-block__img" src="http://lorempixel.com/39/38/people/" alt="fb-avatar">
+					<br><span class="footer__fb-block__info"><i class="footer__fb-block__icon"></i>17 friends are already on Flerika</span>
+				</div>
+
+				<p class="footer__copyright">Copyriht © 2014 Flerika Inc. All rights Reserved</p>
+			</div>
+		</footer>
+	</body>
