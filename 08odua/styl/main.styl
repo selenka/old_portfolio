@@ -270,9 +270,24 @@ textarea:-moz-placeholder
 	width 1366px
 	margin 0 auto
 	z-index -1
-.category
+
+.col-l
 	float left
-	width 1025px
+	width 1050px
+	clearfix()
+	border-right 1px solid #e7e6e1
+	padding 0 25px 0 0
+
+	&__banner
+		width 728px
+		height 90px
+		margin 25px auto
+		background #000
+		color #fff
+		text-align center
+		padding-top 37px
+
+.category
 	clearfix()
 
 	&__link
@@ -349,15 +364,16 @@ textarea:-moz-placeholder
 		background url(../images/category-sprite.png) no-repeat -0px -180px
 	&__item-icon.animals
 		background url(../images/category-sprite.png) no-repeat -0px -210px
+
+
 			
 .col-r
 	float right
-	width 277px
-	height 100%
-	border-left 1px solid #e7e6e1
+	width 265px
+	
 
 	&__news
-		padding 0 25px 0 12px
+		padding 0 10px 0 25px
 
 		&-title
 			font 25px $font-r
