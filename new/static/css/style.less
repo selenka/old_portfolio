@@ -15,16 +15,36 @@ html, body {
 	margin: 0 auto;
 	background: #3d3d3d;
 }
-
+/*---------------------owl dots start--------------------*/
+.owl-dots {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+.owl-dot{
+  width: 15px;
+  height: 15px;
+  background: #e2e2e2;
+  border-radius: 50%;
+  float: left;
+  margin-right: 5px;
+  
+  &.active {
+	background: #fff;
+  }
+}
+/*---------------------owl dots end--------------------*/
 /*---------------------MAIN CSS--------------------*/
 .wrapper {
   height: 100%;
 }
 .media {
   min-width: 300px;
+  .clearfix;
 }
 
 .slider {
+  margin-bottom: 30px;
   &__item {
 	position: relative;
 
@@ -346,6 +366,7 @@ html, body {
   .header {
 	&__logo {
 	  font-size: 34px;
+	  padding-left: 20px;
 	}
 	&__link {
 	  font-size: 28px;
