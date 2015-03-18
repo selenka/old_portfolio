@@ -49,24 +49,24 @@ html, body {
 	position: relative;
 
 	&.slide1 .slider__text {
-	  color: #fff;
+	  color: #38375E;
 	  bottom: 6px;
 	  right: 10px;
 	}
 	&.slide2 .slider__text {
 	  color: #000;
-	  top: 10px;
-	  left: 10px;
+	  bottom: 6px;
+	  right: 10px;
 	}
 	&.slide3 .slider__text {
 	  color: #19185E;
 	  top: 20px;
-	  right: 10px;
+	  left: 10px;
 	}
 	&.slide4 .slider__text {
 	  color: #575649;
 	  top: 30px;
-	  right: 15px;
+	  left: 15px;
 	}
   }
   &__text {
@@ -81,6 +81,8 @@ html, body {
   width: 100%;
   padding: 13px 10px 0;
   .clearfix;
+  position: fixed;
+  z-index: 2;
 
   &__logo {
 	float: left;
@@ -115,7 +117,9 @@ html, body {
 	}
   }
 }
-
+.content {
+  padding-top: 120px;
+}
 .page {
   height: 100%;
 
