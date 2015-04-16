@@ -1,110 +1,240 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-	<title>SeLenKa's portfolio</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<div class="wrapper">
-		<div class="header clearfix">
-				<i onclick="toggleShareBlock(this);" class="header__menu"></i>
-				<a href="/cv/index.html" class="cv">CV</a>
-				<ul class="header__menu__contacts" id="test">
-						<li class="header__menu__contacts__icon-linkedin">
-							<a class="header__menu__contacts__link-linkedin" href="http://www.linkedin.com/profile/view?id=329817747" target="_blank"></a>
-						</li>
-						<li class="header__menu__contacts__icon-facebook">
-							<a class="header__menu__contacts__link-facebook" href="https://www.facebook.com/lenka.serebryakova" target="_blank"></a>
-						</li>
-						<li class="header__menu__contacts__icon-twitter">
-							<a class="header__menu__contacts__link-twitter" href="https://twitter.com/selenka_rise" target="_blank"></a>
-						</li>
-						<li class="header__menu__contacts__icon-skype">
-							<a class="header__menu__contacts__link-skype" href="skype:lenakey89?chat"></a>
-						</li>
-				</ul>
-				<script>
-					function toggleShareBlock(elt) {
-						var active = !!elt.getAttribute('active');
-						elt.setAttribute('active', active ? '' : '1');
-						elt.className = 'header__menu' + (active ? '' : ' active');
-						document.getElementById('test').style.display = active ? 'none' : 'block';
-					}
-				</script>
-							
-			<h1 class="header__title">&lt;portfolio id="<span>Lena Kotets</span>"&gt;</h1>
+	<head>
+		<title>Lena Kotets - Front-End Developer</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="static/css/result.css">
+		<script src="static/js/jquery-1.11.2.min.js"></script>
+		
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="back">
+			<header id="top" class="header">
+				<div class="media">
+					<div id="logo" class="header__logo"><span>Lena</span><br>
+						Kotets
+					</div>
+					<ul id="nav" class="header__nav">
+						<li class="header__item"><a class="header__link" href="#about">About me</a></li>
+						<li class="header__item"><a class="header__link" href="#portfolio">Portfolio</a></li>
+						<li class="header__item"><a class="header__link" href="#cv">CV</a></li>
+					</ul>
+				</div>
+			</header>
+			<div class="content">
+				<div class="page">
+					<div id="slider" class="slider owl-carousel">
+						<div class="item slider__item slide1">
+							<img src="static/images/welcome.jpg" alt=""/>
+						</div>
+						<div class="item slider__item slide2">
+							<span class="slider__text">I can be modern!</span>
+							<img src="static/images/modern.png" alt=""/>
+						</div>
+						<div class="item slider__item slide3">
+							<span class="slider__text">I can be classic!</span>
+							<img src="static/images/classic.png" alt=""/>
+						</div>
+						<div class="item slider__item slide4">
+							<span class="slider__text">I can be Responsive!</span>
+							<img src="static/images/responsive_dogs.jpg" alt=""/>
+						</div>
+						<div class="item slider__item slide5">
+							<span class="slider__text">I do have some Skills!</span>
+							<img src="static/images/skills.jpg" alt=""/>
+						</div>
+					</div>
+				</div>
+
+					<h2 id="about" class="page__title">
+						<div class="media">
+							About me
+						</div>
+					</h2>
+					<p class="page__text media">
+						I'm responsible, enthusiastic and self-motivated person. I work with HTML5 and CSS3. I try to keep on top of these subjects. I work with pre-processor "Stylus" and "Less".
+						Due to the fact, that I lack experience, I promise - to do my job, to learn, to do mistakes and to resolve them :)
+					</p>
+					<div class="page__misc">
+						<div class="media">
+							<div class="page__misc__icons">
+								<img class="page__misc__icons-item "src="static/images/opera.png" alt=""/>
+								<img class="page__misc__icons-item "src="static/images/chrome.png" alt=""/>
+								<img class="page__misc__icons-item "src="static/images/safari.png" alt=""/>
+								<img class="page__misc__icons-item "src="static/images/firefox.png" alt=""/>
+								<img class="page__misc__icons-item "src="static/images/ie.png" alt=""/>
+								<img class="page__misc__icons-item "src="static/images/apple.png" alt=""/>
+								<img class="page__misc__icons-item "src="static/images/android.png" alt=""/>
+							</div>
+							<div class="page__misc__icons">
+								<img class="page__misc__icons-item "src="static/images/css.png" alt=""/>
+								<img class="page__misc__icons-item "src="static/images/html.png" alt=""/>
+							</div>
+						</div>
+					</div>
+
+				<div id="portfolio" class="page">
+						<h2 class="page__title">
+							<div class="media">Portfolio</div>
+						</h2>
+						<ul class="page__gallery media">
+							<li class="page__gallery-item">
+								<img src="preview/car-rental.jpg" alt=""/>
+								<div class="page__gallery-preview">
+									<span class="page__gallery-text">
+										<span class="page__gallery-title">September 2013 (sample)</span>
+										<span class="page__gallery-text">Used: CSS only</span>
+									</span>
+									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="/car-rental" target="_blank">View</a></span>
+								</div>
+							</li>
+							<li class="page__gallery-item">
+								<img src="preview/clothestore.jpg" alt=""/>
+								<div class="page__gallery-preview">
+									<span class="page__gallery-text">
+										<span class="page__gallery-title">December 2013 (sample)</span>
+										<span class="page__gallery-text">Used: CSS only</span>
+									</span>
+									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="/clothe-store" target="_blank">View</a></span>
+								</div>
+							</li>
+							<li class="page__gallery-item">
+								<img src="preview/marathon.jpg" alt=""/>
+								<div class="page__gallery-preview">
+									<span class="page__gallery-text">
+										<span class="page__gallery-title">March 2013 (sample)</span>
+										<span class="page__gallery-text">Used: CSS only</span>
+									</span>
+									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="/marathon" target="_blank">View</a></span>
+								</div>
+							</li>
+							<li class="page__gallery-item">
+								<img src="preview/ribbons.jpg" alt=""/>
+								<div class="page__gallery-preview">
+									<span class="page__gallery-text">
+										<span class="page__gallery-title">April 2014 (sample)</span>
+										<span class="page__gallery-text">Used: Preprocessor 'Stylus'</span>
+									</span>
+									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="/ribbons" target="_blank">View</a></span>
+								</div>
+							</li>
+							<li class="page__gallery-item">
+								<img src="preview/infomir.jpg" alt=""/>
+								<div class="page__gallery-preview">
+									<span class="page__gallery-text">
+										<span class="page__gallery-title">May 2014</span>
+										<span class="page__gallery-text">Used: Preprocessor 'Stylus', jQuery</span>
+									</span>
+									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="/infomir" target="_blank">View</a></span>
+								</div>
+							</li>
+							<li class="page__gallery-item steelkiwi">
+								<img src="preview/barqspeed.jpg" alt=""/>
+								<div class="page__gallery-preview">
+									<span class="page__gallery-text">
+										<span class="page__gallery-title">November 2014</span>
+										<span class="page__gallery-text">Used: Preprocessor 'Stylus', jQuery (plugins), Responsive design</span>
+									</span>
+									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="https://www.barqspeed.com" target="_blank">View</a></span>
+								</div>
+							</li>
+							<li class="page__gallery-item steelkiwi">
+								<img src="preview/bookelgouna.jpg" alt=""/>
+								<div class="page__gallery-preview">
+									<span class="page__gallery-text">
+										<span class="page__gallery-title">December 2014 - May 2015 (In Progress)</span>
+										<span class="page__gallery-text">Used: Preprocessor 'Less', CSS3, jQuery (plugins), Responsive design, html templates (Python), JS, RTL direction</span>
+									</span>
+									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="http://www.bookelgouna.com/" target="_blank">View</a></span>
+								</div>
+							</li>
+						</ul>
+				</div>
+				<div id='cv' class="page">
+						<h2 class="page__title">
+							<div class="media">CV </div>
+						</h2>
+						<div class="cv media">
+							<ul class="cv__info">
+								<h2 class="cv__title"><span class="cv__class">class</span> = "personal-information"</h2>
+								<li class="cv__text"><span class="cv__name">Year Of Birth:</span>1989</li>
+								<li class="cv__text"><span class="cv__name">Place of Birth:</span>Ukraine, Odessa</li>
+								<li class="cv__text"><span class="cv__name">Marital status:</span>Marriage</li>
+								<li class="cv__text"><span class="cv__name">Tel:</span>+38(067)290-01-06</li>
+								<li class="cv__text"><span class="cv__name">Email:</span><a class="cv__link" href="mailto:lenka@kotets.com">lenka@kotets.com</a></li>
+								<li class="cv__text"><span class="cv__name">Skype:</span>lenakey89</li>
+								<li class="cv__text"><span class="cv__name">Linkedin:</span><a class="cv__link" href="https://ua.linkedin.com/pub/lena-kotets/92/556/903">Lena Kotets</a></li>
+							</ul>
+							<h2 class="cv__title"><span class="cv__class">class</span> = "general-information"</h2>
+							<ul class="cv__info">
+								<li class="cv__text"><span class="cv__name">Occupation:</span>Front-End Developer in SteelKiwi Development</li>
+								 <li class="cv__text"><span class="cv__name">Current position:</span> Junior Front-End Developer</li>
+							</ul>
+							<h2 class="cv__title"><span class="cv__class">class</span> = "employment history"</h2>
+							<ul class="cv__info">
+								<li class="cv__text"><span class="cv__name">sep 2014 - till present:</span>SteelKiwi Development</li>
+							</ul>
+							<h2 class="cv__title"><span class="cv__class">class</span> = "languages"</h2>
+							<ul class="cv__info">
+								<li class="cv__text"><span class="cv__name">Russian:</span>Native</li>
+								<li class="cv__text"><span class="cv__name">Ukrainian:</span>Advanced</li>
+								<li class="cv__text"><span class="cv__name">English:</span>Upper-Intermediate</li>
+							</ul>
+							<h2 class="cv__title"><span class="cv__class">class</span> = "education and training courses"</h2>
+							<ul class="cv__info">
+								<li class="cv__text"><span class="cv__name">2014</span>Javascript (Design-Class)</li>
+								<li class="cv__text"><span class="cv__name">2012</span>HTML+CSS (Design-Class)</li>
+								<li class="cv__text"><span class="cv__name">2009 – 2010</span>Master's degree, Odessa State Economics University (Economy and development strategy of enterprise)</li>
+							</ul>
+							<h2 class="cv__title"><span class="cv__class">class</span> = "knowledge and skills"</h2>
+							<ul class="cv__info">
+								<li class="cv__text"><span class="cv__name"></span>HTML5</li>
+								<li class="cv__text"><span class="cv__name"></span>CSS3</li>
+								<li class="cv__text"><span class="cv__name"></span>Responsive markup</li>
+								<li class="cv__text"><span class="cv__name"></span>HTML Emails</li>
+								<li class="cv__text"><span class="cv__name"></span>Stylus</li>
+								<li class="cv__text"><span class="cv__name"></span>LESS</li>
+								<li class="cv__text"><span class="cv__name"></span>Bootstrap(not using often)</li>
+								<li class="cv__text"><span class="cv__name"></span>GruntJS</li>
+								<li class="cv__text"><span class="cv__name"></span>Jira</li>
+								<li class="cv__text"><span class="cv__name"></span>Redmine</li>
+								<li class="cv__text"><span class="cv__name"></span>Javascript (learning)</li>
+								<li class="cv__text"><span class="cv__name"></span>GIT</li>
+								<li class="cv__text"><span class="cv__name"></span>jQuery</li>
+								<li class="cv__text"><span class="cv__name"></span>Working with HTML templates (Python)</li>
+							</ul>
+						</div>
+					</div>
+				<a href="#top" id="label"> Go to top </a>
+			</div>
+			<footer class="footer">
+				<div class="media">
+					<div class="page__title">Write me, call me, read me</div>
+					<div class="social">
+						<a href="https://www.facebook.com/selenka.kotets" class="social-icon">
+							<img src="static/images/facebook.png" alt=""/>
+						</a>
+						<a href="https://twitter.com/selenka_rise" class="social-icon">
+							<img src="static/images/twitter.png" alt=""/>
+						</a>
+						<a href="https://ua.linkedin.com/pub/lena-kotets/92/556/903" class="social-icon">
+							<img src="static/images/linkedin.png" alt=""/>
+						</a>
+						<a href="https://instagram.com/selenka.rise/" class="social-icon">
+							<img src="static/images/instagram.png" alt=""/>
+						</a>
+						<a href="skype:lenakey89?chat" class="social-icon">
+							<img src="static/images/skype.png" alt=""/>
+						</a>
+					</div>
+				</div>
+			</footer>
+			</div>
 		</div>
+		<script src="static/js/lib.js"></script>
+		<script src="static/js/script.js"></script>
+	</body>
 
-		<ul class="list clearfix">
-			<li class="list__item">
-				<a href="/car-rental" class="list__item__link">
-					<div class="list__item__link__preview">
-						<div class="list__item__link__preview__img">
-							<img src="car_rental.png">
-						</div>
-					</div>
-					<div class="list__item__link__title">Car Rental</div>
-					<div class="list__item__link__info">Sep 2013 (sample)</div>
-				</a>
-			</li>
-			<li class="list__item">
-				<a href="/clothe-store" class="list__item__link">
-					<div class="list__item__link__preview">
-						<div class="list__item__link__preview__img">
-							<img src="clothe-store.png">
-						</div>
-					</div>
-					<div class="list__item__link__title">Clothe Store</div>
-					<div class="list__item__link__info">Dec 2013 (sample)</div>
-				</a>
-			</li>
-			<li class="list__item">
-				<a href="/marathon" class="list__item__link">
-					<div class="list__item__link__preview">
-						<div class="list__item__link__preview__img">
-							<img src="marathon_sm.png">
-						</div>
-					</div>
-					<div class="list__item__link__title">Marathon</div>
-					<div class="list__item__link__info">Mar 2014 (sample)</div>
-				</a>
-			</li>
-			<li class="list__item">
-				<a href="/ribbons" class="list__item__link">
-					<div class="list__item__link__preview">
-						<div class="list__item__link__preview__img">
-							<img src="ribbons.png">
-						</div>
-					</div>
-					<div class="list__item__link__title">Ribbons</div>
-					<div class="list__item__link__info">Apr 2014 (sample)</div>
-				</a>
-			</li>
-			<li class="list__item">
-				<a href="/infomir/company.html" class="list__item__link">
-					<div class="list__item__link__preview">
-						<div class="list__item__link__preview__img">
-							<img src="infomir.jpg">							
-						</div>
-					</div>
-					<div class="list__item__link__title">Infomir</div>
-					<div class="list__item__link__info">May 2014</div>
-				</a>
-			</li>
-			<li class="list__item">
-				<a href="" class="list__item__link">
-					<div class="list__item__link__preview">
-						<div class="list__item__link__preview__img">
-							
-						</div>
-					</div>
-					<div class="list__item__link__title">&lt;untitled/&gt;</div>
-				</a>
-			</li>
-			
-		</ul>
-	</div>
-</body>
 </html>
-
