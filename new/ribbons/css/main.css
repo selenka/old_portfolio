@@ -1,0 +1,763 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+tt,
+var,
+u,
+inner,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: "BauhausStdLight";
+  src: url("../fonts/bauhaus-std-light.otf") format('opentype');
+}
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+html,
+body {
+  font: 12px/18px 'Arial';
+  max-width: 1000px;
+  margin: 0 auto;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+input,
+textarea,
+select {
+  outline: none;
+  border: none;
+}
+/*+++++++++++++++++++++++++++++++++++++++*/
+.preview,
+.send,
+.register,
+.login {
+  float: right;
+  font: 11px 'Arial';
+  border-radius: 5px;
+  height: 19px;
+  text-align: center;
+  line-height: 19px;
+  margin: 5px 0 0 5px;
+}
+.preview,
+.register {
+  width: 52px;
+  color: #d0c1b2;
+  background: #f3ece4;
+}
+.preview:hover,
+.register:hover {
+  color: #fff;
+  background: #3aafeb;
+}
+.send,
+.login {
+  width: 38px;
+  color: #fff;
+  background: #3aafeb;
+}
+.register,
+.login {
+  float: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.register {
+  margin-left: 21px;
+}
+.login {
+  background: #ef2d5d;
+}
+.wrapper {
+  width: 1000px;
+  background: #eae3d1;
+  height: 100%;
+  overflow: hidden;
+}
+.header {
+  *zoom: 1;
+  height: 182px;
+  background: #fdfcf2;
+  border-bottom: 1px solid #d4ccb8;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+.header:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.header__bg {
+  *zoom: 1;
+  width: 922px;
+  float: right;
+  height: 182px;
+  position: relative;
+  background: #fdfcf2;
+  border-bottom-left-radius: 5em;
+}
+.header__bg:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.header__bg:after {
+  content: '';
+  display: block;
+  width: 121px;
+  height: 181px;
+  position: absolute;
+  background: #ef2d5d;
+  top: 0;
+  left: -37px;
+  border-radius: 0 5em;
+  z-index: -1;
+}
+.header__bg:before {
+  content: '';
+  display: block;
+  width: 121px;
+  height: 181px;
+  position: absolute;
+  background: #3aafeb;
+  top: 0;
+  left: -77px;
+  border-radius: 0 5em;
+  z-index: -2;
+}
+.header__top {
+  padding: 18px 13px 13px 67px;
+}
+.header__link {
+  display: inline-block;
+  padding-top: 3px;
+  color: #786566;
+}
+.header__title {
+  font: 72px 'BauhausStdLight';
+  height: 76px;
+  text-transform: uppercase;
+}
+.header__brief {
+  font: 14px 'BauhausStdLight';
+  color: #cbb6b6;
+  padding-left: 47px;
+}
+.header__rss-title {
+  font: 14px 'BauhausStdLight';
+  color: #786566;
+  text-transform: uppercase;
+  float: right;
+  margin-top: 12px;
+}
+.header__rss-icon {
+  display: block;
+  width: 27px;
+  height: 27px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxOEFGOUE3MEMxNjAxMUUzQkEzRUNDQTE1QkE4NUY3MiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxOEFGOUE3MUMxNjAxMUUzQkEzRUNDQTE1QkE4NUY3MiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjE4QUY5QTZFQzE2MDExRTNCQTNFQ0NBMTVCQTg1RjcyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjE4QUY5QTZGQzE2MDExRTNCQTNFQ0NBMTVCQTg1RjcyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+2eVc8QAABlFJREFUeNp8VluIVVUY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");
+}
+.main {
+  *zoom: 1;
+  width: 750px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 0 0 80px;
+}
+.main:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.main__top {
+  *zoom: 1;
+  padding: 11px 0 18px;
+}
+.main__top:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.main__nav {
+  *zoom: 1;
+  float: left;
+  margin: 0 0 0 11px;
+  padding-top: 9px;
+}
+.main__nav:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.main__nav-item {
+  font: 14px 'BauhausStdLight';
+  color: #786566;
+  text-transform: uppercase;
+  margin-right: 1px;
+  width: 94px;
+  height: 25px;
+  float: left;
+  text-align: center;
+  line-height: 24px;
+}
+.main__nav-item:hover {
+  color: #3aafeb;
+  background: #fdfcf2;
+  border: 1px solid #e1dcce;
+  outline: 1px solid #fdfcf2;
+  border-radius: 5px;
+  line-height: 23px;
+}
+.main__search {
+  float: right;
+  width: 141px;
+  height: 23px;
+  border: 1px solid #d4ccb8;
+  outline: 1px solid #fff;
+  font: italic 14px 'BauhausStdLight';
+  color: #e3ded1;
+  padding: 5px 25px 5px 5px;
+  margin: 2px 34px 0 0;
+  background: #fdfcf2 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAQCAYAAAD52jQlAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyQ0Y0NTg5OUMxNjAxMUUzQjg2OUNFRkQ5Qjc1ODBENyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyQ0Y0NTg5QUMxNjAxMUUzQjg2OUNFRkQ5Qjc1ODBENyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjJDRjQ1ODk3QzE2MDExRTNCODY5Q0VGRDlCNzU4MEQ3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjJDRjQ1ODk4QzE2MDExRTNCODY5Q0VGRDlCNzU4MEQ3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+1uJgSwAAA1hJREFUeNqEU0uIFFcUve/Vq6r+2zM93YODGRN0oUOCTGavCQi60wFnJS6yEEVwqRBQFAzZCko2QVwIIkEIZDsLF4Io7twMIir4m55PT/e0dn26Pq8893UXKCHkwa33qt6955577i2RJAnxklJSu93+GcfbWZZ9S1+vQab1fcd1LzcajQ/0P0tEUURCCNrY2LgCsKswYsODlG1TiqQaZ8uyCMCv6hMTRwqFwivj81+gw+GQut3uotb6bxixVSoVKpfL5DgOpWlKnudRv983yaUQjycbjYOITfidFyfIzwa01+s5CPIBZoEJ1XbsoHq9bsBHziyNRb7vUaezZb6VSqXTSHqLfb4Ey5fyPW9O69RiB6VswzCXJF9pqgklk+u6FAQB3x9VSt3K73MpOIbPahhFM6ZR+CCMGTnpS83y8lzXMaBxFO3/lCSC3Uzq/DGOUZaUYZZnM8ESzKJ/lcXTocGY4KYEbbkFOxu9CkoQx820xzGqWCq94OwaDUlgXDqXGkVDoysz4IZxUh9+NvhtavvNdlyjvpcSGkEJYoqA390qG2LSte0PCF7hurlRaBzFcYxSC1QslmBFk32r00GSlASC7q2qpeV3+vx2KCiIBcWhpjjFKIID8zBzOhgMdsJWE4BJzCOXig6DoT0eKd/sVZnRg/eaTohJ6EH0a+Dd/HGyfFGGQWjbGe1tVkb6r62t0fT0NK2vr+8Dw6ewaq6nHHdz1CxNz9oRHaea0dU8MGpLvv9wqeKerBWt97NTZeNv9dttaOBStVrtYD6vK8vaAuQeRBWElCms5yq1/Naz//ptO/3pTRZj7IeYs9G+Imn3/TBYXJTWo29a5VWBRGJhYcEwqSDD2QsXqNVqUbPZ5ObIOAwLWogEmkebm13qZK25Jzp7eoOyMqVcSjYeI4uOiej1L5OtH5w08MWh+Xl8IgpQajQuewL7zOwsefg1eSq6Hz/SYHx37tLvleWk9PCZtuafk4POZCMpHDFsdMOZ5p9/dBnU4VIBzLsCAQvgbBL6SIVmctIiGOFnJw/MqxO7dOXQqdt+vXl44Dom2fehdyf859qZl71PEYNCeZpiBcbADgOT6a/ZGTT/E/SIFiWhtMLazMJ36dSBOZEO36mVuw8GWnsqy3qfBRgANUPY0jBkdLkAAAAASUVORK5CYII=") no-repeat 116px 3px;
+}
+.main__search:focus {
+  color: #786566;
+  font-style: normal;
+}
+.main .main__content {
+  float: left;
+  width: 408px;
+  position: relative;
+  z-index: 3;
+}
+.main .main__content .main__post-title {
+  width: 408px;
+  height: 63px;
+  border-radius: 3em 0;
+  background: #fdfcf2;
+  padding: 10px 0 0 32px;
+  position: relative;
+}
+.main .main__content .main__post-title__date {
+  width: 69px;
+  height: 63px;
+  background: #ef2d5d;
+  border-radius: 0 39px;
+  position: absolute;
+  top: -1px;
+  left: -70px;
+  font: 24px 'BauhausStdLight';
+  color: #fffffe;
+  text-align: center;
+  line-height: 15px;
+  padding-top: 18px;
+}
+.main .main__content .main__post-title__month {
+  font: 14px 'BauhausStdLight';
+  color: #fffffe;
+  text-transform: uppercase;
+}
+.main .main__content .main__post-title__name {
+  font: 24px 'BauhausStdLight';
+  color: #3aafeb;
+  text-transform: uppercase;
+}
+.main .main__content .main__post-title__time {
+  padding-right: 9px;
+}
+.main .main__content .main__post-title__time,
+.main .main__content .main__post-title__tags {
+  font: 12px 'BauhausStdLight';
+  color: #d0c1b2;
+}
+.main .main__content .main__post-title__user,
+.main .main__content .main__post-title__tag-item {
+  font: 12px 'BauhausStdLight';
+  color: #786566;
+}
+.main .main__content .main__post-article {
+  width: 408px;
+  border-radius: 0 3em 3em 3em;
+  background: -webkit-radial-gradient(50% 60%, circle cover, #fffffe 0%, #f9f8e9 100%);
+  background: -moz-radial-gradient(50% 60%, circle cover, #fffffe 0%, #f9f8e9 100%);
+  position: relative;
+  padding: 27px 39px 29px 36px;
+  margin-bottom: 44px;
+}
+.main .main__content .main__post-article:before {
+  content: '';
+  display: block;
+  width: 68px;
+  height: 98px;
+  background: #3aafeb;
+  border-radius: 39px 0;
+  position: absolute;
+  top: -1px;
+  left: -69px;
+}
+.main .main__content .main__post-article__text {
+  font: 12px 'Arial';
+  color: #786566;
+  line-height: 18px;
+  padding-bottom: 18px;
+}
+.main .main__content .main__post-article__link {
+  color: #3aafeb;
+}
+.main .main__content .main__post-article__i {
+  font-style: italic;
+}
+.main .main__content .main__post-article__comments {
+  *zoom: 1;
+}
+.main .main__content .main__post-article__comments:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.main .main__content .main__post-article__comment {
+  width: 336px;
+  border-bottom: 1px dotted #dacacb;
+  padding-bottom: 22px;
+  margin-bottom: 20px;
+}
+.main .main__content .main__post-article__comment-count,
+.main .main__content .main__post-article__comment-rss {
+  float: right;
+  font: 12px 'Arial';
+  color: #d0c1b2;
+  padding-left: 13px;
+}
+.main .main__content .main__post-article__comment-main,
+.main .main__content .main__post-article__comment-reply {
+  *zoom: 1;
+  padding-bottom: 19px;
+}
+.main .main__content .main__post-article__comment-main:after,
+.main .main__content .main__post-article__comment-reply:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.main .main__content .main__post-article__comment-left {
+  float: left;
+  width: 55px;
+  height: 70px;
+}
+.main .main__content .main__post-article__comment-avatar {
+  border: 1px solid #bfa0a2;
+  width: 51px;
+  height: 51px;
+  padding: 1px;
+}
+.main .main__content .main__post-article__comment-addicon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAABLcGxfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozNzk1RTgyM0MxNjAxMUUzQTVBOUFDRTZCODJFMDg1MCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozNzk1RTgyNEMxNjAxMUUzQTVBOUFDRTZCODJFMDg1MCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjM3OTVFODIxQzE2MDExRTNBNUE5QUNFNkI4MkUwODUwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjM3OTVFODIyQzE2MDExRTNBNUE5QUNFNkI4MkUwODUwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+XAnP/gAAActJREFUeNo0kUtrU1EUhb97c/K6SWoSbFAEqRCldhAptuDEUSGCiIOi0A6c6V/wHzhxIgEHgqDUQQfOBMWB0Ir4oIPakbZkkGBJTEisaZLmfe857l7qhs157XX2WntZuVyO44i2G2wtLi9w5/5rvL5NJKLZ3Czk3j8tWM4UxrL8OsVJmPEQEtML3Jy/MBuAvbBclvZX+v1xIeaAbdtorVHBUZdBu0PvoA31WoPfLnvWIThpOddLk2aTgTcmFo8SjKdQ25dvXGNucZWuIKbP32IoxUrDsAPZi0u/Hjx6QjoF1cru2R8f1+Dh83e0jKEmWeoYvlcM21VJWYt/DRXPMJK3F1uG+fyMotOqUz2CrvysjYjxwBcoe6GLJW8DoXf4px92XW3jqjMYURVMSJGoHY6gJwPojUGw2DEBSU4CjvKMbdnXly/pTHaJYatLeuYeK3fzhKRDSMb09kOZna+PSfodStmD3Q11tblTNOVPxXCvxZfs7Tbj1bxwEUZRKJc+X/m29iyQShJ0oowiU6hJ5BQ6lMAKCx0neY54EpK2sBOAk5jVqQwmfRr3xC91bIZvSjhG5qi20Vh/+YagK4aGNPs/X6l4zJfyP/4JMAAa8L13uyTKGAAAAABJRU5ErkJggg==") no-repeat 0px 1px;
+}
+.main .main__content .main__post-article__comment-right {
+  float: left;
+  width: 272px;
+}
+.main .main__content .main__post-article__comment-right.reply {
+  width: 213px;
+}
+.main .main__content .main__post-article__comment-time {
+  font: 11px 'Arial';
+  color: #d0c1b2;
+}
+.main .main__content .main__post-article__comment-user,
+.main .main__content .main__post-article__comment-addreply {
+  font: 11px 'Arial';
+  color: #786566;
+}
+.main .main__content .main__post-article__comment-text {
+  font: 11px 'Arial';
+  color: #ae948e;
+}
+.main .main__content .main__post-article__comment-i {
+  font-style: italic;
+}
+.main .main__content .main__post-article__comment-reply {
+  padding-left: 60px;
+}
+.main .main__content .main__post-article__comment-input {
+  width: 274px;
+  height: 51px;
+  border: 1px solid #f1ddde;
+  padding: 7px;
+  color: #f1ddde;
+  font: 12px 'Arial';
+  background: #fdfcf2;
+}
+.main__account {
+  float: right;
+  margin-bottom: 31px;
+  position: relative;
+  z-index: 2;
+}
+.main__account:before {
+  content: '';
+  display: block;
+  width: 108px;
+  height: 570px;
+  background: #ef2d5d;
+  border-radius: 0 5em;
+  position: absolute;
+  top: -144px;
+  right: -13px;
+  transform: rotate(48.5deg);
+  -moz-transform: rotate(48.5deg);
+  -webkit-transform: rotate(48.5deg);
+  z-index: -1;
+}
+.main__account:after {
+  content: '';
+  display: block;
+  width: 74px;
+  height: 570px;
+  background: #3aafeb;
+  border-radius: 0 5em;
+  position: absolute;
+  top: -128px;
+  right: -7px;
+  transform: rotate(48.5deg);
+  -moz-transform: rotate(48.5deg);
+  -webkit-transform: rotate(48.5deg);
+  z-index: -1;
+}
+.main__account__title {
+  display: inline-block;
+  width: 221px;
+  height: 37px;
+  border-radius: 0 3em;
+  background: #fdfcf2;
+  text-align: center;
+  text-transform: uppercase;
+  font: 18px 'BauhausStdLight';
+  line-height: 35px;
+  color: #786566;
+}
+.main__account__block {
+  width: 221px;
+  height: 168px;
+  background: -webkit-radial-gradient(50% 60%, circle cover, #fffffe 0%, #f9f8e9 100%);
+  background: -moz-radial-gradient(50% 60%, circle cover, #fffffe 0%, #f9f8e9 100%);
+  border-radius: 3em 0 3em 3em;
+  padding: 30px 38px 25px;
+}
+.main__account__id,
+.main__account__pass {
+  width: 141px;
+  height: 23px;
+  border: 1px solid #d4ccb8;
+  outline: 1px solid #fff;
+  font: italic 14px 'BauhausStdLight';
+  color: #e3ded1;
+  background: #fdfcf2;
+  padding: 5px 25px 5px 5px;
+  margin: 2px 34px 0 0;
+  margin-bottom: 6px;
+}
+.main__account__id:focus,
+.main__account__pass:focus {
+  color: #786566;
+  font-style: normal;
+}
+.main__account__forget-pass {
+  font: 12px 'Arial';
+  color: #d0c1b2;
+  margin-left: 25px;
+}
+.main__news {
+  float: right;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 31px;
+}
+.main__news:before {
+  content: '';
+  display: block;
+  width: 90px;
+  height: 1080px;
+  background: #3aafeb;
+  position: absolute;
+  top: 76px;
+  left: -320px;
+  transform: rotate(48.5deg);
+  -moz-transform: rotate(48.5deg);
+  -webkit-transform: rotate(48.5deg);
+  z-index: -1;
+}
+.main__news:after {
+  content: '';
+  display: block;
+  width: 52px;
+  height: 1080px;
+  background: #ef2d5d;
+  position: absolute;
+  top: 120px;
+  left: -320px;
+  transform: rotate(48.5deg);
+  -moz-transform: rotate(48.5deg);
+  -webkit-transform: rotate(48.5deg);
+  z-index: -1;
+}
+.main__news__title {
+  display: inline-block;
+  width: 221px;
+  height: 37px;
+  border-radius: 0 3em;
+  background: #fdfcf2;
+  text-align: center;
+  text-transform: uppercase;
+  font: 18px 'BauhausStdLight';
+  line-height: 35px;
+  color: #786566;
+}
+.main__news__list {
+  width: 221px;
+  background: -webkit-radial-gradient(50% 60%, circle cover, #fffffe 0%, #f9f8e9 100%);
+  background: -moz-radial-gradient(50% 60%, circle cover, #fffffe 0%, #f9f8e9 100%);
+  border-radius: 3em 0 3em 3em;
+  padding: 30px 38px 0px;
+}
+.main__news__list-item {
+  padding-bottom: 20px;
+  font: 12px 'Arial';
+  color: #786566;
+}
+.main__news__list-link {
+  font: 12px 'Arial';
+  color: #786566;
+}
+.main__news__list-link:hover {
+  text-decoration: underline;
+}
+.main__tags {
+  float: right;
+  width: 221px;
+}
+.main__tags__title {
+  display: inline-block;
+  width: 221px;
+  height: 37px;
+  border-radius: 0 3em;
+  background: #fdfcf2;
+  text-align: center;
+  text-transform: uppercase;
+  font: 18px 'BauhausStdLight';
+  line-height: 35px;
+  color: #786566;
+}
+.main__tags__block {
+  width: 221px;
+  background: -webkit-radial-gradient(50% 60%, circle cover, #fffffe 0%, #f9f8e9 100%);
+  background: -moz-radial-gradient(50% 60%, circle cover, #fffffe 0%, #f9f8e9 100%);
+  border-radius: 3em 0 3em 3em;
+  padding: 30px 38px 25px;
+  text-align: center;
+}
+.main__tags__item {
+  display: inline-block;
+  font: 18px 'BauhausStdLight';
+  text-transform: uppercase;
+  color: #786566;
+  margin: 0 6px 17px 0;
+}
+.main__tags__item.blue-tag {
+  color: #3aafeb;
+}
+.main__tags__item.pink-tag {
+  color: #ef2d5d;
+}
+.main__tags__item-sup {
+  font-size: 12px;
+}
+.footer {
+  height: 298px;
+  background: #3b2f2f;
+  border-top: 1px solid #746868;
+  position: relative;
+  z-index: 2;
+}
+.footer__inner {
+  *zoom: 1;
+  width: 750px;
+  margin: 0 auto;
+  padding: 28px 0 0 80px;
+}
+.footer__inner:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.footer__nav {
+  width: 170px;
+  float: left;
+}
+.footer__title {
+  font: 20px 'BauhausStdLight';
+  color: #fff;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 20px;
+}
+.footer__list-item {
+  font: 14px 'BauhausStdLight';
+  padding-bottom: 11px;
+}
+.footer__list-link {
+  color: #8d887f;
+}
+.footer__photos {
+  *zoom: 1;
+  float: left;
+  width: 236px;
+}
+.footer__photos:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.footer__photo-item {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #eae3d1;
+  width: 49px;
+  height: 49px;
+}
+.footer__about {
+  float: right;
+  width: 190px;
+}
+.footer__title {
+  font: 20px 'BauhausStdLight';
+  color: #fff;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 20px;
+}
+.footer__text {
+  text-transform: uppercase;
+  font: 12px 'BauhausStdLight';
+  color: #8d887f;
+  line-height: 20px;
+}

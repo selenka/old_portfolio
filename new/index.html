@@ -11,12 +11,12 @@
 	<body>
 		<div class="wrapper">
 			<div class="back">
-			<header class="header">
+			<header id="top" class="header">
 				<div class="media">
 					<div id="logo" class="header__logo"><span>Lena</span><br>
 						Kotets
 					</div>
-					<ul class="header__nav">
+					<ul id="nav" class="header__nav">
 						<li class="header__item"><a class="header__link" href="#about">About me</a></li>
 						<li class="header__item"><a class="header__link" href="#portfolio">Portfolio</a></li>
 						<li class="header__item"><a class="header__link" href="#cv">CV</a></li>
@@ -25,44 +25,38 @@
 			</header>
 			<div class="content">
 				<div class="page">
-					<!--<div id="slider" class="slider owl-carousel">-->
-						<!--<div class="item slider__item slide1">-->
-							<!--<span class="slider__text">Welcome!</span>-->
-							<!--<img src="static/images/1.jpg" alt=""/>-->
-						<!--</div>-->
-						<!--<div class="item slider__item slide2">-->
-							<!--<span class="slider__text">I can be modern!</span>-->
-							<!--<img src="static/images/camaro.jpg" alt=""/>-->
-						<!--</div>-->
-						<!--<div class="item slider__item slide3">-->
-							<!--<span class="slider__text">I can be classic!</span>-->
-							<!--<img src="static/images/camaro69.jpg" alt=""/>-->
-						<!--</div>-->
-						<!--<div class="item slider__item slide4">-->
-							<!--<span class="slider__text">I can be Responsive!</span>-->
-							<!--<img src="static/images/responsive.jpg" alt=""/>-->
-						<!--</div>-->
-						<!--<div class="item slider__item slide5">-->
-							<!--<span class="slider__text">I do have some Skills!</span>-->
-							<!--<img src="static/images/skills.jpg" alt=""/>-->
-						<!--</div>-->
-					<!--</div>-->
-					<div class="animation">
-						<div class="animation-text">Welcome to my Portfolio!</div>
-						<div class="animation-text">I can be Modern!</div>
-						<div class="animation-text">I can be Classic!</div>
-						<div class="animation-text">I can be Responsive!</div>
-						<div class="animation-text">And i do have some skills!</div>
+					<div id="slider" class="slider owl-carousel">
+						<div class="item slider__item slide1">
+							<img src="static/images/welcome.jpg" alt=""/>
+						</div>
+						<div class="item slider__item slide2">
+							<span class="slider__text">I can be modern!</span>
+							<img src="static/images/modern.png" alt=""/>
+						</div>
+						<div class="item slider__item slide3">
+							<span class="slider__text">I can be classic!</span>
+							<img src="static/images/classic.png" alt=""/>
+						</div>
+						<div class="item slider__item slide4">
+							<span class="slider__text">I can be Responsive!</span>
+							<img src="static/images/responsive_dogs.jpg" alt=""/>
+						</div>
+						<div class="item slider__item slide5">
+							<span class="slider__text">I do have some Skills!</span>
+							<img src="static/images/skills.jpg" alt=""/>
+						</div>
 					</div>
-
 				</div>
 
-					<h2 class="page__title">
+					<h2 id="about" class="page__title">
 						<div class="media">
-							About me <a href="#logo" class="page__top-link">top</a>
+							About me
 						</div>
 					</h2>
-					<p class="page__text media"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id itaque maiores quasi, ratione saepe temporibus vel vitae! Amet dicta facere molestiae natus odio odit reiciendis sed sint, soluta vitae.  </p>
+					<p class="page__text media">
+						I'm responsible, enthusiastic and self-motivated person. I work with HTML5 and CSS3. I try to keep on top of these subjects. I work with pre-processor "Stylus" and "Less".
+						Due to the fact, that I lack experience, I promise - to do my job, to learn, to do mistakes and to resolve them :)
+					</p>
 					<div class="page__misc">
 						<div class="media">
 							<div class="page__misc__icons">
@@ -83,56 +77,84 @@
 
 				<div id="portfolio" class="page">
 						<h2 class="page__title">
-							<div class="media">Portfolio <a href="#logo" class="page__top-link">top</a></div>
+							<div class="media">Portfolio</div>
 						</h2>
-						<ul class="page__gallery">
+						<ul class="page__gallery media">
 							<li class="page__gallery-item">
-								<img src="http://lorempixel.com/600/400/people/1/" alt=""/>
+								<img src="preview/car-rental.jpg" alt=""/>
 								<div class="page__gallery-preview">
-									<span class="page__gallery-text">was made at date and month.Used:stylus, bootstrap</span>
-									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="#">View</a></span>
+									<span class="page__gallery-text">
+										<span class="page__gallery-title">September 2013 (sample)</span>
+										<span class="page__gallery-text">Used: CSS only</span>
+									</span>
+									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="/car-rental" target="_blank">View</a></span>
 								</div>
 							</li>
 							<li class="page__gallery-item">
-								<img src="http://lorempixel.com/600/400/nature/1/" alt=""/>
+								<img src="preview/clothestore.jpg" alt=""/>
 								<div class="page__gallery-preview">
-									<span class="page__gallery-text">was made at date and month.Used:stylus, bootstrap</span>
-									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="#">View</a></span>
+									<span class="page__gallery-text">
+										<span class="page__gallery-title">December 2013 (sample)</span>
+										<span class="page__gallery-text">Used: CSS only</span>
+									</span>
+									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="/cloth-store" target="_blank">View</a></span>
 								</div>
 							</li>
 							<li class="page__gallery-item">
-								<img src="http://lorempixel.com/600/400/city/3/" alt=""/>
+								<img src="preview/marathon.jpg" alt=""/>
 								<div class="page__gallery-preview">
-									<span class="page__gallery-text">was made at date and month.Used:stylus, bootstrap</span>
-									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="#">View</a></span>
+									<span class="page__gallery-text">
+										<span class="page__gallery-title">March 2013 (sample)</span>
+										<span class="page__gallery-text">Used: CSS only</span>
+									</span>
+									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="/marathon" target="_blank">View</a></span>
 								</div>
 							</li>
 							<li class="page__gallery-item">
-								<img src="http://lorempixel.com/600/400/people/2/" alt=""/>
+								<img src="preview/ribbons.jpg" alt=""/>
 								<div class="page__gallery-preview">
-									<span class="page__gallery-text">was made at date and month.Used:stylus, bootstrap</span>
-									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="#">View</a></span>
+									<span class="page__gallery-text">
+										<span class="page__gallery-title">April 2014 (sample)</span>
+										<span class="page__gallery-text">Used: Preprocessor 'Stylus'</span>
+									</span>
+									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="/ribbons" target="_blank">View</a></span>
 								</div>
 							</li>
 							<li class="page__gallery-item">
-								<img src="http://lorempixel.com/600/400/nature/2/" alt=""/>
+								<img src="preview/infomir.jpg" alt=""/>
 								<div class="page__gallery-preview">
-									<span class="page__gallery-text">was made at date and month.Used:stylus, bootstrap</span>
-									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="#">View</a></span>
+									<span class="page__gallery-text">
+										<span class="page__gallery-title">May 2014</span>
+										<span class="page__gallery-text">Used: Preprocessor 'Stylus', jQuery</span>
+									</span>
+									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="/infomir" target="_blank">View</a></span>
 								</div>
 							</li>
-							<li class="page__gallery-item">
-								<img src="http://lorempixel.com/600/400/city/5/" alt=""/>
+							<li class="page__gallery-item steelkiwi">
+								<img src="preview/barqspeed.jpg" alt=""/>
 								<div class="page__gallery-preview">
-									<span class="page__gallery-text">was made at date and month.Used:stylus, bootstrap</span>
-									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="#">View</a></span>
+									<span class="page__gallery-text">
+										<span class="page__gallery-title">November 2014</span>
+										<span class="page__gallery-text">Used: Preprocessor 'Stylus', jQuery (plugins), Responsive design</span>
+									</span>
+									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="https://www.barqspeed.com" target="_blank">View</a></span>
+								</div>
+							</li>
+							<li class="page__gallery-item steelkiwi">
+								<img src="preview/bookelgouna.jpg" alt=""/>
+								<div class="page__gallery-preview">
+									<span class="page__gallery-text">
+										<span class="page__gallery-title">December 2014 - May 2015 (In Progress)</span>
+										<span class="page__gallery-text">Used: Preprocessor 'Less', CSS3, jQuery (plugins), Responsive design, html templates (Python), JS, RTL direction</span>
+									</span>
+									<span class="page__gallery-linkbox"><a class="page__gallery-link" href="http://www.bookelgouna.com/" target="_blank">View</a></span>
 								</div>
 							</li>
 						</ul>
 				</div>
 				<div id='cv' class="page">
 						<h2 class="page__title">
-							<div class="media">CV <a href="#logo" class="page__top-link">top</a></div>
+							<div class="media">CV </div>
 						</h2>
 						<div class="cv media">
 							<ul class="cv__info">
@@ -143,15 +165,12 @@
 								<li class="cv__text"><span class="cv__name">Tel:</span>+38(067)290-01-06</li>
 								<li class="cv__text"><span class="cv__name">Email:</span><a class="cv__link" href="mailto:lenka@kotets.com">lenka@kotets.com</a></li>
 								<li class="cv__text"><span class="cv__name">Skype:</span>lenakey89</li>
-								<li class="cv__text"><span class="cv__name">Linkedin:</span><a class="cv__link" href="https://www.linkedin.com/pub/lena-serebryakova/92/556/903">Lena Kotets</a></li>
+								<li class="cv__text"><span class="cv__name">Linkedin:</span><a class="cv__link" href="https://ua.linkedin.com/pub/lena-kotets/92/556/903">Lena Kotets</a></li>
 							</ul>
 							<h2 class="cv__title"><span class="cv__class">class</span> = "general-information"</h2>
 							<ul class="cv__info">
-								<li class="cv__text"><span class="cv__name">Occupation:</span>Junior Front-End Developer in SteelKiwi Development</li>
-								<li class="cv__text"><span class="cv__name">About me:</span>I work with HTML5 and CSS3. I try to keep on top of these subjects. I work with pre-processor "Stylus".<br>
-									Due to the fact, that I lack experience, I promise - to do my job, to learn, to do mistakes and to resolve them :)
-								</li>
-								<!-- <li class="cv__info-text"><span class="cv__info-name">Current situation:</span>Have a full time job, so in a case of job offer need time to quit and hand over responsibilities. </li>		 -->
+								<li class="cv__text"><span class="cv__name">Occupation:</span>Front-End Developer in SteelKiwi Development</li>
+								 <li class="cv__text"><span class="cv__name">Current position:</span> Junior Front-End Developer</li>
 							</ul>
 							<h2 class="cv__title"><span class="cv__class">class</span> = "employment history"</h2>
 							<ul class="cv__info">
@@ -173,33 +192,40 @@
 							<ul class="cv__info">
 								<li class="cv__text"><span class="cv__name"></span>HTML5</li>
 								<li class="cv__text"><span class="cv__name"></span>CSS3</li>
+								<li class="cv__text"><span class="cv__name"></span>Responsive markup</li>
+								<li class="cv__text"><span class="cv__name"></span>HTML Emails</li>
 								<li class="cv__text"><span class="cv__name"></span>Stylus</li>
+								<li class="cv__text"><span class="cv__name"></span>LESS</li>
+								<li class="cv__text"><span class="cv__name"></span>Bootstrap(not using often)</li>
+								<li class="cv__text"><span class="cv__name"></span>GruntJS</li>
 								<li class="cv__text"><span class="cv__name"></span>Jira</li>
 								<li class="cv__text"><span class="cv__name"></span>Redmine</li>
 								<li class="cv__text"><span class="cv__name"></span>Javascript (learning)</li>
 								<li class="cv__text"><span class="cv__name"></span>GIT</li>
 								<li class="cv__text"><span class="cv__name"></span>jQuery</li>
+								<li class="cv__text"><span class="cv__name"></span>Working with HTML templates (Python)</li>
 							</ul>
 						</div>
 					</div>
+				<a href="#top" id="label"> Go to top </a>
 			</div>
 			<footer class="footer">
 				<div class="media">
-					<div class="page__title">Write me, call me, read me<a href="#logo" class="page__top-link">top</a></div>
+					<div class="page__title">Write me, call me, read me</div>
 					<div class="social">
-						<a href="#" class="social-icon">
+						<a href="https://www.facebook.com/selenka.kotets" class="social-icon">
 							<img src="static/images/facebook.png" alt=""/>
 						</a>
-						<a href="#" class="social-icon">
+						<a href="https://twitter.com/selenka_rise" class="social-icon">
 							<img src="static/images/twitter.png" alt=""/>
 						</a>
-						<a href="#" class="social-icon">
+						<a href="https://ua.linkedin.com/pub/lena-kotets/92/556/903" class="social-icon">
 							<img src="static/images/linkedin.png" alt=""/>
 						</a>
-						<a href="#" class="social-icon">
+						<a href="https://instagram.com/selenka.rise/" class="social-icon">
 							<img src="static/images/instagram.png" alt=""/>
 						</a>
-						<a href="#" class="social-icon">
+						<a href="skype:lenakey89?chat" class="social-icon">
 							<img src="static/images/skype.png" alt=""/>
 						</a>
 					</div>

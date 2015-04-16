@@ -1,0 +1,89 @@
+.feature__separator {
+  border: 0;
+  height: 1px;
+  background: #e8e8e8;
+  margin-bottom: 73px;
+}
+.feature__icons {
+  padding-top: 8px;
+  padding-bottom: 120px;
+}
+.feature__icon-item {
+  display: inline-block;
+  width: 62px;
+  height: 62px;
+  background: url("../images/sprite2.png") no-repeat -1px -745px;
+  border-radius: 5px;
+  margin-right: 40px;
+  position: relative;
+  cursor: pointer;
+}
+.feature__icon-item.youtube {
+  background: url("../images/sprite2.png") no-repeat -1px -745px;
+}
+.feature__icon-item.ex {
+  background: url("../images/sprite2.png") no-repeat -2px -811px;
+}
+.feature__icon-item.megogo {
+  background: url("../images/sprite2.png") no-repeat -1px -875px;
+}
+.feature__icon-item.oll {
+  background: url("../images/sprite2.png") no-repeat -2px -943px;
+}
+.feature__icon-item.vidi {
+  background: url("../images/sprite2.png") no-repeat -2px -1010px;
+}
+.feature__icon-item.picasa {
+  background: url("../images/sprite2.png") no-repeat -3px -1075px;
+}
+.feature__icon-item.br {
+  background: url("../images/sprite2.png") no-repeat -2px -1140px;
+}
+.feature__icon-item.radio {
+  background: url("../images/sprite2.png") no-repeat -2px -1205px;
+}
+.feature__icon-item.karaoke {
+  background: url("../images/sprite2.png") no-repeat -3px -1271px;
+}
+.feature__icon-item.games {
+  background: url("../images/sprite2.png") no-repeat -3px -1337px;
+}
+.feature__icon-item.widgets {
+  background: url("../images/sprite2.png") no-repeat -3px -1405px;
+}
+.feature__icon-item:last-child {
+  margin-right: 0;
+}
+.feature__icon-item:hover {
+  box-shadow: 1px 1px 15px 3px rgba(0,0,0,0.3);
+}
+.feature__icons-title:hover:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 7px;
+  background: url("../images/sprite2.png") no-repeat 0px -728px;
+  top: -20px;
+  left: 23px;
+}
+.feature__icons-title {
+  float: left;
+  padding: 78px 0 0 1px;
+  font: 17px 'PT Sans';
+  color: #414141;
+  width: 62px;
+}
+.active-i {
+  box-shadow: 1px 1px 15px 3px rgba(0,0,0,0.3);
+}
+.active-i:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 7px;
+  background: url("../images/sprite2.png") no-repeat 0px -728px;
+  top: -20px;
+  left: 23px;
+}

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Infomir</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css">
+		<link type="text/css" rel="stylesheet" href="js/lightSlider/css/lightSlider.css">  
+		<script src="js/jquery-1.11.1.js"></script>
+		<script src="js/lightSlider/js/jquery.lightSlider.js"></script>
+		<!--[if lt IE 9]>
+		<script>
+			document.createElement('header');
+			document.createElement('nav');
+			document.createElement('section');
+			document.createElement('article');
+			document.createElement('aside');
+			document.createElement('footer');
+		</script>
+		<![endif]-->
+	</head>
+	<body>
+		<header>
+			<div class="header-up">
+				<div class="wrapper">
+					<ul class="header-up__top-menu">
+						<li class="header-up__item"><a class="header-up__link" href="">Contact Sales</a></li>
+						<li class="header-up__item"><a class="header-up__link" href="">Choose your MAG</a><a class="header-up__more">&#8250;</a></li>
+						<li class="header-up__item"><a class="header-up__link" href="">English<i class="header-up__flag"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="header-low">
+				<div class="wrapper">
+					<a class="header-low__logo" href=""><h1 class="header-low__logo-title">Infomir</h1></a>
+
+					<nav class="header-low__nav">
+						<div  class="header-low__nav-block">
+							<a class="header-low__nav-item" href="">company</a>
+							<div class="header-low__nav-container">
+								<ul class="header-low__nav-menu arrow-company">
+									<li class="header-low__nav-company"><a class="header-low__nav-sublink" href="">Company</a></li>
+									<li class="header-low__nav-company"><a class="header-low__nav-sublink" href="">Press Center</a></li>
+									<li class="header-low__nav-company"><a class="header-low__nav-sublink" href="">Career</a></li>
+									<li class="header-low__nav-company"><a class="header-low__nav-sublink" href="">Partnership</a></li>
+									<li class="header-low__nav-company"><a class="header-low__nav-sublink" href="">Partners</a></li>
+								</ul>
+							</div>
+						</div>
+						<div  class="header-low__nav-block">
+							<a class="header-low__nav-item" href="">products</a>
+							<div class="header-low__nav-container">
+								<ul class="header-low__nav-menu arrow-products">
+									<li class="header-low__nav-products"><a class="header-low__nav-sublink" href="">Company</a></li>
+									<li class="header-low__nav-products"><a class="header-low__nav-sublink" href="">Press Center</a></li>
+									<li class="header-low__nav-products"><a class="header-low__nav-sublink" href="">Career</a></li>
+									<li class="header-low__nav-products"><a class="header-low__nav-sublink" href="">Partnership</a></li>
+									<li class="header-low__nav-products"><a class="header-low__nav-sublink" href="">Partners</a></li>
+								</ul>
+							</div>
+						</div>
+						<div  class="header-low__nav-block">
+							<a class="header-low__nav-item" href="">solutions</a>
+							<div class="header-low__nav-container">
+								<ul class="header-low__nav-menu arrow-solutions">
+									<li class="header-low__nav-solutions"><a class="header-low__nav-sublink" href="">Company</a></li>
+									<li class="header-low__nav-solutions"><a class="header-low__nav-sublink" href="">Press Center</a></li>
+									<li class="header-low__nav-solutions"><a class="header-low__nav-sublink" href="">Career</a></li>
+									<li class="header-low__nav-solutions"><a class="header-low__nav-sublink" href="">Partnership</a></li>
+									<li class="header-low__nav-solutions"><a class="header-low__nav-sublink" href="">Partners</a></li>
+								</ul>
+							</div>
+						</div>
+						<div  class="header-low__nav-block">
+							<a class="header-low__nav-item" href="">support</a>
+							<div class="header-low__nav-container">
+								<ul class="header-low__nav-menu arrow-support">
+									<li class="header-low__nav-support"><a class="header-low__nav-sublink" href="">Company</a></li>
+									<li class="header-low__nav-support"><a class="header-low__nav-sublink" href="">Press Center</a></li>
+									<li class="header-low__nav-support"><a class="header-low__nav-sublink" href="">Career</a></li>
+									<li class="header-low__nav-support"><a class="header-low__nav-sublink" href="">Partnership</a></li>
+									<li class="header-low__nav-support"><a class="header-low__nav-sublink" href="">Partners</a></li>
+								</ul>
+							</div>
+						</div>
+						<div  class="header-low__nav-block">
+							<a class="header-low__nav-item" href="">contact us</a>
+							<div class="header-low__nav-container">
+								<ul class="header-low__nav-menu arrow-contacts">
+									<li class="header-low__nav-contacts"><a class="header-low__nav-sublink" href="">Company</a></li>
+									<li class="header-low__nav-contacts"><a class="header-low__nav-sublink" href="">Press Center</a></li>
+									<li class="header-low__nav-contacts"><a class="header-low__nav-sublink" href="">Career</a></li>
+									<li class="header-low__nav-contacts"><a class="header-low__nav-sublink" href="">Partnership</a></li>
+									<li class="header-low__nav-contacts"><a class="header-low__nav-sublink" href="">Partners</a></li>
+								</ul>
+							</div>
+						</div>
+					
+					</nav>
+					<input class="header-low__search" placeholder="Search on site" type="text">
+				</div>
+			</div>
+		</header>
+		<div class="content wrapper">
+			<!-- !!! content !!! -->
+			<div class="feature">
+				<h1 class="feature__title">Преимущества пользователя</h1>
+					<div class="feature__text-content">
+						<span id="slideTitle" class="feature__tag-line"></span>
+						<p id="slideText" class="feature__text"></p>
+					</div>
+					<div class="feature__slider">
+
+						<ul id="lightSlider" class="feature__slider-tv" >
+							<li class="feature__slider__item">
+								<div class="feature__slider-box">
+									<img class="feature__slider-img" src="images/stalker2.jpg" data-caption="FullHD" data-text="Ни одна деталь не ускользнет от вас с самым ярким, насыщенным и реалистичным изображением в FullHD качестве." alt="">
+								</div>
+							</li>
+							<li class="feature__slider__item">
+								<div class="feature__slider-box">
+									<img class="feature__slider-img" src="images/stalker2-1.jpg" data-caption="ТВ гид" data-text="Вы никогда больше не пропустите матч любимой команды или любопытное ток-шоу. Просмотрите программу телепередач и выставьте напоминания. " alt="">
+								</div>
+							</li>
+							<li class="feature__slider__item">
+								<div class="feature__slider-box">
+									<img class="feature__slider-img" src="images/stalker2-2.jpg" data-caption="Видеотека" data-text="Исключительно простая навигация и деление фильмов по жанрам обеспечивают легкий поиск. Самостоятельно сортируйте фильмы по названию, темам, рейтингу Кинопоиска или дате добавления. Просмотрите трейлер, прочтите описание и добавляйте фильм в избранное. Пользуйтесь расширенным набором функций проигрывателя: ставьте видео на паузу, смотрите с места остановки и перематывайте в случае необходимости." alt="">
+								</div>
+							</li>
+							<li class="feature__slider__item">
+								<div class="feature__slider-box">
+									<img class="feature__slider-img" src="images/stalker2-3.jpg" data-caption="Машина времени" data-text="Навсегда решите проблему неудобного времени показа с «Машиной времени». Просматривайте ночные шоу за завтраком, а утренние биржевые новости в обеденный перерыв. Со встроенными функциями проигрывателя телеэфир гибок как никогда." alt="">
+								</div>
+							</li>
+								<!-- <ul id="lightSlider">
+									<li class="feature__slider-item"><img class="feature__slider-img" src="images/stalker2.jpg" data-caption="FullHD" data-text="Ни одна деталь не ускользнет от вас с самым ярким, насыщенным и реалистичным изображением в FullHD качестве." alt=""></li>
+									<li class="feature__slider-item"><img class="feature__slider-img" src="images/stalker2-1.jpg" data-caption="ТВ гид" data-text="Вы никогда больше не пропустите матч любимой команды или любопытное ток-шоу. Просмотрите программу телепередач и выставьте напоминания. " alt=""></li>
+									<li class="feature__slider-item"><img class="feature__slider-img" src="images/stalker2-2.jpg" data-caption="Видеотека" data-text="Исключительно простая навигация и деление фильмов по жанрам обеспечивают легкий поиск. Самостоятельно сортируйте фильмы по названию, темам, рейтингу Кинопоиска или дате добавления. Просмотрите трейлер, прочтите описание и добавляйте фильм в избранное. Пользуйтесь расширенным набором функций проигрывателя: ставьте видео на паузу, смотрите с места остановки и перематывайте в случае необходимости." alt=""></li>
+									<li class="feature__slider-item"><img class="feature__slider-img" src="images/stalker2-3.jpg" data-caption="Машина времени" data-text="Навсегда решите проблему неудобного времени показа с «Машиной времени». Просматривайте ночные шоу за завтраком, а утренние биржевые новости в обеденный перерыв. Со встроенными функциями проигрывателя телеэфир гибок как никогда." alt=""></li>
+								</ul> -->
+
+									
+								
+							
+						</ul>
+						<div>
+							<i id="goToPrevSlide" class="feature__l slide-left"></i>
+							<i id="goToNextSlide" class="feature__r slide-right"></i>
+						</div>
+					</div>
+
+					<script type="text/javascript">
+
+					$(document).ready(function() {
+
+						var slider = $("#lightSlider").lightSlider({
+							onBeforeSlide: onBeforeSlide,
+							onAfterSlide: onAfterSlide,
+							onSliderLoad: onAfterSlide,
+							mode:"slide",
+							slideMargin: 230,
+							SlideWidth: 831
+						 });
+						function onBeforeSlide () {
+							var slideTitle = $(".feature__slider__item.active > div > .feature__slider-img").data("caption");
+							var slideText = $(".feature__slider__item.active > div > .feature__slider-img").data("text");
+
+							$('#slideTitle').text(slideTitle);
+							$('#slideText').text(slideText);
+
+							$('#slideTitle').fadeOut(1000);
+							$('#slideText').fadeOut(1000);
+						}
+
+						function onAfterSlide () {
+							var slideTitle = $(".feature__slider__item.active > div > .feature__slider-img").data("caption");
+							var slideText = $(".feature__slider__item.active > div > .feature__slider-img").data("text");
+
+							$('#slideTitle').text(slideTitle);
+							$('#slideText').text(slideText);
+
+							$('#slideTitle').fadeIn(1000);
+							$('#slideText').fadeIn(1000);
+						}
+
+						$('#goToPrevSlide').click(function(){
+							slider.goToPrevSlide();
+						});
+						
+						$('#goToNextSlide').click(function(){
+							slider.goToNextSlide();
+						});
+					});
+
+					</script>
+
+				<span class="feature__tag-line">Все 33 удовольствия не сходя с дивана</span>
+				
+				<div class="feature__slider">
+					<div class="feature__slider-box">
+						<ul>
+							<li class="feature__slider__item youtube-img"><img src="images/stalker2.jpg" alt=""></li>
+							<li class="feature__slider__item ex-img"><img src="images/stalker2-1.jpg" alt=""></li>
+							<li class="feature__slider__item megogo-img"><img src="images/stalker2-2.jpg" alt=""></li>
+							<li class="feature__slider__item oll-img"><img src="images/stalker2-3.jpg" alt=""></li>
+							<li class="feature__slider__item vidi-img"><img src="images/stalker2.jpg" alt=""></li>
+							<li class="feature__slider__item picasa-img"><img src="images/stalker2-1.jpg" alt=""></li>
+							<li class="feature__slider__item br-img"><img src="images/stalker2-2.jpg" alt=""></li>
+							<li class="feature__slider__item radio-img"><img src="images/stalker2-3.jpg" alt=""></li>
+							<li class="feature__slider__item karaoke-img"><img src="images/stalker2-1.jpg" alt=""></li>
+							<li class="feature__slider__item games-img"><img src="images/stalker2-2.jpg" alt=""></li>
+							<li class="feature__slider__item widgets-img"><img src="images/stalker2-3.jpg" alt=""></li>
+						</ul>
+					</div>
+				</div>
+				<p class="feature__text">Получите неограниченный доступ к лучшей коллекции развлечений с Middleware Stalker.</p>
+				
+				<div class="feature__icons">
+					<a class="feature__icon-item youtube active-i"><span class="feature__icons-title">Youtube</span></a>
+					<i class="feature__icon-item ex" ><span class="feature__icons-title">EX.ua</span></i>
+					<i class="feature__icon-item megogo"><span class="feature__icons-title">Megogo</span></i>
+					<i class="feature__icon-item oll"><span class="feature__icons-title">Oll.tv</span></i>
+					<i class="feature__icon-item vidi"><span class="feature__icons-title">Vidimax</span></i>
+					<i class="feature__icon-item picasa"><span class="feature__icons-title">Picasa</span></i>
+					<i class="feature__icon-item br"><span class="feature__icons-title">Browser</span></i>
+					<i class="feature__icon-item radio"><span class="feature__icons-title">Online radio</span></i>
+					<i class="feature__icon-item karaoke"><span class="feature__icons-title">Karaoke</span></i>
+					<i class="feature__icon-item games"><span class="feature__icons-title">Games</span></i>
+					<i class="feature__icon-item widgets"><span class="feature__icons-title">Vidgets</span></i>
+				</div>
+
+				<script type="text/javascript">
+
+					$(document).ready(function() {
+						$(".feature__icon-item").mouseover(function(){
+							$(".feature__icon-item").removeClass('active-i');
+							$(this).closest(".feature__icon-item").addClass('active-i');
+						});
+						var items = ['youtube', 'ex','megogo', 'oll', 'vidi', 'picasa', 'br', 'radio', 'karaoke', 'games', 'widgets'];
+						
+						$(items).each(function(i, curItem) {
+							$(".feature__icon-item." + curItem).mouseover(function(){
+								$(".feature__slider__item").css('display', 'none');
+								$(".feature__slider__item." + curItem + "-img").css("display", "block").fadeIn("slow");
+							});
+						});
+
+					});
+
+				</script>
+
+				<ul class="feature__list">
+					<li class="feature__list-item user-icon" >
+						<span class="feature__item-title">Преимущества пользователя</span>
+						<p class="feature__item-text">Middleware Stalker – это интерфейс, интуитивно понятный пользователю, удобный и лаконичный...</p>
+						<a class="feature__item-link" href="">Learn more</a>
+					</li>
+					<li class="feature__list-item settings-icon" >
+						<span class="feature__item-title">Простота эксплуатации</span>
+						<p class="feature__item-text">Инженеры и дизайнеры компании Infomir тщательно продумали все детали взаимодействия с пользователями...</p>
+						<a class="feature__item-link" href="">Learn more</a>
+					</li>
+					<li class="feature__list-item hand-icon" >
+						<span class="feature__item-title">Начать использовать</span>
+						<p class="feature__item-text">Мы предлагаем специальный онлайн-тур, который разъясняет все шаги, необходимые для запуска услуг IPTV...</p>
+						<a class="feature__item-link" href="">Learn more</a>
+					</li>
+				</ul>
+
+
+			
+			</div>
+
+
+			<!-- !!! /content !!! -->
+
+			
+		</div>
+		<footer>
+				<div class="wrapper">
+					<div class="footer-left">
+						<div class="footer-left__about">
+							<h4 class="footer-left__title">About Infomir</h4>
+							<p class="footer-left__about-info">Infomir is a group of companies which specializes mostly on design, manufacturing and support of equipment and the client devices for modern services based on broadband networks.</p>
+							<p class="footer-left__about-info">The main feature of the group – complete production cycle including: product design, industrial design, software development, production, integration and service support. </p>
+						</div>
+						<div class="footer-left__rights">
+							<p class="footer-left__rights__info">© 2014 InfoMir LLC. All rights reserved </p>
+							<ul class="clearfix">
+								<li class="footer-left__rights__item"><a class="footer-left__rights__link" href="">Privacy Policy</a></li>
+								<li class="footer-left__rights__item"><a class="footer-left__rights__link" href="">Impressum</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer-right">
+						<ul class="footer-right__list footer-prod">
+							<h4 class="footer-right__title">Products</h4>
+							<li class="footer-right__item"><a class="footer-right__link" href="">IPTV Set-Top Boxes</a></li>
+							<li class="footer-right__item"><a class="footer-right__link" href="">Aura HD</a></li>
+							<li class="footer-right__item"><a class="footer-right__link" href="">Accessories</a></li>
+							<li class="footer-right__item"><a class="footer-right__link" href="">Where to Buy</a></li>
+						</ul>
+						<ul class="footer-right__list footer-contact">
+							<h4 class="footer-right__title">Contact Us</h4>
+							<li class="footer-right__item"><a class="footer-right__link" href="">Sales</a></li>
+							<li class="footer-right__item"><a class="footer-right__link" href="">Partnerships</a></li>
+							<li class="footer-right__item"><a class="footer-right__link" href="">Press Inquiries</a></li>
+						</ul>
+						<ul class="footer-right__list footer-solution">
+							<h4 class="footer-right__title">Solutions</h4>
+							<li class="footer-right__item"><a class="footer-right__link" href="">Middleware stalker</a></li>
+							<li class="footer-right__item"><a class="footer-right__link" href="">IPS / IPTV Solutions</a></li>
+							<li class="footer-right__item"><a class="footer-right__link" href="">Hospitality IPTV Solutions</a></li>
+							<li class="footer-right__item"><a class="footer-right__link" href="">Completed Projects</a></li>
+						</ul>
+						<div class="footer-right__service footer-service">
+							<h4 class="footer-right__service-title">Service Center</h4>
+							<p class="footer-right__service-info">Teletec LLC </p>
+							<p class="footer-right__service-address">4-D, Marshal Zhukov Avenue, Odessa </p>
+							<p class="footer-right__service-address">Phone <span class="footer-right__service-tel"> +38 048 740 6 740 </span></p>
+							<p class="footer-right__service-address-mail">e-mail: <a class="footer-right__service-mail" href="mailto:warranty@infomir.eu">warranty@infomir.eu</a></p>
+						</div>
+					</div>
+				</div>
+		</footer>
+	</body>
