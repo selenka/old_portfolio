@@ -21,6 +21,8 @@ module.exports = function(grunt) {
         concat: {
              dist: {
                 src: [
+                    'js/lib/jquery-1.11.2.min.js',
+                    'js/lib/datepicker.js'
                 ],
                 dest: 'js/lib.js',
             },

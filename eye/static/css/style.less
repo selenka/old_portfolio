@@ -192,23 +192,102 @@ html, body {
 
   &__b {
 	padding: 5px 0;
+    position: relative;
   }
 
-  &__label {
-	font: 16px @font-regular;
-	color: #000;
-	display: inline-block;
-	width: 15%;
-  }
   &__input {
 	font: 16px @font-regular;
 	color: #000;
+    display: block;
 	width: 75%;
 	border: 1px solid #f7991a;
-	padding: 0 10px;
+	padding: 4px;
 	height: 30px;
+
+    &[type='submit'] {
+      background: #F7B153;
+      border-radius: 4px;
+      color: #fff;
+      &:hover {
+        background: #FAC174;
+      }
+      &:active {
+        background: #F79F29;
+      }
+    }
+  }
+
+  & .vf-datepicker {
+    font-family: @font-regular;
+    & .day.black {
+      color: #adadad;
+    }
+    & .fa-angle-left {
+      display: block;
+      width: 35px;
+      height: 35px;
+      background: #fff;
+      position: relative;
+
+      &:hover:after {
+        border-color: #f7991a;
+      }
+      &:after {
+        content:'';
+        position: absolute;
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-top: 2px solid #000;
+        border-right: 2px solid #000;
+        border-bottom: none;
+        border-left: none;
+        .rotate(-135deg);
+        top: 12px;
+        left: 6px;
+      }
+    }
+      & .fa-angle-right {
+        display: block;
+        width: 35px;
+        height: 35px;
+        background: #fff;
+        position: relative;
+        
+        &:hover:after {
+          border-color: #f7991a;
+        }
+
+        &:after {
+          content:'';
+          position: absolute;
+          display: block;
+          width: 16px;
+          height: 16px;
+          border-top: 2px solid #000;
+          border-right: 2px solid #000;
+          border-bottom: none;
+          border-left: none;
+          .rotate(45deg);
+          top: 12px;
+          right: 6px;
+        }
+    }
+    & .head-month,
+    & .head-days {
+      font-family: @font-bold;
+    }
+    & .vf-clear {
+      bottom: 8px;
+    }
+    & .week .day:hover,
+    & .week .day.drag-from,
+    & .week .day.drag-to {
+      background: #f7991a;
+    }
   }
 }
+
 .tag {
   padding: 15px 0;
 

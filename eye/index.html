@@ -5,8 +5,6 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="static/css/result.css">
-		<script src="static/js/jquery-1.11.2.min.js"></script>
-		
 	</head>
 	<body>
 		<div class="wrapper">
@@ -28,13 +26,23 @@
 					<div class="content__title">Выберите период</div>
 					<div class="datepicker">
 						<div class="datepicker__b">
-							<label class="datepicker__label" for="fromDate">С:</label>
-							<input class="datepicker__input" id="fromDate" type="text"/>
+							<div class="form-group">
+								<span class="datepicker__input form-control" id="fromDisplay" name="from">С</span>
+								<input type="hidden" name="from" value="" id="fromInput">
+								<div class="vf-datepicker" id="startDP"></div>
+							</div>
 						</div>
 						<div class="datepicker__b">
-							<label class="datepicker__label" for="toDate">По:</label>
-							<input class="datepicker__input" id="toDate" type="text"/>
+							<div class="form-group">
+								<span class="datepicker__input form-control" id="toDisplay">По</span>
+								<input type="hidden" name="to" value="" id="toInput">
+								<div class="vf-datepicker" id="endDP"></div>
+							</div>
 						</div>
+						<div class="datepicker__b">
+							<input class="datepicker__input" type="submit" value="Показать"/>
+						</div>
+
 					</div>
 					<div class="content__title">Тэги <span class="hint">(самые популярные)</span></div>
 					<div class="tag">
@@ -120,6 +128,7 @@
 				</div
 			</footer>
 		</div>
+		<script src="static/js/lib.js"></script>
 		<script src="static/js/script.js"></script>
 	</body>
 
