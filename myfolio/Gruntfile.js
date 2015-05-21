@@ -22,8 +22,8 @@ module.exports = function(grunt) {
              dist: {
                 src: [
                     'js/lib/jquery-1.11.2.min.js',
-                    'js/lib/bootstrap.min.js'
-
+                    'js/lib/bootstrap.min.js',
+                    'js/lib/placeholders.min.js'
                 ],
                 dest: 'js/lib.js',
             },
