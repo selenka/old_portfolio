@@ -5,3 +5,33 @@ Icon classes can be used entirely standalone. They are named after their origina
 <i class="icon-home"></i>
 ```
 */
+.icon-comp {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: 0px -35px;
+  width: 32px;
+  height: 23px;
+}
+.icon-curve {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -101px 0px;
+  width: 108px;
+  height: 25px;
+}
+.icon-develop {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -33px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-lamp {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: 0px 0px;
+  width: 31px;
+  height: 33px;
+}
+.icon-pencil {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -67px 0px;
+  width: 32px;
+  height: 32px;
+}

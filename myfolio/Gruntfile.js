@@ -6,19 +6,32 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        less: {
+            development: {
+                options: {
+                    compress: true,
+                    optimization: 2
+                },
+                files: {
+                    "css/style.css": "css/style.less" // destination file and source file
+                }
+            }
+        },
+
         concat: {
              dist: {
                 src: [
-                    'js/lib/jquery-1.11.2.min.js'
+                    'js/lib/jquery-1.11.2.min.js',
+                    'js/lib/bootstrap.min.js'
+
                 ],
                 dest: 'js/lib.js',
             },
             css: {
                 src: [
-                    'css/style.css',
                     'css/sprites.css',
-                    'css/plugins/*.css' //For owl slider
-
+                    'css/plugins/*.css',
+                    'css/style.css'
                 ],
                 dest: 'css/result.css'
             }
@@ -66,7 +79,7 @@ module.exports = function(grunt) {
 
 //   Explicit tasks loading is not required because of jit-grunt usage https://github.com/shootaroo/jit-grunt
     grunt.file.setBase(base_dir);
-    grunt.registerTask('deploy', ['sprite', 'concat']);
-    grunt.registerTask('default', ['sprite', 'concat', 'watch']);
+    grunt.registerTask('deploy', ['less', 'sprite', 'concat']);
+    grunt.registerTask('default', ['less', 'sprite', 'concat', 'watch']);
 
 };
