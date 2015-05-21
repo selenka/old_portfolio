@@ -7,28 +7,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="static/css/result.css">
 	</head>
-	<body>
+	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 		<div class="header fluid-container">
 			<header class="container">
-				<nav class="navbar">
-				  <div class="container-fluid">
-				    <div class="navbar-header">
+				<nav class="navbar navbar-fixed-top top-nav-collapse">
+				  <div class="container">
+				    <div class="navbar-header page0scroll">
 				    	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
 					    	<span class="sr-only">Toggle navigation</span>
 					        <span class="icon-bar"></span>
 					        <span class="icon-bar"></span>
 					        <span class="icon-bar"></span>
 				        </button>
-				    	<a class="header__logo navbar-brand" href="#">
+				    	<a class="header__logo navbar-brand page-scroll" href="#">
 				    		<span class="header__logo white">MY</span><span class="header__logo yellow">FOLIO</span></a>
 				    </div>
 				    <div class="collapse navbar-collapse navbar-right" id="navbar-collapse-1">
 					    <ul class="nav navbar-nav">
-						  <li role="presentation" class="header__nav-link active"><a href="#">Home</a></li>
-						  <li role="presentation" class="header__nav-link"><a href="#">About me</a></li>
-						  <li role="presentation" class="header__nav-link"><a href="#">Services</a></li>
-						  <li role="presentation" class="header__nav-link"><a href="#">My work</a></li>
-						  <li role="presentation" class="header__nav-link"><a href="#">contact me</a></li>
+						  <li role="presentation" class="header__nav-link active"><a class="page-scroll" href="#">Home</a></li>
+						  <li role="presentation" class="header__nav-link"><a class="page-scroll" href="#about">About me</a></li>
+						  <li role="presentation" class="header__nav-link"><a class="page-scroll" href="#service">Services</a></li>
+						  <li role="presentation" class="header__nav-link"><a class="page-scroll" href="#work">My work</a></li>
+						  <li role="presentation" class="header__nav-link"><a class="page-scroll" href="#contact">contact me</a></li>
 						</ul>
 					</div>
 				  </div>
@@ -42,11 +42,11 @@
 						<div class="content__text extra">incididunt bore</div>
 						<div class="content__text small">Orem ipsum dolor sit amet, consectetur </div>
 						<div class="content__text"><i class="icon-curve"></i></div>
-						<a class="content__btn btn" href="#" role="button">Know more</a>
+						<a class="content__btn btn page-scroll" href="#about" role="button">Know more</a>
 					</div>
 				</div>
 			</div>
-			<div class="container block">
+			<div class="container block" id="about">
 				<h2 class="text-center">about me</h2>
 				<div class="separator text-center">~~~~~~~~ :: ~~~~~~~~</div>
 				<div class="text-center block-center">
@@ -103,7 +103,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="fluid-container block-relative">
+			<div class="fluid-container block-relative" id="service">
 				<div class="container block block-absolute">
 					<div class="block__left">
 						<h2 class="text-left">services</h2>
@@ -167,7 +167,7 @@
 				<div class="block__left pull-left"></div>
 				<div class="block__right pull-right"></div>
 			</div>
-			<div class="block-top container">
+			<div class="block-top container" id="work">
 				<h2 class="text-center">my work</h2>
 				<div class="separator text-center">~~~~~~~~ :: ~~~~~~~~</div>
 				<div class="text-center block-center">
@@ -251,7 +251,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="block-top container">
+			<div class="block-top container" id="contact">
 				<h2 class="text-center">contact me</h2>
 				<div class="separator text-center">~~~~~~~~ :: ~~~~~~~~</div>
 				<div class="text-center block-center">
