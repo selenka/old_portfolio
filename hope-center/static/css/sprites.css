@@ -1,0 +1,61 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<i class="icon-home"></i>
+```
+*/
+.icon-chart {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: 0px -35px;
+  width: 32px;
+  height: 32px;
+}
+.icon-clock {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: 0px 0px;
+  width: 32px;
+  height: 33px;
+}
+.icon-comp {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: 0px -96px;
+  width: 32px;
+  height: 23px;
+}
+.icon-curve {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: 0px -69px;
+  width: 108px;
+  height: 25px;
+}
+.icon-develop {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -34px -35px;
+  width: 32px;
+  height: 32px;
+}
+.icon-lamp {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -34px 0px;
+  width: 31px;
+  height: 33px;
+}
+.icon-map {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -67px 0px;
+  width: 28px;
+  height: 33px;
+}
+.icon-pencil {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -97px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-zoom {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -97px -34px;
+  width: 32px;
+  height: 32px;
+}
