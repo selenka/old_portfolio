@@ -5,57 +5,21 @@ Icon classes can be used entirely standalone. They are named after their origina
 <i class="icon-home"></i>
 ```
 */
-.icon-chart {
-  background-image: url(../images/spritesheet-icons.png);
-  background-position: 0px -35px;
-  width: 32px;
-  height: 32px;
-}
-.icon-clock {
+.icon-home {
   background-image: url(../images/spritesheet-icons.png);
   background-position: 0px 0px;
-  width: 32px;
-  height: 33px;
+  width: 15px;
+  height: 13px;
 }
-.icon-comp {
+.icon-home2 {
   background-image: url(../images/spritesheet-icons.png);
-  background-position: 0px -96px;
-  width: 32px;
-  height: 23px;
+  background-position: -17px 0px;
+  width: 15px;
+  height: 11px;
 }
-.icon-curve {
+.icon-home3 {
   background-image: url(../images/spritesheet-icons.png);
-  background-position: 0px -69px;
-  width: 108px;
-  height: 25px;
-}
-.icon-develop {
-  background-image: url(../images/spritesheet-icons.png);
-  background-position: -34px -35px;
-  width: 32px;
-  height: 32px;
-}
-.icon-lamp {
-  background-image: url(../images/spritesheet-icons.png);
-  background-position: -34px 0px;
-  width: 31px;
-  height: 33px;
-}
-.icon-map {
-  background-image: url(../images/spritesheet-icons.png);
-  background-position: -67px 0px;
-  width: 28px;
-  height: 33px;
-}
-.icon-pencil {
-  background-image: url(../images/spritesheet-icons.png);
-  background-position: -97px 0px;
-  width: 32px;
-  height: 32px;
-}
-.icon-zoom {
-  background-image: url(../images/spritesheet-icons.png);
-  background-position: -97px -34px;
-  width: 32px;
-  height: 32px;
+  background-position: 0px -15px;
+  width: 15px;
+  height: 11px;
 }
