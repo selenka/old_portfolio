@@ -10,9 +10,9 @@ $(document).ready(function () {
         var input = $(this);
         input.attr('placeholder', input.data('place-holder-text'));
     });
-    // $('.carousel').carousel({
-    //     interval: 6000,
-    //     cycle: false,
-    //     pause: 'hover'
-    // });
+    $('.carousel').carousel({
+        interval: 6000,
+        cycle: false,
+        pause: 'hover'
+    });
 });

@@ -46,24 +46,23 @@ i {
 //carousel fade style end
 //carousel setting start
 .carousel-indicators {
-  width: 260px;
+  width: 220px;
   bottom: inherit;
   height: 100%;
   left: 0;
   margin-left: 0;
-  overflow: hidden;
+  border-right: 2px solid #fff;
+  // overflow: hidden;
 }
 .carousel-indicators li,
 .carousel-indicators li.active {
   text-indent: inherit;
-  width: 80%;
-  height: 34%;
+  width: 100%;
   border-radius: 0;
   border: none;
   margin: 0;
 }
 .carousel-indicators li {
-  border-right: 2px solid #fff;
   &:hover {
     &:after {
       position: absolute;
@@ -71,10 +70,10 @@ i {
       display: block;
       width: 0;
       height: 0;
-      border-top: 80px solid transparent;
-      border-bottom: 80px solid transparent;
-      top: -2px;
-      right: -18px;
+      border-top: 77px solid transparent;
+      border-bottom: 77px solid transparent;
+      top: 0px;
+      right: -20px;
     }
     &:before {
       position: absolute;
@@ -82,50 +81,48 @@ i {
       display: block;
       width: 0;
       height: 0;
-      border-top: 85px solid transparent;
-      border-left: 22px solid #fff;
-      border-bottom: 85px solid transparent;
-      top: -7px;
-      right: -20px;
+      border-top: 77px solid transparent;
+      border-left: 21px solid #fff;
+      border-bottom: 81px solid transparent;
+      top: 0px;
+      right: -23px;
     }
     &.bg-orange:after {
-      border-left: 21px solid @orange;
+      border-left: 20px solid @orange;
     }
     &.bg-green:after {
-      border-left: 21px solid @green;
+      border-left: 20px solid @green;
     }
     &.bg-teal:after {
-      border-left: 21px solid @teal;
+      border-left: 20px solid @teal;
     }
 
   }
   &.bg-orange {
+    height: 33%;
     background: @orange;
   }
   &.bg-green {
+    height: 34%;
     background: @green;
   }
   &.bg-teal {
+    height: 33%;
     background: @teal;
   }
 }
 .carousel-indicators li.active {
-  &.bg-orange {
-    
-  }
-  &.bg-green {
-    
-  }
+
   &:after {
     position: absolute;
     content: '';
     display: block;
     width: 0;
     height: 0;
-    border-top: 80px solid transparent;
-    border-bottom: 80px solid transparent;
-    top: -2px;
-    right: -18px;
+    border-top: 77px solid transparent;
+    border-bottom: 77px solid transparent;
+    top: 0px;
+    right: -20px;
   }
   &:before {
     position: absolute;
@@ -133,20 +130,20 @@ i {
     display: block;
     width: 0;
     height: 0;
-    border-top: 85px solid transparent;
-    border-left: 22px solid #fff;
-    border-bottom: 85px solid transparent;
-    top: -7px;
-    right: -20px;
+    border-top: 77px solid transparent;
+    border-left: 21px solid #fff;
+    border-bottom: 81px solid transparent;
+    top: 0px;
+    right: -23px;
   }
   &.bg-orange:after {
-    border-left: 21px solid @orange;
+    border-left: 20px solid @orange;
   }
   &.bg-green:after {
-    border-left: 21px solid @green;
+    border-left: 20px solid @green;
   }
   &.bg-teal:after {
-    border-left: 21px solid @teal;
+    border-left: 20px solid @teal;
   }
 }
 //carousel setting end
@@ -159,6 +156,7 @@ i {
   &:hover,
   &:focus {
     background: @orange;
+    color: #fff;
   }
 }
 .nav-pills {
@@ -228,6 +226,45 @@ i {
 }
 #home-slider {
   max-width: 940px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  & .item {
+    .clearfix;
+
+    & .carousel-caption {
+      font-size: 40px;
+      color: #dad6cc;
+      left: inherit;
+      right: inherit;
+      bottom: 0;
+      text-align: right;
+      width: 100%;
+      padding-right: 30px;
+      margin-left: 100%;
+      -moz-transition: margin 1s ease-out;  /* FF4+ */
+      -o-transition: margin 1s ease-out;  /* Opera 10.5+ */
+      -webkit-transition: margin 1s ease-out;  /* Saf3.2+, Chrome */
+      -ms-transition: margin 1s ease-out;  /* IE10 */
+      transition: margin 1s ease-out;
+      & span {
+        background: #000;
+        padding: 8px 15px;
+        display: inline-block;
+      }
+      & .first-line {       
+        font-family: @font-r;
+        margin-bottom: 6px;
+      }
+      & .second-line {
+        font-family: @font-l;
+      }
+    }
+  }
+  & .item.active {
+    & .carousel-caption {
+      margin-left: 0;
+    }
+  }
 }
 .slider-label {
   text-transform: uppercase;
