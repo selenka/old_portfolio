@@ -24,6 +24,8 @@ i {
 .carousel-fade .carousel-inner .item {
   cursor: pointer;
   opacity: 0;
+  height: auto;
+  overflow: hidden;
   -webkit-transition-property: opacity;
           transition-property: opacity;
 }
@@ -152,7 +154,7 @@ i {
 .nav-pills > li {
   float: right;
 }
-.nav > li > a {
+.header-menu > li > a {
   &:hover,
   &:focus {
     background: @orange;
@@ -173,6 +175,80 @@ i {
 }
 .navbar-toggle span {
   background: @orange;
+}
+.row {
+
+  &.article {
+    background: #dad6cc;
+    border-top: 5px solid #d0cbc0;
+    padding: 10px;
+  }
+  &.article-date {
+    background: none;
+    padding: 10px;
+  }
+  
+}
+.bold-text {
+  font-family: @font-r;
+}
+.thumbnail {
+  background: none;
+  border: none;
+  border-right: 1px solid #d0cbc0;
+  box-shadow: 1px 0px 0px 0px #edeae5;
+
+  &.article-date {
+    border-right-color: #221e1a;
+    box-shadow: none;
+  }
+
+  &-item {
+    &:last-of-type .thumbnail {
+      border-right: none;
+      box-shadow: none;
+    }
+  }
+  &-frame {
+    .gradient(#fff, #efefef);
+    display: inline-block;
+    padding: 5px 5px 0px 5px;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1)
+  }
+  & h2 {
+    font-size: 35px;
+
+    &.article-date {
+      color: #dad6cc;
+    }
+  }
+  & .caption {
+    font-size: 14px;
+    height: 70px;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+
+    &.article-date {
+      height: inherit;
+      overflow: inherit;
+    }
+
+    &-subtitle {
+      color: #dcd9cf;
+    }
+    &-text {
+      color: #575652;
+    }
+  }
+}
+.capital-letter {
+  font: 35px @font-b;
+  color: #fff;
+  padding: 0px 10px;
+  text-transform: uppercase;
+  margin-right: 5px;
 }
 //custom bootstrap end
 
@@ -280,12 +356,148 @@ i {
     font: 30px @font-l;
   }
 }
-@media only screen and (max-width: 768px) {
-  //custom bootstrap start
-    .navbar-header {
-      min-height: 90px;
+.readmore {
+  font: 14px @font-l;
+  padding: 3px 10px;
+  &.article {
+    background: #000;
+    color: #dddad1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    &:before {
+      content:'';
+      position: absolute;
+      display: block;
+      width: 25px;
+      height: 100%;
+      left: -25px;
+      .gradient(#dad6cc, rgba(218, 214, 204, 0.05));
     }
-  //custom bootstrap end
+
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    &.article1:hover {
+      background: @orange;
+    }
+    &.article2:hover {
+      background: @green;
+    }
+    &.article3:hover {
+      background: @teal;
+    }
+  }
+  &.article-date {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: @font-m;
+    padding: 10px 15px;
+    margin-top: 14px;
+    display: inline-block;
+    border: 1px solid #000;
+
+    &:hover {
+      text-decoration: none;
+      background: #000;
+      border: 1px solid #dddad1;
+    }
+  }
+}
+.quote {
+  .clearfix;
+  padding: 50px 35px;
+
+  &-title {
+    font: 35px @font-r;
+    color: #dad6cc;
+    width: 35%;
+  }
+  &-text {
+    width: 65%;
+    font: italic 14px @font-l;
+    color: #575652;
+    line-height: 35px;
+    position: relative;
+
+    &:before {
+      content:'\201C';
+      font: 120px @font-quote;
+      position: absolute;
+      top: -36px;
+      left: -55px;
+    }
+    &:after {
+      content:'\201D';
+      font: 120px @font-quote;
+      position: absolute;
+      line-height: 90px;
+    }
+  }
+}
+.footer {
+  &__logo {
+    font: 46px @font-l;
+    text-transform: uppercase;
+    color: #dedbd2;
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  &-menu {
+    padding: 30px 0;
+
+    & > li > a:hover,
+    & > li > a:focus {
+      background: none;
+      color: #575652;
+      cursor: pointer;
+    }
+    &__item {
+      background: none;
+      &.tel-size {
+        font-size: 35px;
+        min-width: 225px;
+        color: #dedad1;
+        & .prefix-tel {
+          padding: 0 10px;
+        }
+      }
+    }
+    &__link {
+      font: 14px @font-l;
+      color: #dad6cc;
+
+    }
+  }
+}
+.soc-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+    & i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  &.fb {
+    background: #1c8bcc;
+  }
+  &.tw {
+    background: #67d8f7;
+  }
+  &.in {
+    background: #1b8acb;
+  }
 }
 @media only screen and (max-width: 991px) {
   //custom bootstrap start
@@ -307,6 +519,68 @@ i {
       &.logo-down {
         font-size: 20px;
       }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  //custom bootstrap start
+    .navbar-header {
+      min-height: 90px;
+    }
+    .carousel-indicators {
+      width: 30%;
+    }
+    .carousel-indicators li:after,
+    .carousel-indicators li:before,
+    .carousel-indicators li.active:after,
+    .carousel-indicators li.active:before,
+    .carousel-indicators li:hover:after,
+    .carousel-indicators li:hover:before,
+    .carousel-indicators li.active:hover:after,
+    .carousel-indicators li.active:hover:before {
+      display: none;
+    }
+  //custom bootstrap end
+  .quote {
+    &-title,
+    &-text {
+      float: none!important;
+      width: 100%;
+    }
+  }
+  #home-slider .item .carousel-caption {
+    font-size: 20px;
+  }
+  .slider-label {
+    &__top {
+      font-size: 30px;
+    }
+    &__bottom {
+      font-size: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .carousel-indicators {
+    width: 50%;
+    height: inherit;
+    border-right: none;
+
+    & li.slider-label,
+    & li.active {
+      height: 25px;
+      width: 25px;
+      text-indent: -9999px;
+    }
+
+    & .slider-label__bottom {
+      visibility: hidden;
+    }
+    & li.active .slider-label__bottom {
+      visibility: visible;
+      padding: 5px;
+      background: rgba(0, 0, 0, 0.7);
     }
   }
 }
