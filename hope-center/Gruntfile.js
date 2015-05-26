@@ -24,8 +24,7 @@ module.exports = function(grunt) {
                     'js/lib/jquery-1.11.2.min.js',
                     'js/lib/bootstrap.min.js',
                     'js/lib/placeholders.min.js',
-                    'js/lib/jquery.easing.min.js',
-                    'js/lib/scrolling-nav.js'
+                    'js/lib/responsive-tabs.js'
                 ],
                 dest: 'js/lib.js',
             },

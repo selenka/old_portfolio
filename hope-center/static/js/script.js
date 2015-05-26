@@ -15,4 +15,9 @@ $(document).ready(function () {
         cycle: false,
         pause: 'hover'
     });
-});
+    fakewaffle.responsiveTabs(['xs', 'sm']);
+    $('#myTab a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    });
+  });

@@ -17,3 +17,187 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap's JavaScript requires j
 this.addAriaAndCollapsedClass(e(n),n)},this)).end()},o.prototype.addAriaAndCollapsedClass=function(t,e){var i=t.hasClass("in");t.attr("aria-expanded",i),e.toggleClass("collapsed",!i).attr("aria-expanded",i)};var n=t.fn.collapse;t.fn.collapse=i,t.fn.collapse.Constructor=o,t.fn.collapse.noConflict=function(){return t.fn.collapse=n,this},t(document).on("click.bs.collapse.data-api",'[data-toggle="collapse"]',function(o){var n=t(this);n.attr("data-target")||o.preventDefault();var s=e(n),a=s.data("bs.collapse"),r=a?"toggle":n.data();i.call(s,r)})}(jQuery),+function(t){"use strict";function e(i,o){this.$body=t(document.body),this.$scrollElement=t(t(i).is(document.body)?window:i),this.options=t.extend({},e.DEFAULTS,o),this.selector=(this.options.target||"")+" .nav li > a",this.offsets=[],this.targets=[],this.activeTarget=null,this.scrollHeight=0,this.$scrollElement.on("scroll.bs.scrollspy",t.proxy(this.process,this)),this.refresh(),this.process()}function i(i){return this.each(function(){var o=t(this),n=o.data("bs.scrollspy"),s="object"==typeof i&&i;n||o.data("bs.scrollspy",n=new e(this,s)),"string"==typeof i&&n[i]()})}e.VERSION="3.3.4",e.DEFAULTS={offset:10},e.prototype.getScrollHeight=function(){return this.$scrollElement[0].scrollHeight||Math.max(this.$body[0].scrollHeight,document.documentElement.scrollHeight)},e.prototype.refresh=function(){var e=this,i="offset",o=0;this.offsets=[],this.targets=[],this.scrollHeight=this.getScrollHeight(),t.isWindow(this.$scrollElement[0])||(i="position",o=this.$scrollElement.scrollTop()),this.$body.find(this.selector).map(function(){var e=t(this),n=e.data("target")||e.attr("href"),s=/^#./.test(n)&&t(n);return s&&s.length&&s.is(":visible")&&[[s[i]().top+o,n]]||null}).sort(function(t,e){return t[0]-e[0]}).each(function(){e.offsets.push(this[0]),e.targets.push(this[1])})},e.prototype.process=function(){var t,e=this.$scrollElement.scrollTop()+this.options.offset,i=this.getScrollHeight(),o=this.options.offset+i-this.$scrollElement.height(),n=this.offsets,s=this.targets,a=this.activeTarget;if(this.scrollHeight!=i&&this.refresh(),e>=o)return a!=(t=s[s.length-1])&&this.activate(t);if(a&&e<n[0])return this.activeTarget=null,this.clear();for(t=n.length;t--;)a!=s[t]&&e>=n[t]&&(void 0===n[t+1]||e<n[t+1])&&this.activate(s[t])},e.prototype.activate=function(e){this.activeTarget=e,this.clear();var i=this.selector+'[data-target="'+e+'"],'+this.selector+'[href="'+e+'"]',o=t(i).parents("li").addClass("active");o.parent(".dropdown-menu").length&&(o=o.closest("li.dropdown").addClass("active")),o.trigger("activate.bs.scrollspy")},e.prototype.clear=function(){t(this.selector).parentsUntil(this.options.target,".active").removeClass("active")};var o=t.fn.scrollspy;t.fn.scrollspy=i,t.fn.scrollspy.Constructor=e,t.fn.scrollspy.noConflict=function(){return t.fn.scrollspy=o,this},t(window).on("load.bs.scrollspy.data-api",function(){t('[data-spy="scroll"]').each(function(){var e=t(this);i.call(e,e.data())})})}(jQuery),+function(t){"use strict";function e(){var t=document.createElement("bootstrap"),e={WebkitTransition:"webkitTransitionEnd",MozTransition:"transitionend",OTransition:"oTransitionEnd otransitionend",transition:"transitionend"};for(var i in e)if(void 0!==t.style[i])return{end:e[i]};return!1}t.fn.emulateTransitionEnd=function(e){var i=!1,o=this;t(this).one("bsTransitionEnd",function(){i=!0});var n=function(){i||t(o).trigger(t.support.transition.end)};return setTimeout(n,e),this},t(function(){t.support.transition=e(),t.support.transition&&(t.event.special.bsTransitionEnd={bindType:t.support.transition.end,delegateType:t.support.transition.end,handle:function(e){return t(e.target).is(this)?e.handleObj.handler.apply(this,arguments):void 0}})})}(jQuery);
 /* Placeholders.js v3.0.2 */
 (function(t){"use strict";function e(t,e,r){return t.addEventListener?t.addEventListener(e,r,!1):t.attachEvent?t.attachEvent("on"+e,r):void 0}function r(t,e){var r,n;for(r=0,n=t.length;n>r;r++)if(t[r]===e)return!0;return!1}function n(t,e){var r;t.createTextRange?(r=t.createTextRange(),r.move("character",e),r.select()):t.selectionStart&&(t.focus(),t.setSelectionRange(e,e))}function a(t,e){try{return t.type=e,!0}catch(r){return!1}}t.Placeholders={Utils:{addEventListener:e,inArray:r,moveCaret:n,changeType:a}}})(this),function(t){"use strict";function e(){}function r(){try{return document.activeElement}catch(t){}}function n(t,e){var r,n,a=!!e&&t.value!==e,u=t.value===t.getAttribute(V);return(a||u)&&"true"===t.getAttribute(D)?(t.removeAttribute(D),t.value=t.value.replace(t.getAttribute(V),""),t.className=t.className.replace(R,""),n=t.getAttribute(F),parseInt(n,10)>=0&&(t.setAttribute("maxLength",n),t.removeAttribute(F)),r=t.getAttribute(P),r&&(t.type=r),!0):!1}function a(t){var e,r,n=t.getAttribute(V);return""===t.value&&n?(t.setAttribute(D,"true"),t.value=n,t.className+=" "+I,r=t.getAttribute(F),r||(t.setAttribute(F,t.maxLength),t.removeAttribute("maxLength")),e=t.getAttribute(P),e?t.type="text":"password"===t.type&&M.changeType(t,"text")&&t.setAttribute(P,"password"),!0):!1}function u(t,e){var r,n,a,u,i,l,o;if(t&&t.getAttribute(V))e(t);else for(a=t?t.getElementsByTagName("input"):b,u=t?t.getElementsByTagName("textarea"):f,r=a?a.length:0,n=u?u.length:0,o=0,l=r+n;l>o;o++)i=r>o?a[o]:u[o-r],e(i)}function i(t){u(t,n)}function l(t){u(t,a)}function o(t){return function(){m&&t.value===t.getAttribute(V)&&"true"===t.getAttribute(D)?M.moveCaret(t,0):n(t)}}function c(t){return function(){a(t)}}function s(t){return function(e){return A=t.value,"true"===t.getAttribute(D)&&A===t.getAttribute(V)&&M.inArray(C,e.keyCode)?(e.preventDefault&&e.preventDefault(),!1):void 0}}function d(t){return function(){n(t,A),""===t.value&&(t.blur(),M.moveCaret(t,0))}}function g(t){return function(){t===r()&&t.value===t.getAttribute(V)&&"true"===t.getAttribute(D)&&M.moveCaret(t,0)}}function v(t){return function(){i(t)}}function p(t){t.form&&(T=t.form,"string"==typeof T&&(T=document.getElementById(T)),T.getAttribute(U)||(M.addEventListener(T,"submit",v(T)),T.setAttribute(U,"true"))),M.addEventListener(t,"focus",o(t)),M.addEventListener(t,"blur",c(t)),m&&(M.addEventListener(t,"keydown",s(t)),M.addEventListener(t,"keyup",d(t)),M.addEventListener(t,"click",g(t))),t.setAttribute(j,"true"),t.setAttribute(V,x),(m||t!==r())&&a(t)}var b,f,m,h,A,y,E,x,L,T,N,S,w,B=["text","search","url","tel","email","password","number","textarea"],C=[27,33,34,35,36,37,38,39,40,8,46],k="#ccc",I="placeholdersjs",R=RegExp("(?:^|\\s)"+I+"(?!\\S)"),V="data-placeholder-value",D="data-placeholder-active",P="data-placeholder-type",U="data-placeholder-submit",j="data-placeholder-bound",q="data-placeholder-focus",z="data-placeholder-live",F="data-placeholder-maxlength",G=document.createElement("input"),H=document.getElementsByTagName("head")[0],J=document.documentElement,K=t.Placeholders,M=K.Utils;if(K.nativeSupport=void 0!==G.placeholder,!K.nativeSupport){for(b=document.getElementsByTagName("input"),f=document.getElementsByTagName("textarea"),m="false"===J.getAttribute(q),h="false"!==J.getAttribute(z),y=document.createElement("style"),y.type="text/css",E=document.createTextNode("."+I+" { color:"+k+"; }"),y.styleSheet?y.styleSheet.cssText=E.nodeValue:y.appendChild(E),H.insertBefore(y,H.firstChild),w=0,S=b.length+f.length;S>w;w++)N=b.length>w?b[w]:f[w-b.length],x=N.attributes.placeholder,x&&(x=x.nodeValue,x&&M.inArray(B,N.type)&&p(N));L=setInterval(function(){for(w=0,S=b.length+f.length;S>w;w++)N=b.length>w?b[w]:f[w-b.length],x=N.attributes.placeholder,x?(x=x.nodeValue,x&&M.inArray(B,N.type)&&(N.getAttribute(j)||p(N),(x!==N.getAttribute(V)||"password"===N.type&&!N.getAttribute(P))&&("password"===N.type&&!N.getAttribute(P)&&M.changeType(N,"text")&&N.setAttribute(P,"password"),N.value===N.getAttribute(V)&&(N.value=x),N.setAttribute(V,x)))):N.getAttribute(D)&&(n(N),N.removeAttribute(V));h||clearInterval(L)},100)}M.addEventListener(t,"beforeunload",function(){K.disable()}),K.disable=K.nativeSupport?e:i,K.enable=K.nativeSupport?e:l}(this);
+var fakewaffle = ( function ( $, fakewaffle ) {
+	'use strict';
+
+	fakewaffle.responsiveTabs = function ( collapseDisplayed ) {
+
+		fakewaffle.currentPosition = 'tabs';
+
+		var tabGroups = $( '.nav-tabs.responsive' );
+		var hidden    = '';
+		var visible   = '';
+		var activeTab = '';
+
+		if ( collapseDisplayed === undefined ) {
+			collapseDisplayed = [ 'xs', 'sm' ];
+		}
+
+		$.each( collapseDisplayed, function () {
+			hidden  += ' hidden-' + this;
+			visible += ' visible-' + this;
+		} );
+
+		$.each( tabGroups, function () {
+			var $tabGroup   = $( this );
+			var tabs        = $tabGroup.find( 'li a' );
+			var collapseDiv = $( '<div></div>', {
+				'class' : 'panel-group responsive' + visible,
+				'id'    : 'collapse-' + $tabGroup.attr( 'id' )
+			} );
+
+			$.each( tabs, function () {
+				var $this          = $( this );
+				var oldLinkClass   = $this.attr( 'class' ) === undefined ? '' : $this.attr( 'class' );
+				var newLinkClass   = 'accordion-toggle';
+				var oldParentClass = $this.parent().attr( 'class' ) === undefined ? '' : $this.parent().attr( 'class' );
+				var newParentClass = 'panel panel-default';
+				var newHash        = $this.get( 0 ).hash.replace( '#', 'collapse-' );
+
+				if ( oldLinkClass.length > 0 ) {
+					newLinkClass += ' ' + oldLinkClass;
+				}
+
+				if ( oldParentClass.length > 0 ) {
+					oldParentClass = oldParentClass.replace( /\bactive\b/g, '' );
+					newParentClass += ' ' + oldParentClass;
+					newParentClass = newParentClass.replace( /\s{2,}/g, ' ' );
+					newParentClass = newParentClass.replace( /^\s+|\s+$/g, '' );
+				}
+
+				if ( $this.parent().hasClass( 'active' ) ) {
+					activeTab = '#' + newHash;
+				}
+
+				collapseDiv.append(
+					$( '<div>' ).attr( 'class', newParentClass ).html(
+						$( '<div>' ).attr( 'class', 'panel-heading' ).html(
+							$( '<h4>' ).attr( 'class', 'panel-title' ).html(
+								$( '<a>', {
+									'class'       : newLinkClass,
+									'data-toggle' : 'collapse',
+									'data-parent' : '#collapse-' + $tabGroup.attr( 'id' ),
+									'href'        : '#' + newHash,
+									'html'        : $this.html()
+								} )
+							)
+						)
+					).append(
+						$( '<div>', {
+							'id'    : newHash,
+							'class' : 'panel-collapse collapse'
+						} )
+					)
+				);
+			} );
+
+			$tabGroup.next().after( collapseDiv );
+			$tabGroup.addClass( hidden );
+			$( '.tab-content.responsive' ).addClass( hidden );
+		} );
+
+
+		fakewaffle.checkResize();
+		fakewaffle.bindTabToCollapse();
+
+		if ( activeTab ) {
+			$( activeTab ).collapse( 'show' );
+		}
+	};
+
+	fakewaffle.checkResize = function () {
+
+		if ( $( '.panel-group.responsive' ).is( ':visible' ) === true && fakewaffle.currentPosition === 'tabs' ) {
+			fakewaffle.tabToPanel();
+			fakewaffle.currentPosition = 'panel';
+		} else if ( $( '.panel-group.responsive' ).is( ':visible' ) === false && fakewaffle.currentPosition === 'panel' ) {
+			fakewaffle.panelToTab();
+			fakewaffle.currentPosition = 'tabs';
+		}
+
+	};
+
+	fakewaffle.tabToPanel = function () {
+
+		var tabGroups = $( '.nav-tabs.responsive' );
+
+		$.each( tabGroups, function ( index, tabGroup ) {
+
+			// Find the tab
+			var tabContents = $( tabGroup ).next( '.tab-content' ).find( '.tab-pane' );
+
+			$.each( tabContents, function ( index, tabContent ) {
+				// Find the id to move the element to
+				var destinationId = $( tabContent ).attr( 'id' ).replace ( /^/, '#collapse-' );
+
+				// Convert tab to panel and move to destination
+				$( tabContent )
+					.removeClass( 'tab-pane' )
+					.addClass( 'panel-body' )
+					.appendTo( $( destinationId ) );
+
+			} );
+
+		} );
+
+	};
+
+	fakewaffle.panelToTab = function () {
+
+		var panelGroups = $( '.panel-group.responsive' );
+
+		$.each( panelGroups, function ( index, panelGroup ) {
+
+			var destinationId = $( panelGroup ).attr( 'id' ).replace( 'collapse-', '#' );
+			var destination   = $( destinationId ).next( '.tab-content' )[ 0 ];
+
+			// Find the panel contents
+			var panelContents = $( panelGroup ).find( '.panel-body' );
+
+			// Convert to tab and move to destination
+			panelContents
+				.removeClass( 'panel-body' )
+				.addClass( 'tab-pane' )
+				.appendTo( $( destination ) );
+
+		} );
+
+	};
+
+	fakewaffle.bindTabToCollapse = function () {
+
+		var tabs     = $( '.nav-tabs.responsive' ).find( 'li a' );
+		var collapse = $( '.panel-group.responsive' ).find( '.panel-collapse' );
+
+		// Toggle the panels when the associated tab is toggled
+		tabs.on( 'shown.bs.tab', function ( e ) {
+			var $current  = $( e.currentTarget.hash.replace( /#/, '#collapse-' ) );
+			$current.collapse( 'show' );
+
+			if ( e.relatedTarget ) {
+				var $previous = $( e.relatedTarget.hash.replace( /#/, '#collapse-' ) );
+				$previous.collapse( 'hide' );
+			}
+		} );
+
+		// Toggle the tab when the associated panel is toggled
+		collapse.on( 'shown.bs.collapse', function ( e ) {
+
+			// Activate current tabs
+			var current = $( e.target ).context.id.replace( /collapse-/g, '#' );
+			$( 'a[href="' + current + '"]' ).tab( 'show' );
+
+			// Update the content with active
+			var panelGroup = $( e.currentTarget ).closest( '.panel-group.responsive' );
+			$( panelGroup ).find( '.panel-body' ).removeClass( 'active' );
+			$( e.currentTarget ).find( '.panel-body' ).addClass( 'active' );
+
+		} );
+	};
+
+	$( window ).resize( function () {
+		fakewaffle.checkResize();
+	} );
+
+	return fakewaffle;
+}( window.jQuery, fakewaffle || { } ) );

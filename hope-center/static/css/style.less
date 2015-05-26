@@ -14,6 +14,7 @@ html, body {
 	width: 100%;
 	margin: 0 auto;
   font-family: @font-l;
+  color: #575652;
   background: url(../images/bg.jpg) repeat top center;
 }
 i {
@@ -191,6 +192,7 @@ i {
 }
 .bold-text {
   font-family: @font-r;
+  padding-right: 10px;
 }
 .thumbnail {
   background: none;
@@ -200,6 +202,10 @@ i {
 
   &.article-date {
     border-right-color: #221e1a;
+    box-shadow: none;
+  }
+  &.single-item {
+    border-right: none;
     box-shadow: none;
   }
 
@@ -213,7 +219,14 @@ i {
     .gradient(#fff, #efefef);
     display: inline-block;
     padding: 5px 5px 0px 5px;
-    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1)
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+
+    &.single-item {
+      margin-right: 20px;
+      border-right: 1px solid #d0cbc0;
+      box-shadow: 1px 0px 0px 0px #edeae5;
+    }
+
   }
   & h2 {
     font-size: 35px;
@@ -240,6 +253,10 @@ i {
     }
     &-text {
       color: #575652;
+      padding: 5px 0;
+    }
+    &.single-item {
+      display: table;
     }
   }
 }
@@ -249,6 +266,20 @@ i {
   padding: 0px 10px;
   text-transform: uppercase;
   margin-right: 5px;
+}
+.panel-default {
+  background: #0e0c0a;
+  &  > .panel-heading {
+    background: #0e0c0a;
+    border: none;
+    // color: #dad6cc;
+  }
+  & .accordion-toggle {
+    color: @text-orange;
+    &.collapsed {
+      color: #dad6cc;
+    }
+  }
 }
 //custom bootstrap end
 
@@ -499,6 +530,87 @@ i {
     background: #1b8acb;
   }
 }
+
+.block {
+  &__text {
+    line-height: 30px;
+    padding: 15px 0;
+  }
+}
+.article-list>li>a {
+  color: #dcd8cf;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.list-mark {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+}
+.article-columns {
+  width: 100%;
+  text-align: justify;
+  padding: 50px 0;
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+}
+.article-col {
+  display: inline-block;
+}
+.history-container {
+  margin: 30px 0;
+}
+.history-tabs.nav-tabs {
+  margin: 40px 0;
+  & li.active {
+    background: none;
+    color: @text-orange;
+    border: none;
+    &:hover,
+    &:focus {
+      background: none;
+      color: @text-orange;
+      border: none;
+    }
+    & a {
+      border: none;
+      &:hover,
+      &:focus {
+        background: none;
+        color: @text-orange;
+        border: none;
+      }
+    }
+  }
+}
+.history-tabs.nav-tabs > li.active > a,
+.history-tabs.nav-tabs > li.active > a:hover,
+.history-tabs.nav-tabs > li.active > a:focus {
+  background: none;
+  color: @text-orange;
+  border: none;
+}
+.history-tabs.nav-justified > li > a {
+  border: none;
+  font: 35px @font-r;
+  color: #ddd9cf;
+  &:hover,
+  &:focus {
+    background: none;
+    color: @text-orange;
+    border: none;
+  }
+}
+.history-content {
+  background: #0e0c0a;
+  padding: 20px;
+}
 @media only screen and (max-width: 991px) {
   //custom bootstrap start
   .nav > li > a {
@@ -560,7 +672,13 @@ i {
     }
   }
 }
-
+@media only screen and (max-width: 630px) {
+  .article-col {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+}
 @media only screen and (max-width: 450px) {
   .carousel-indicators {
     width: 50%;
