@@ -5,3 +5,9 @@ Icon classes can be used entirely standalone. They are named after their origina
 <i class="icon-home"></i>
 ```
 */
+.icon-back-btn-donate {
+  background-image: url(../images/spritesheet-backs.png);
+  background-position: 0px 0px;
+  width: 125px;
+  height: 101px;
+}

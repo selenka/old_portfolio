@@ -149,6 +149,7 @@ i {
     border-left: 20px solid @teal;
   }
 }
+
 //carousel setting end
 
 //custom bootstrap start
@@ -177,12 +178,17 @@ i {
 .navbar-toggle span {
   background: @orange;
 }
+.accordion-toggle {
+  display: inline-block;
+  width: 100%;
+}
 .row {
 
   &.article {
     background: #dad6cc;
     border-top: 5px solid #d0cbc0;
     padding: 10px;
+    margin: 15px 0;
   }
   &.article-date {
     background: none;
@@ -225,6 +231,9 @@ i {
       margin-right: 20px;
       border-right: 1px solid #d0cbc0;
       box-shadow: 1px 0px 0px 0px #edeae5;
+    }
+    & img {
+      width: 100%;
     }
 
   }
@@ -316,7 +325,12 @@ i {
       color: #fff;
     }
   }
-
+  &__nav-link.active {
+    background: @orange;
+    & a {
+       color: #fff;
+    }
+  }
   &__nav-link a {
     font: 18px @font-r;
     color: #dad6cc;
@@ -535,6 +549,9 @@ i {
   &__text {
     line-height: 30px;
     padding: 15px 0;
+    &.white {
+      color: #fff;
+    }
   }
 }
 .article-list>li>a {
@@ -611,6 +628,110 @@ i {
   background: #0e0c0a;
   padding: 20px;
 }
+.info {
+  padding: 35px;
+  &.donate-block {
+    .clearfix;
+    background: #0e0c0a;
+    margin: 20px 0;
+  }
+}
+.title-style {
+  font-size: 35px;
+  &.contact-page {
+    padding-bottom: 30px;
+  }
+}
+.donate-btn {
+  width: 265px;
+  height: 112px;
+  display: inline-block;
+  padding: 15px;
+  background-color: #ffbb1b;
+  background-image: url(../images/spritesheet-backs.png);
+  background-position: 95% 100%;
+  background-repeat: no-repeat;
+  margin-right: 50px;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+  &__text {
+    &.white {
+      font: 45px @font-r;
+      color: #fff;
+      text-shadow: 1px 1px 1px #ff9405;
+    }
+    &.black {
+      font: 25px @font-r;
+      color: #000;
+      text-shadow: 1px 1px 1px #ffdc58;
+    }
+  }
+}
+.side-text {
+  display: table;
+}
+.contact-title {
+  width: 30%;
+  display: inline-block;
+}
+.contact-list {
+  padding: 15px 0;
+}
+.mail-address {
+  color: #575652;
+  text-decoration: underline;
+  &:hover,
+  &:focus {
+    color: #575652;
+    text-decoration: none;
+  }
+}
+.contact-form {
+  padding: 35px;
+  background: url(../images/contact-bg.png) no-repeat 100% 50%;
+
+  & label {
+    display: inline-block;
+    width: 25%;
+    height: 30px;
+    margin: 5px 0;
+  }
+  & form {
+    max-width: 590px;
+  }
+}
+.contact-input {
+  width: 65%;
+  background: #000000;
+  margin: 5px 0;
+  height: 30px;
+  padding: 0 10px;
+  color: #fff;
+  &.textarea {
+    resize: none;
+    height: 100px;
+    padding: 10px;
+  }
+}
+.btn-container {
+  clear: both;
+  padding-top: 30px;
+}
+.btn-form {
+  padding: 10px 35px;
+  font: 15px @font-r;
+  color: #fff;
+  text-transform: uppercase;
+  margin-left: 10px;
+  border: 1px solid #000;
+
+  &:hover {
+    background: none;
+    border: 1px solid #fff;
+  }
+}
 @media only screen and (max-width: 991px) {
   //custom bootstrap start
   .nav > li > a {
@@ -633,6 +754,9 @@ i {
       }
     }
   }
+  .contact-form {
+    background: none;
+  }
 }
 @media only screen and (max-width: 768px) {
   //custom bootstrap start
@@ -651,6 +775,11 @@ i {
     .carousel-indicators li.active:hover:after,
     .carousel-indicators li.active:hover:before {
       display: none;
+    }
+    .thumbnail {
+      border: none;
+      border-bottom: 1px solid #d0cbc0;
+      box-shadow: 0 1px 0 0 #edeae5;
     }
   //custom bootstrap end
   .quote {
@@ -700,5 +829,15 @@ i {
       padding: 5px;
       background: rgba(0, 0, 0, 0.7);
     }
+  }
+  .contact-form {
+    padding: 5px;
+    margin: 15px 0;
+    & label {
+      width: 100%;
+    }
+  }
+  .contact-input {
+    width: 100%;
   }
 }
