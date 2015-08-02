@@ -1,0 +1,49 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<i class="icon-home"></i>
+```
+*/
+.icon-fb {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -24px 0px;
+  width: 7px;
+  height: 13px;
+}
+.icon-home {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: 0px -18px;
+  width: 15px;
+  height: 13px;
+}
+.icon-home2 {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -33px 0px;
+  width: 15px;
+  height: 11px;
+}
+.icon-home3 {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -33px -13px;
+  width: 15px;
+  height: 11px;
+}
+.icon-in {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: 0px -33px;
+  width: 11px;
+  height: 11px;
+}
+.icon-tel {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: 0px 0px;
+  width: 22px;
+  height: 16px;
+}
+.icon-tw {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -17px -18px;
+  width: 11px;
+  height: 13px;
+}

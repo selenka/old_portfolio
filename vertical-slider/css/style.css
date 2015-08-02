@@ -1,0 +1,9 @@
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.owl-theme .owl-dots .owl-dot span {
+	width: 100px;
+	height: 100px;
+	border-radius: none;
+}

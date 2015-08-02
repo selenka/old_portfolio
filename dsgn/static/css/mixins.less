@@ -1,0 +1,61 @@
+.clearfix {
+  *zoom: 1;
+
+  &:after {
+	content: '';
+	display: table;
+	clear: both;
+  }
+}
+
+.box-shadow (@string) {
+  -webkit-box-shadow: @string;
+  -moz-box-shadow:    @string;
+  box-shadow:         @string;
+}
+
+.gradient (@startColor, @endColor) {
+  background-color: @startColor;
+  background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+  background: -webkit-linear-gradient(top, @startColor, @endColor);
+  background: -moz-linear-gradient(top, @startColor, @endColor);
+  background: -ms-linear-gradient(top, @startColor, @endColor);
+  background: -o-linear-gradient(top, @startColor, @endColor);
+}
+.rotate (@deg) {
+  -webkit-transform: rotate(@deg);
+  -moz-transform: rotate(@deg);
+  -ms-transform: rotate(@deg);
+  -o-transform: rotate(@deg);
+}
+.skew (@deg1, @deg2) {
+  -webkit-transform: skew(@deg1, @deg2);
+  -moz-transform: skew(@deg1, @deg2);
+  -ms-transform: skew(@deg1, @deg2);
+  -o-transform: skew(@deg1, @deg2);
+}
+.scale (@factor) {
+  -webkit-transform: scale(@factor);
+  -moz-transform: scale(@factor);
+  -ms-transform: scale(@factor);
+  -o-transform: scale(@factor);
+}
+.transition (@transition) {
+  -webkit-transition: @transition;
+  -moz-transition:    @transition;
+  -ms-transition:     @transition;
+  -o-transition:      @transition;
+}
+//colors
+@orange:#ffbb1b;
+@green:#98cb35;
+@teal:#64d1a8;
+@text-orange: #bb8e16;
+@text-green: #9ecf39;
+@text-teal: #6cd6af;
+//fonts
+@font-l: 'vegurlight';
+@font-r: 'vegurregular';
+@font-m: 'vegurmedium';
+@font-b: 'vegurbold';
+@font-quote: 'orandabt';
