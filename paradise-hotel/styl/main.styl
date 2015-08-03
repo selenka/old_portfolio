@@ -1,11 +1,15 @@
 @import 'mixins.styl'
 @import 'variables.styl'
+@import 'fonts.styl'
 // default styles start
 *
 	box-sizing border-box
 	-moz-box-sizing border-box
 i
 	display inline-block
+
+a
+	text-decoration none
 	
 html, body
 	height 100%
@@ -52,3 +56,132 @@ textarea:focus:-moz-placeholder
 	height $footer-height
 	width 100%
 // sticky footer end
+
+// general styles start
+.wrap
+	max-width 980px
+	margin 0 auto
+	clearfix()
+.expand-menu
+	display none
+	float right
+	background-color transparent
+	width 30px
+	height 30px
+	margin 10px
+	border-top 2px solid #fff
+	border-bottom 2px solid #fff
+	font 17px $title-font-l
+	color #fff
+	transition(width 0.5s)
+	&:hover
+		width 40px
+	
+.select2-container--default .select2-selection--single.dir-drop
+	background-color $black
+	border none
+	font 13px $base-font
+	outline none
+	
+	.select2-selection__rendered
+		color #fff
+.select2-dropdown.dir-dropdown
+	background-color $black
+	font 13px $base-font
+	color #fff
+	outline none
+	border none
+		
+	
+// general styles end
+
+// header start
+.header
+	width 100%
+	background $black
+	padding 20px 0
+	&__logo
+		position relative
+		display inline-block
+		font 28px $title-font-l
+		color #fff
+		text-transform uppercase
+		padding 8px 0
+		border-top 1px solid #3b3b3b
+		border-bottom 1px solid #3b3b3b
+		&:before
+			content ''
+			position absolute
+			display block
+			background $black
+			width 55px
+			height 9px
+			left 0
+			right 0
+			bottom -4px
+			margin auto
+		&:after
+			content ''
+			position absolute
+			display block
+			background url(../images/spritesheet-backs.png) repeat-x
+			background-position 0px 0px
+			width 45px
+			height 9px
+			left 0
+			right 0
+			bottom -4px
+			margin auto
+
+	&__nav
+		float right
+		padding-top 12px
+		
+	&__nav a
+		font 17px $base-font
+		color #fff
+		font-weight 300
+		padding 0 15px
+		border-right 1px solid #303030
+		&:last-child
+			border-right none
+		&:hover
+			color $blue
+	
+	&__select
+		float right
+		padding-top 12px
+		padding-left 120px
+			
+			
+// header end
+@media only screen and (max-width: 980px)
+	.wrap
+		padding 0 30px
+	.expand-menu
+		display block
+	.header
+		&__nav
+			float none
+			display none
+
+		&__nav a
+			display block
+			padding 8px 0
+			border-right none
+			border-bottom 1px solid #fff
+			transition(all 0.5s)
+			&:hover
+				border-bottom 1px solid $blue
+				
+		&__select
+			padding-left 0
+
+@media only screen and (max-width: 480px)
+	.header
+		&__logo
+			font-size 22px
+			
+@media only screen and (max-width: 320px)
+	.wrap
+		min-width 320px

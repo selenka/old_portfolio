@@ -4,14 +4,34 @@
 		<title></title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 		<link rel="shortcut icon" type="image/png"  href="/images/favicon.png">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 		<header class="header">
+			<div class="wrap">
+				<a class="header__logo" href="#">paradise hotel</a>
+				<button id="expand-menu" class="expand-menu" type='button'>M</button>
+				<div class="header__select">
+					<select name="page-dir" class="select select-dir">
+						 <option value="LTR">EN LTR</option>
+						 <option value="LTR">EN RTL</option>
+					</select>
+				</div>
+				<nav id="main-nav" class="header__nav">
+					<a href="#">Hotel</a>
+					<a href="#">Rooms & Suites</a>
+					<a href="#">Reservation</a>
+					<a href="#">Activities</a>
+					<a href="#">Contact</a>
+				</nav>
+			</div>
 		</header>
 		<div class="page-content"></div>
 		<footer class="footer">
 		</footer>
+		<script src="/js/libs.js"></script>
+		<script src="/js/script.js"></script>
 	</body>
 </html>
