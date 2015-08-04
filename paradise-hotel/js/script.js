@@ -22,11 +22,37 @@ $(document).ready(function () {
             minimumResultsForSearch: -1,
             containerCssClass: additionClass + "-drop",
             dropdownCssClass: additionClass + "-dropdown",
-            width: 'style'
+            dropdownAutoWidth: !0,
+            placeholder: function(){
+                $(this).data('placeholder');
+            },
+            width: "style"
         });
     }
-    styleSelect('.select', 'dir');
+    styleSelect('.select-dir', 'dir');
+    styleSelect('.select-form', 'form');
     //select2 end
+
+    //datepicker-range start
+    $('.input-daterange').datepicker({
+        format: 'mm/dd/yyyy',
+        todayHighlight: true,
+        startDate: new Date(),
+        endDate: '+90d',
+        autoclose: true
+    });
+    //datepicker-range end
+
+    //owl carousel start
+    $('.slider-basic').owlCarousel({
+        loop: true,
+        nav: true,
+        navText: [
+        "<i class='icon-arrow-40 prev-arrow'></i>",
+        "<i class='icon-arrow-40 next-arrow'></i>"],
+        items: 1
+    })
+    //owl carousel end
 });
 
 var expandMenuBtn = document.getElementById('expand-menu');

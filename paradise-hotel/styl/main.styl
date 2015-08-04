@@ -10,12 +10,15 @@ i
 
 a
 	text-decoration none
-	
+html
+	position relative
 html, body
-	height 100%
+	min-height 100%
 	width 100%
 	margin 0 auto
 	background $light-grey
+	font 13px $base-font
+	color #373535
 
 input, button, textarea
 	outline none
@@ -49,7 +52,7 @@ textarea:focus:-moz-placeholder
 
 // sticky footer start
 .page-content
-	padding-bottom $footer-height
+	padding-bottom $footer-height*3
 
 .footer
 	position absolute
@@ -74,6 +77,10 @@ textarea:focus:-moz-placeholder
 .wrap
 	max-width 980px
 	margin 0 auto
+	&.form-position
+		position: relative;
+		top: -40px;
+		z-index: 1;
 	
 .expand-menu
 	display none
@@ -104,8 +111,25 @@ textarea:focus:-moz-placeholder
 	color #fff
 	outline none
 	border none
-		
-	
+
+.select2-container--default .select2-selection--single.form-drop
+	font 13px $base-font
+	outline none
+	width 100%
+.bold-text
+	font-weight 700
+	font-size 18px
+.btn-blue
+	padding 5px 15px
+	background $light-blue
+	font 14px $base-font
+	color #fff
+	font-weight 700
+	display inline-block
+	vertical-align bottom
+	margin-top 8px
+	&:hover
+		opacity 0.7
 // general styles end
 
 // header start
@@ -137,7 +161,7 @@ textarea:focus:-moz-placeholder
 			content ''
 			position absolute
 			display block
-			background url(../images/spritesheet-backs.png) repeat-x
+			background url(../images/logo-star.png) repeat-x
 			background-position 0px 0px
 			width 45px
 			height 9px
@@ -164,7 +188,7 @@ textarea:focus:-moz-placeholder
 	&__select
 		float right
 		padding-top 12px
-		padding-left 120px
+		padding-left 35px
 			
 .footer
 	background #fff
@@ -188,9 +212,146 @@ textarea:focus:-moz-placeholder
 			color $blue
 		
 // header end
-@media only screen and (max-width: 980px)
+
+// homepage start
+
+.slider-basic
+	.owl-controls
+		width 100%
+		position absolute
+		top 50%
+	.owl-nav
+		clearfix()
+		.owl-prev,
+		.owl-next
+			margin 0 20px
+				
+		.owl-prev
+			float left
+			&:hover > .prev-arrow
+				opacity 0.8
+			
+			.prev-arrow
+				transform(rotate(180deg))
+		.owl-next
+			float right
+			&:hover > .next-arrow
+				opacity 0.8
+			
+	.owl-nav div i
+		vertical-align middle
+		
+	.item
+		position relative
+		.slider-text
+			position absolute
+			top 47%
+			width 100%
+			overflow hidden
+		.text-line
+			padding 10px 15px
+			display inline-block
+			color #fff
+			text-transform uppercase
+		.black-title
+			background $black
+			font 28px $title-font-b
+			position: relative;
+			z-index: 2;
+			&:after
+				content ''
+				position: absolute;
+				display: block;
+				width: 40px;
+				height: 60px;
+				background-color $black
+				right: -18px;
+				transform: rotate(30deg);
+				bottom: 6px;
+				z-index: -1;
+		.blue-title
+			background $light-blue
+			font 20px $title-font-l
+			position relative
+			z-index 1
+			&:after
+				content ''
+				position: absolute;
+				display: block;
+				width: 40px;
+				height: 50px;
+				background-color $light-blue
+				right: -15px;
+				transform: rotate(30deg);
+				bottom: 6px;
+				z-index: -1;
+
+.form
+	border-radius 6px
+	width 100%
+	background #fff
+	border 2px solid rgba(0,0,0,0.2)
+	
+	&__discr
+		width 215px			
+		background #f3f3f3
+		padding 10px
+		display inline-block
+		vertical-align middle
+		border-right 1px solid #e0e0e0
+	&__block
+		display inline-block
+		vertical-align middle
+		padding 10px
+		
+		fieldset
+			display inline-block
+			vertical-align middle
+			margin-right 8px
+			.select2-container
+				width 100%
+				min-width 160px	
+		fieldset.small .select2-container
+			min-width 100%
+		fieldset label
+			display block
+			line-height 24px
+		.date-block
+			display inline-block
+			input
+				border 1px solid #aaa
+				border-radius 4px
+				height 28px
+				text-align left
+				padding 0 10px
+				background url(../images/spritesheet-backs.png) no-repeat 95% 0px 
+				
+.thumbs
+	display -webkit-flex
+	display flex
+	
+	&__item
+		max-width 300px
+		margin 20px
+		
+		img
+			width 100%
+		
+	&__title
+		font-size 20px
+		padding 5px 0
+		
+// homepage end
+@media only screen and (max-width: 1100px)
 	.wrap
-		padding 0 30px
+		padding 0 75px
+		
+	.form__discr
+		display block
+		width 100%
+		border-right none
+		border-bottom 1px solid #e0e0e0
+@media only screen and (max-width: 980px)
 	.expand-menu
 		display block
 	.header
@@ -209,7 +370,13 @@ textarea:focus:-moz-placeholder
 				
 		&__select
 			padding-left 0
-			
+	.slider-basic .item .black-title
+		font-size 20px
+	.slider-basic .item .blue-title
+		font-size 14px
+	.slider-basic .owl-controls
+		top 46%
+		
 @media only screen and (max-width: 768px)
 	.flex-justify-center
 		min-height 200px
@@ -227,11 +394,32 @@ textarea:focus:-moz-placeholder
 			padding 5px 0
 			border-bottom 1px solid #aeadad
 			text-align center
-
+	.thumbs
+		-webkit-flex-wrap wrap
+		flex-wrap wrap
+		-webkit-justify-content center
+		justify-content center
+		margin-bottom 100px
+@media only screen and (max-width: 600px)
+	.wrap
+		padding 0 30px
+	.wrap.form-position
+		position inherit
+		margin-top 40px
+	.slider-basic .item .slider-text
+		display none
+	.slider-basic .owl-controls
+		top 37%
 @media only screen and (max-width: 480px)
 	.header
 		&__logo
 			font-size 22px
+	.form__block
+		fieldset,
+		.date-block,
+		.date-block input
+			width 100%
+			
 			
 @media only screen and (max-width: 320px)
 	.wrap

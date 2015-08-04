@@ -7,7 +7,9 @@ module.exports = function(grunt) {
                 src: [
                     'js/libs/jquery-1.11.2.min.js',
                     'js/libs/placeholders.min.js',
-                    'js/libs/select2.full.min.js'
+                    'js/libs/select2.full.min.js',
+                    'js/libs/owl.carousel.min.js',
+                    'js/libs/bootstrap-datepicker.min.js'
                 ],
                 dest: 'js/libs.js',
             },
