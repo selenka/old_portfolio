@@ -5,3 +5,33 @@ Icon classes can be used entirely standalone. They are named after their origina
 <i class="icon-home"></i>
 ```
 */
+.icon-facebook-32 {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: 0px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-flickr-32 {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -34px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-google-32 {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: 0px -34px;
+  width: 32px;
+  height: 32px;
+}
+.icon-twitter-32 {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -34px -34px;
+  width: 32px;
+  height: 32px;
+}
+.icon-youtube-32 {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -68px 0px;
+  width: 32px;
+  height: 32px;
+}

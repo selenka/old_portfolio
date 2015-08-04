@@ -15,6 +15,7 @@ html, body
 	height 100%
 	width 100%
 	margin 0 auto
+	background $light-grey
 
 input, button, textarea
 	outline none
@@ -53,15 +54,27 @@ textarea:focus:-moz-placeholder
 .footer
 	position absolute
 	bottom 0
-	height $footer-height
+	min-height $footer-height
 	width 100%
 // sticky footer end
 
 // general styles start
+.clearfix
+	clearfix()
+.flex-justify-center
+	display -webkit-flex
+	display flex
+	-webkit-flex-direction row /* works with row or column */
+	flex-direction row
+	-webkit-align-items center
+	align-items center
+	-webkit-justify-content space-between
+	justify-content space-between
+	
 .wrap
 	max-width 980px
 	margin 0 auto
-	clearfix()
+	
 .expand-menu
 	display none
 	float right
@@ -153,7 +166,27 @@ textarea:focus:-moz-placeholder
 		padding-top 12px
 		padding-left 120px
 			
-			
+.footer
+	background #fff
+	padding-top 20px
+	font 12px $base-font
+	color #aeadad
+	
+	&__social a
+		background-color #d1d1d1
+		border-radius 50%
+		display inline-block
+		vertical-align middle
+		&:hover
+			background-color $blue
+		
+	&__nav a
+		font 12px $base-font
+		color #aeadad
+		margin 0 5px
+		&:hover
+			color $blue
+		
 // header end
 @media only screen and (max-width: 980px)
 	.wrap
@@ -176,6 +209,24 @@ textarea:focus:-moz-placeholder
 				
 		&__select
 			padding-left 0
+			
+@media only screen and (max-width: 768px)
+	.flex-justify-center
+		min-height 200px
+		-webkit-flex-direction column-reverse
+		flex-direction column-reverse
+		-webkit-justify-content space-between
+		justify-content space-between
+	.footer
+		min-height 200px
+		&__nav
+			width 100%
+		&__nav a
+			display block
+			width 100%
+			padding 5px 0
+			border-bottom 1px solid #aeadad
+			text-align center
 
 @media only screen and (max-width: 480px)
 	.header
