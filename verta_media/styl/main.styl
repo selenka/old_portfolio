@@ -1,0 +1,393 @@
+@import 'mixins.styl'
+@import 'variables.styl'
+@import 'fonts.styl'
+// default styles start
+*
+	box-sizing border-box
+	-moz-box-sizing border-box
+i
+	display inline-block
+
+a
+	text-decoration none
+	cursor pointer
+body
+	position relative
+	
+html, body
+	min-height 100%
+	width 100%
+	margin 0 auto
+	background #fff
+	font 13px $base-font
+	color #777
+
+input, button, textarea
+	outline none
+	border none
+	cursor pointer
+	
+input[type=text]::-ms-clear
+	display none
+
+input[type=password]::-ms-reveal
+	display none
+
+input[type='submit']
+	-webkit-appearance none
+	-moz-appearance none
+	appearance none
+
+::-webkit-input-placeholder 
+	color #000
+::-moz-placeholder
+	color #000 /* firefox 19+ */
+:-ms-input-placeholder
+	color #000/* ie */
+input:-moz-placeholder
+	color #000
+
+textarea:focus::-webkit-input-placeholder,
+textarea:focus:-moz-placeholder
+	color transparent
+// default styles end
+
+// page styles start
+.header-wrap
+	max-width 1600px
+	margin 0 auto
+.wrap
+	max-width 1150px
+	margin 0 auto
+	clearfix()
+
+.expand-menu
+	display none
+	border-top 5px solid $blue
+	border-bottom 5px solid $blue
+	width 30px
+	height 30px
+	background-color transparent
+	position relative
+	margin 16px
+	cursor pointer
+	user-select(none)
+	
+	&:after
+		content ''
+		position absolute
+		display block
+		width 100%
+		height 5px
+		background-color $orange
+		left 0
+		top 8px
+		
+.expand-menu-input
+	display none
+.expand-menu-input:checked + #mobile-menu
+	display block
+	
+	
+// page styles end
+.header
+	position absolute
+	top 0
+	width 100%
+	min-height 98px
+	clearfix()
+		
+	&__link
+		display inline-block
+		text-indent -9999px
+		width 160px
+		height 135px
+		background url(../images/logo.png) no-repeat 50% 25%;
+	&__logo
+		display inline-block
+		width 20% //400px
+		min-width 350px
+		height 135px
+		background url(../images/logo-shape.png) no-repeat
+		padding-left 90px
+
+	&__menu
+		position absolute
+		top 0
+		right 0
+		width 85%
+		min-height 98px
+		border-bottom 1px solid $orange
+		text-align right
+
+	&__note,
+	&__right
+		display inline-block
+		text-transform uppercase
+		text-align right
+	&__note
+		vertical-align top
+		padding-top 16px
+		padding-right 10%
+		font 18px $museo-sans-500
+		color #fff
+		text-align center
+		
+	&__nav-top
+		clearfix()
+
+		li
+			float right
+			border-bottom 1px solid $orange
+			
+			&.orange-link
+				background $orange
+					
+			&.blue-link
+				background $blue
+					
+			a
+				display inline-block
+				font 13px $museo-sans-500
+				color #fff
+				padding 15px 15px
+			
+			&:last-child a
+				padding-left 0
+				
+			&:hover a
+				color $blue
+			&.orange-link:hover a,
+			&.blue-link:hover a
+				color #fff
+
+			&.orange-link:hover,
+			&.blue-link:hover
+				opacity 0.7
+	&__nav-bottom
+		a
+			font 18px $museo-sans-900
+			color #fff
+			display inline-block
+			padding 15px 15px 10px 15px;
+			transition(border 0.2s \, color 0.5s)
+			
+			&:hover
+				border-bottom 4px solid $orange
+				color $blue
+
+.page-content
+	width 100%
+.main
+	height 700px
+	width 100%
+	display table
+	background $dark-grey url(../images/pics/main-bg.jpg) no-repeat
+	-webkit-background-size cover
+	background-size cover
+	background-position 50% 50%
+	color #fff
+		
+	&__center
+		display table-cell
+		vertical-align middle
+		text-align center
+		
+	&__block
+		display inline-block
+		max-width 580px
+		
+	&__title
+		font 48px $museo-sans-900
+		text-transform uppercase
+		
+	&__text
+		font 24px $museo-500
+		padding 35px 0 55px
+		
+	&__btn
+		display inline-block
+		background $bright-orange
+		font 24px $museo-sans-900
+		color #fff
+		padding 16px
+		min-width 340px
+		text-transform uppercase
+		&:hover
+			opacity 0.7
+			
+.note
+	font 24px $museo-sans-300
+	color #777
+	padding 130px 20px
+
+.slider
+	// min-height 700px
+	background url('../images/triangles.jpg') repeat
+	clearfix()
+	
+	&__left,
+	&__right
+		width 50%
+		float left
+		height 700px
+		display table
+		
+	&__left
+		border-right 1px solid #c0c8cc
+	&__center
+		display table-cell
+		vertical-align middle
+	
+.ipad
+	max-height 500px
+	background #fff
+	border-radius 35px 0 0 35px
+	padding 60px 0 60px 60px
+	position relative
+	&:before
+		content ''
+		position absolute
+		display block
+		width 10px
+		height 10px
+		border 1px solid #dcdcdc
+		border-radius 50%
+		top 50%
+		left 25px
+	
+	img
+		width 100%
+		box-shadow -1px 1px 4px -1px rgba(0,0,0,0.6)
+		
+.slider-box
+	width 450px
+	padding 70px
+
+@media only screen and (max-width: 1600px)
+	.header
+		&__menu
+			width 80%
+
+@media only screen and (max-width: 1180px)
+	.header
+		&__menu
+			width 75%
+		&__note
+			padding-right 0
+			font-size 12px
+	.main
+		height 600px
+
+@media only screen and (max-width: 980px)
+	.header
+		&__logo
+			width inherit
+			max-width inherit
+			background none
+			padding-left 0
+			height inherit
+		&__link
+			height 98px
+		&__menu
+			width 100%
+		&__note
+			display inline-block
+			text-align right
+			padding 20px 15px
+			font-size 16px
+		&__right
+			display block
+			
+	.main
+		&__center
+			vertical-align bottom
+			padding 50px 0
+		&__title
+			word-break break-word
+
+@media only screen and (max-width: 768px)
+	.expand-menu
+		display inline-block
+		margin 16px 25px
+	.header		
+		&__right
+			display none
+			clearfix()
+			width 100%
+			margin-top 30px
+			padding 25px
+			
+		&__nav-top
+			width 50%
+			float left
+			text-align left
+			li
+				background rgba(0,0,0, 0.8)
+			li,
+			a
+				width 100%
+				
+			li.blue-link,
+			li.orange-link
+				width 50%
+				
+			li:last-child a
+				padding-left 15px
+			li:last-child
+				border-bottom 1px solid transparent
+				
+		&__nav-bottom
+			width 50%
+			float right
+			text-align right
+				
+			a
+				width 100%
+				font-size 13px
+				padding 15px
+				border-bottom 1px solid transparent
+				background rgba(0,0,0, 0.8)
+				
+			a:hover
+				border-bottom-width 1px
+			a:last-child
+				border-bottom 1px solid transparent
+			a:last-child:hover
+				border-bottom 1px solid transparent
+	
+	.main
+		height 500px
+		&__title
+			font-size 38px
+		&__text
+			font-size 18px
+		&__btn
+			font-size 18px
+			min-width 240px
+			padding 12px
+			
+	.note
+		font-size 18px
+		padding 50px 20px
+
+@media only screen and (max-width: 480px)
+	.expand-menu
+		margin 0px 25px
+	.header
+		&__note
+			display block
+			font-size 12px
+		&__right
+			margin-top 25px
+			
+	.main
+		&__title
+			font-size 24px
+			
+		&__text
+			font-size 16px
+		&__btn
+			font-size 16px
+			min-width 140px
+			padding 8px
