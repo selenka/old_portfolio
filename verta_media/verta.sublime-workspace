@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"museo",
+				"museo-300"
+			],
+			[
+				"mu",
+				"museo-sans-500"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
 				"tran",
 				"transition"
 			],
@@ -502,18 +514,6 @@
 			[
 				"chi",
 				"childrenAmount"
-			],
-			[
-				"ol",
-				"OL"
-			],
-			[
-				"elem",
-				"lastElementChild"
-			],
-			[
-				"before",
-				"beforeItem"
 			]
 		]
 	},
@@ -523,39 +523,31 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1772,
+				"buffer_size": 3519,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "styl/main.styl",
-			"settings":
-			{
-				"buffer_size": 4503,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "styl/variables.styl",
-			"settings":
-			{
-				"buffer_size": 462,
-				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "js/script.js",
 			"settings":
 			{
-				"buffer_size": 1044,
+				"buffer_size": 802,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "styl/mixins.styl",
+			"file": "css/plugins/owl.carousel.css",
 			"settings":
 			{
-				"buffer_size": 396,
+				"buffer_size": 4614,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "styl/main.styl",
+			"settings":
+			{
+				"buffer_size": 6390,
 				"line_ending": "Unix"
 			}
 		},
@@ -563,7 +555,7 @@
 			"file": "Gruntfile.js",
 			"settings":
 			{
-				"buffer_size": 2660,
+				"buffer_size": 2553,
 				"line_ending": "Unix"
 			}
 		}
@@ -718,14 +710,18 @@
 	"expanded_folders":
 	[
 		"/Users/selenka/Workspace/selenka.github.io/verta_media",
+		"/Users/selenka/Workspace/selenka.github.io/verta_media/css",
+		"/Users/selenka/Workspace/selenka.github.io/verta_media/css/plugins",
 		"/Users/selenka/Workspace/selenka.github.io/verta_media/js",
+		"/Users/selenka/Workspace/selenka.github.io/verta_media/js/libs",
 		"/Users/selenka/Workspace/selenka.github.io/verta_media/styl"
 	],
 	"file_history":
 	[
-		"/Users/selenka/Workspace/selenka.github.io/verta_media/styl/fonts.styl",
+		"/Users/selenka/Workspace/selenka.github.io/verta_media/styl/mixins.styl",
 		"/Users/selenka/Workspace/selenka.github.io/verta_media/js/script.js",
 		"/Users/selenka/Workspace/selenka.github.io/verta_media/styl/variables.styl",
+		"/Users/selenka/Workspace/selenka.github.io/verta_media/styl/fonts.styl",
 		"/Volumes/iBox/itstep/script.js",
 		"/Volumes/iBox/itstep/style.css",
 		"/Volumes/iBox/itstep/lesson1.html",
@@ -849,8 +845,7 @@
 		"/Users/selenka/Workspace/tipcow/tipcow/templates/account/artist_main.html",
 		"/Users/selenka/Workspace/bookelgouna/bookelgouna/bookelgouna/core/urls.py",
 		"/Users/selenka/Workspace/tipcow/tipcow/tipcow/urls.py",
-		"/Users/selenka/Workspace/tipcow/tipcow/account/views.py",
-		"/Users/selenka/Workspace/tipcow/tipcow/account/urls.py"
+		"/Users/selenka/Workspace/tipcow/tipcow/account/views.py"
 	],
 	"find":
 	{
@@ -893,6 +888,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"dot",
+			"dor",
+			"dot",
+			"dots",
 			"keydow",
 			"keypres",
 			"getCom",
@@ -1016,11 +1015,7 @@
 			" mail, error",
 			"error",
 			"recom",
-			"hotels",
-			"media",
-			"small",
-			"&__discr",
-			"price-or"
+			"hotels"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1093,15 +1088,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1772,
+						"buffer_size": 3519,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								695,
-								701
+								3036,
+								3036
 							]
 						],
 						"settings":
@@ -1170,7 +1165,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 21.0,
+						"translation.y": 703.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -1178,19 +1173,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "styl/main.styl",
+					"file": "js/script.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4503,
+						"buffer_size": 802,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3672,
-								3672
+								174,
+								174
 							]
 						],
 						"settings":
@@ -1255,96 +1250,9 @@
 								"bh_unmatched_content"
 							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
-							"syntax": "Packages/Stylus/Stylus.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2820.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "styl/variables.styl",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 462,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								412,
-								418
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
-							"syntax": "Packages/Stylus/Stylus.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1354,20 +1262,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "js/script.js",
-					"semi_transient": false,
+					"buffer": 2,
+					"file": "css/plugins/owl.carousel.css",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1044,
+						"buffer_size": 4614,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								812,
-								812
+								1591,
+								1594
 							]
 						],
 						"settings":
@@ -1432,32 +1340,32 @@
 								"bh_unmatched_content"
 							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 787.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "styl/mixins.styl",
+					"buffer": 3,
+					"file": "styl/main.styl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 396,
+						"buffer_size": 6390,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								4109,
+								4109
 							]
 						],
 						"settings":
@@ -1526,27 +1434,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1514.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "Gruntfile.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2660,
+						"buffer_size": 2553,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2188,
-								2188
+								276,
+								276
 							]
 						],
 						"settings":
@@ -1616,10 +1524,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 427.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]

@@ -6,8 +6,8 @@ module.exports = function(grunt) {
              dist: {
                 src: [
                     'js/libs/jquery-1.11.2.min.js',
-                    'js/libs/select2.full.min.js',
-                    'js/libs/lightslider.min.js'
+                    // 'js/libs/select2.full.min.js',
+                    'js/libs/owl.carousel.min.js'
                 ],
                 dest: 'js/libs.js',
             },

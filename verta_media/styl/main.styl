@@ -52,6 +52,20 @@ textarea:focus:-moz-placeholder
 	color transparent
 // default styles end
 
+//owl carousel custom styles start
+.owl-dot
+	display inline-block
+	width 12px
+	height 12px
+	background #47464b
+	border-radius 50%
+	margin 10px
+	&.active
+		background transparent
+		border 1px solid #47464b
+	
+//owl carousel custom styles end
+
 // page styles start
 .header-wrap
 	max-width 1600px
@@ -238,6 +252,19 @@ textarea:focus:-moz-placeholder
 	&__center
 		display table-cell
 		vertical-align middle
+		
+	&__box
+		width 570px
+		padding 70px
+	
+	&__title
+		font 36px $museo-300
+		color $bright-orange
+		padding-bottom 50px
+		
+	&__text
+		font 24px $museo-300
+		color #77767c
 	
 .ipad
 	max-height 500px
@@ -255,19 +282,27 @@ textarea:focus:-moz-placeholder
 		border-radius 50%
 		top 50%
 		left 25px
-	
+	&__frame
+		box-shadow -1px 1px 4px -1px rgba(0,0,0,0.6)
+		overflow hidden
 	img
 		width 100%
-		box-shadow -1px 1px 4px -1px rgba(0,0,0,0.6)
 		
-.slider-box
-	width 450px
-	padding 70px
+		
+	
 
 @media only screen and (max-width: 1600px)
 	.header
 		&__menu
 			width 80%
+			
+@media only screen and (max-width: 1300px)
+	.wrap
+		padding 0 40px
+	.slider
+		&__box
+			width 450px
+			padding 40px
 
 @media only screen and (max-width: 1180px)
 	.header
@@ -276,7 +311,10 @@ textarea:focus:-moz-placeholder
 		&__note
 			padding-right 0
 			font-size 12px
-	.main
+	.main,
+	.slider,
+	.slider__left,
+	.slider__right
 		height 600px
 
 @media only screen and (max-width: 980px)
@@ -305,6 +343,16 @@ textarea:focus:-moz-placeholder
 			padding 50px 0
 		&__title
 			word-break break-word
+			
+	.slider
+		&__box
+			width 300px
+		&__title
+			font-size 26px
+		&__text
+			font-size 16px
+	.ipad
+		padding 40px 0 40px 40px
 
 @media only screen and (max-width: 768px)
 	.expand-menu
@@ -370,10 +418,42 @@ textarea:focus:-moz-placeholder
 	.note
 		font-size 18px
 		padding 50px 20px
+		
+@media only screen and (max-width: 680px)
+	.slider
+		height 100%
+		padding-top 30px
+
+		&__left,
+		&__right
+			height 100%
+			width 100%
+			float none
+		&__left
+			border-right none
+			
+		&__center
+			text-align center
+			
+		&__box
+			width 400px
+			margin 0 auto
+	.ipad
+		padding 40px
+		width 80%
+		margin 0 auto
+		border-radius 35px
+		&:before
+			left 15px
+		&__frame
+			box-shadow 0px 1px 6px -1px rgba(0,0,0,0.6)
+		
 
 @media only screen and (max-width: 480px)
 	.expand-menu
 		margin 0px 25px
+	.wrap
+		padding 0 10px
 	.header
 		&__note
 			display block
@@ -391,3 +471,13 @@ textarea:focus:-moz-placeholder
 			font-size 16px
 			min-width 140px
 			padding 8px
+			
+	.slider
+		&__box
+			width 300px
+			padding 10px
+		&__title
+			font-size 18px
+			padding-bottom 25px
+		&__text
+			font-size 12px

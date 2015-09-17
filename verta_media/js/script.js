@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    $("#slider").lightSlider({
-        item: 1,
-        slideMargin: 0,
+    //owl carousel start
+    $('.owl-carousel').owlCarousel({
         loop: true,
-        controls: false
-    }); 
-
+        items: 1,
+        dots: true
+    })
+    //owl carousel end
 
     //select2 start
    
