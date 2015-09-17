@@ -9,20 +9,20 @@ $(document).ready(function () {
 
     //select2 start
    
-    // function styleSelect(selectClass, additionClass) {
-    //      $(selectClass).select2({
-    //         minimumResultsForSearch: -1,
-    //         containerCssClass: additionClass + "-drop",
-    //         dropdownCssClass: additionClass + "-dropdown",
-    //         dropdownAutoWidth: !0,
-    //         placeholder: function(){
-    //             $(this).data('placeholder');
-    //         },
-    //         width: "style"
-    //     });
-    // }
-    // styleSelect('.select-dir', 'dir');
-    // styleSelect('.select-form', 'form');
+    function styleSelect(selectClass, additionClass) {
+         $(selectClass).select2({
+            minimumResultsForSearch: -1,
+            containerCssClass: additionClass + "-drop",
+            dropdownCssClass: additionClass + "-dropdown",
+            dropdownAutoWidth: !0,
+            placeholder: function(){
+                $(this).data('placeholder');
+            },
+            width: "style"
+        });
+    }
+    styleSelect('.select-lang', 'lang');
+
     //select2 end
 
 });
