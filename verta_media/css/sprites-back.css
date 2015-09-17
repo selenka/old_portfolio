@@ -5,3 +5,9 @@ Icon classes can be used entirely standalone. They are named after their origina
 <i class="icon-home"></i>
 ```
 */
+.icon-a-arrow-orange {
+  background-image: url(../images/spritesheet-backs.png);
+  background-position: 0px 0px;
+  width: 15px;
+  height: 13px;
+}

@@ -5,3 +5,75 @@ Icon classes can be used entirely standalone. They are named after their origina
 <i class="icon-home"></i>
 ```
 */
+.icon-fb {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -413px -188px;
+  width: 31px;
+  height: 32px;
+}
+.icon-g_plus {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -413px -109px;
+  width: 31px;
+  height: 32px;
+}
+.icon-instagram {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -419px -149px;
+  width: 31px;
+  height: 32px;
+}
+.icon-linkedin {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -313px -188px;
+  width: 31px;
+  height: 32px;
+}
+.icon-logo-link1 {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -346px -188px;
+  width: 65px;
+  height: 32px;
+}
+.icon-logo-link2 {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -313px -109px;
+  width: 98px;
+  height: 38px;
+}
+.icon-logo-link3 {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -313px -149px;
+  width: 104px;
+  height: 37px;
+}
+.icon-scheme1 {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -313px 0px;
+  width: 161px;
+  height: 107px;
+}
+.icon-scheme2 {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -170px 0px;
+  width: 141px;
+  height: 124px;
+}
+.icon-scheme3 {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: 0px 0px;
+  width: 168px;
+  height: 138px;
+}
+.icon-scheme4 {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: 0px -140px;
+  width: 177px;
+  height: 113px;
+}
+.icon-twitter {
+  background-image: url(../images/spritesheet-icons.png);
+  background-position: -179px -140px;
+  width: 31px;
+  height: 32px;
+}
