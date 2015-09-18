@@ -147,7 +147,11 @@ textarea:focus:-moz-placeholder
 	top 0
 	width 100%
 	min-height 98px
-	clearfix()	
+	clearfix()
+	-webkit-animation-name opacity-increase
+	-webkit-animation-duration 4s
+	animation-name opacity-increase
+	animation-duration 4s
 		
 	&__link
 		display inline-block
@@ -833,3 +837,21 @@ textarea:focus:-moz-placeholder
 			margin 0 auto
 			padding 30px 0
 			border-bottom 1px solid #bcbdc0
+			
+//animations		
+@-webkit-keyframes opacity-increase
+	0%
+		opacity 0
+	100%
+		opacity 1
+
+@-moz-keyframes opacity-increase
+	0%
+		opacity 0
+	100%
+		opacity 1
+@keyframes opacity-increase
+	0%
+		opacity 0
+	100%
+		opacity 1

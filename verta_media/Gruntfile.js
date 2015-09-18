@@ -67,7 +67,7 @@ module.exports = function(grunt) {
             stylus: {
               files: ['*/*.*'],
               tasks: ['stylus:compile'],
-              options : { livereload: 1339 },
+              options : { livereload: 1339 }
             },
             concat: {
 			    files: ['css/stylus/main.css'],
