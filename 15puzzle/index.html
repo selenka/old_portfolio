@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>15 Puzzle</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div class="container clearfix">
+			<div class="container__left">
+				<div class="container__info clearfix">
+					<div class="left">Moves
+						<span class="moves" id="moves">0</span>
+					</div>
+					<div class="right">Time
+						<span id="timer">
+							<span class="time" data-time="hours">00</span>:<span class="time" data-time="minutes">00</span>:<span class="time" data-time="seconds">00</span>
+						</span>
+					</div>
+				</div>
+				<div class="container__info btns clearfix">
+					<div class="left">
+						<button class="shuffle" type="button" id="shuffle-btn" data-action="start-timer">Shuffle</button>
+					</div>
+					<div class="right">
+						<button class="pause" type="button"  id="pause-btn" data-action="pause-timer">Pause</button>
+					</div>
+				</div>
+				<ul id="puzzle" class="puzzle clearfix">
+					<li data-x="1" data-y="1" data-puzzle-number="1">1</li>
+					<li data-x="1" data-y="2" data-puzzle-number="2">2</li>
+					<li data-x="1" data-y="3" data-puzzle-number="3">3</li>
+					<li data-x="1" data-y="4" data-puzzle-number="4">4</li>
+					<li data-x="2" data-y="1" data-puzzle-number="5">5</li>
+					<li data-x="2" data-y="2" data-puzzle-number="6">6</li>
+					<li data-x="2" data-y="3" data-puzzle-number="7">7</li>
+					<li data-x="2" data-y="4" data-puzzle-number="8">8</li>
+					<li data-x="3" data-y="1" data-puzzle-number="9">9</li>
+					<li data-x="3" data-y="2" data-puzzle-number="10">10</li>
+					<li data-x="3" data-y="3" data-puzzle-number="11">11</li>
+					<li data-x="3" data-y="4" data-puzzle-number="12">12</li>
+					<li data-x="4" data-y="1" data-puzzle-number="13">13</li>
+					<li data-x="4" data-y="2" data-puzzle-number="14">14</li>
+					<li data-x="4" data-y="3" data-puzzle-number="15">15</li>
+					<li data-x="4" data-y="4" data-puzzle-number="0"></li>
+				</ul>
+			</div>
+			<div class="container__right">
+				<div class="history">
+					<div class="history__title">Here you can see latest History</div>
+					<ul class="history-list" id="history">
+					</ul>
+				</div>
+				<div class="add-player-box">
+					<button class="add-player" id="player-btn" type='button' data-action='add-player'>Add New Player</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="script.js"></script>
+</html>
