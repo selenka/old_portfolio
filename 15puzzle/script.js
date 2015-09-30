@@ -82,13 +82,13 @@ function Puzzle (options) {
 	}
 	Puzzle.checkWinner = function () {
 		var resultArray = [];
-		console.log(resultArray);
 		for (var i = 0; i < tiles.length; i++) {
 			var resultTile = tiles[i].getAttribute('data-puzzle-number');
 			resultArray.push(+resultTile);
 		};
-		if (resultArray == basicArray) {
-			alert('congratulations!');
+		if (resultArray.toLocaleString() == basicArray.toLocaleString()) {
+			createOverlay();
+			congratWinner();
 		}
 	}
 	this.puzzle.addEventListener('click', function (e){
@@ -103,7 +103,6 @@ function Puzzle (options) {
 				empty = availableTiles[prop];
 				emptyAttr = empty.getAttribute('data-puzzle-number');
 			}
-			console.log(empty);
 			if (target == availableTiles[prop] && target.innerHTML != '0' ) {
 				Puzzle.countMoves();
 				attr = availableTiles[prop].getAttribute('data-puzzle-number');
@@ -275,6 +274,9 @@ document.addEventListener('click', function (e) {
 		setPlayerInHistory();
 		closePopUp();
 		destroyOverlay();
+	} else if (target.getAttribute('data-action') == 'ok') {
+		closePopUp();
+		destroyOverlay();
 	}
 })
 
@@ -315,6 +317,19 @@ function addNewPlayer() {
 		'</div>' +
 	'</div>';
 	overlay.innerHTML = addPlayerPopup;
+}
+function congratWinner() {
+	var congratPopup =
+	'<div class="popup-player">' +
+		'<div class="popup-center">' +
+			'<span>Congratulations! You won!</span>' +
+			'<div>'+
+				'<button class="resume" type="button"  data-action="ok" >Thank you!</button>' +
+			'</div>' +
+			'<span>If you want to cintinue, than add New Player and have a nice time :)</span>' +
+		'</div>' +
+	'</div>';
+	overlay.innerHTML = congratPopup;
 }
 function getPlayerInfo() {
 	var nickname = document.getElementById('nickname');
