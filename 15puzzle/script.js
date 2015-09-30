@@ -78,9 +78,11 @@ function Puzzle (options) {
 	}
 	Puzzle.clearMoves = function () {
 		Puzzle.moves.innerHTML = 0;
+		count = 0;
 	}
 	Puzzle.checkWinner = function () {
 		var resultArray = [];
+		console.log(resultArray);
 		for (var i = 0; i < tiles.length; i++) {
 			var resultTile = tiles[i].getAttribute('data-puzzle-number');
 			resultArray.push(+resultTile);
@@ -95,13 +97,14 @@ function Puzzle (options) {
 		var target = e.target;
 		var emptyAttr;
 		var attr;
+		var empty;
 		for (var prop in availableTiles) {
-			var empty;
 			if (prop == 'empty') {
 				empty = availableTiles[prop];
 				emptyAttr = empty.getAttribute('data-puzzle-number');
 			}
-			if (target == availableTiles[prop] && target != empty) {
+			console.log(empty);
+			if (target == availableTiles[prop] && target.innerHTML != '0' ) {
 				Puzzle.countMoves();
 				attr = availableTiles[prop].getAttribute('data-puzzle-number');
 				empty.setAttribute('data-puzzle-number', attr);
