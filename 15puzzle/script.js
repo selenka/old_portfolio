@@ -92,7 +92,6 @@ function Puzzle (options) {
 		}
 	}
 	this.puzzle.addEventListener('click', function (e){
-		Puzzle.checkWinner();
 		Puzzle.checkAvailableTiles(availableTiles);
 		var target = e.target;
 		var emptyAttr;
@@ -112,8 +111,53 @@ function Puzzle (options) {
 				target.innerHTML = 0;
 			}
 		}
+		Puzzle.checkWinner();
+	});
+	document.addEventListener('keydown', function (e) {
+		Puzzle.checkAvailableTiles(availableTiles);
+		var code = e.keyCode;
+		var attr;
+		var empty;
+		var curTile;
+
+		for (var prop in availableTiles) {
+			empty = availableTiles['empty'];
+				switch (code) {
+					case 37:
+						curTile = availableTiles['nextTile'];
+					break;
+
+					case 38:
+						curTile = availableTiles['bottomTile'];
+					break;
+
+					case 39:
+						curTile = availableTiles['prevTile'];
+					break;
+
+					case 40:
+						curTile = availableTiles['topTile'];
+					break;
+				}
+		}
+		if (curTile != undefined) {
+			Puzzle.countMoves();
+			attr = curTile.getAttribute('data-puzzle-number');
+			empty.setAttribute('data-puzzle-number', attr);
+			empty.innerHTML = attr;
+			curTile.setAttribute('data-puzzle-number', 0);
+			curTile.innerHTML = 0;
+		}
+		if (code == 37 || code == 38 || code == 39 || code ==40) {
+			Puzzle.checkWinner();
+		} else {
+			return false;
+		}
 	});
 }
+
+
+
 var puzzle15 = new Puzzle({
 	puzzle: document.getElementById('puzzle'),
 	moves: document.getElementById('moves')
@@ -270,13 +314,28 @@ document.addEventListener('click', function (e) {
 		destroyOverlay();
 		Timer.runIt(target);
 	} else if (target.getAttribute('data-action') == 'play') {
-		getPlayerInfo();
-		setPlayerInHistory();
-		closePopUp();
-		destroyOverlay();
+		validatePlayer();
 	} else if (target.getAttribute('data-action') == 'ok') {
 		closePopUp();
 		destroyOverlay();
+	}
+})
+document.addEventListener('keypress', function (e) {
+	var code = e.keyCode;
+	var popups = {
+		popupPlayer: 'popup-player',
+		popupCongrat: 'popup-congrat'
+	}
+	if (code == 13) {
+		for (prop in popups) {
+			var curPopup = document.getElementById(popups[prop]);
+			if(curPopup != null && popups[prop] == 'popup-player') {
+				validatePlayer();
+			} else if (curPopup != null && popups[prop] == 'popup-congrat') {
+				closePopUp();
+				destroyOverlay();
+			}
+		}
 	}
 })
 
@@ -304,7 +363,7 @@ var nicknameValue;
 
 function addNewPlayer() {
 	var addPlayerPopup =
-	'<div class="popup-player">' +
+	'<div id="popup-player" class="popup-player">' +
 		'<div class="popup-center">' +
 			'<span>Welcome, please enter your nickname and click Play!</span>' +
 			'<div>'+
@@ -317,16 +376,17 @@ function addNewPlayer() {
 		'</div>' +
 	'</div>';
 	overlay.innerHTML = addPlayerPopup;
+	nickname.focus();
 }
 function congratWinner() {
 	var congratPopup =
-	'<div class="popup-player">' +
+	'<div id="popup-congrat" class="popup-player">' +
 		'<div class="popup-center">' +
 			'<span>Congratulations! You won!</span>' +
 			'<div>'+
 				'<button class="resume" type="button"  data-action="ok" >Thank you!</button>' +
 			'</div>' +
-			'<span>If you want to cintinue, than add New Player and have a nice time :)</span>' +
+			'<span>If you want to continue, than add New Player and have a nice time :)</span>' +
 		'</div>' +
 	'</div>';
 	overlay.innerHTML = congratPopup;
@@ -341,6 +401,20 @@ function setPlayerInHistory(){
 	var newItem = document.createElement('li');
 	newItem.innerHTML = nicknameValue;
 	history.appendChild(newItem);
+}
+function validatePlayer() {
+	getPlayerInfo();
+	if (nicknameValue == '') {
+		errorNickname();
+	} else {
+		setPlayerInHistory();
+		closePopUp();
+		destroyOverlay();
+	}
+}
+function errorNickname() {
+	nickname.style.borderColor = 'red';
+	nickname.focus();
 }
 function closePopUp() {
 	overlay.innerHTML = '';
