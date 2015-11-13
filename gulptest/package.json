@@ -1,0 +1,14 @@
+{
+  "name": "gulptest",
+  "version": "1.0.0",
+  "description": "testing gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "testc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-sass": "^2.0.4"
+  }
+}

@@ -1,0 +1,13 @@
+html,
+body {
+  background: $base-back;
+  font-family: 'Muli', sans-serif;
+  color: $base-grey;
+}
+.wrapper {
+  display: flex;
+}
+.content {
+  width: 100%;
+  padding: 30px;
+}

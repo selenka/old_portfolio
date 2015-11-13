@@ -1,0 +1,375 @@
+@font-face {
+  font-family: 'fontello';
+  src: url("fonts/fontello.eot?50809833");
+  src: url("fonts/fontello.eot?50809833#iefix") format('embedded-opentype'), url("fonts/fontello.woff?50809833") format('woff'), url("fonts/fontello.ttf?50809833") format('truetype'), url("fonts/fontello.svg?50809833#fontello") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+/* opacity: .8; */
+/* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+/* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+/* Animation center compensation - margins should be symmetric */
+/* remove if not needed */
+  margin-left: 0.2em;
+/* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-chart-line:before {
+  content: '\e801';
+}
+.icon-thumbs-down-alt:before {
+  content: '\e803';
+}
+.icon-thumbs-up-alt:before {
+  content: '\e804';
+}
+.icon-download-cloud:before {
+  content: '\e805';
+}
+.icon-gauge:before {
+  content: '\e800';
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+i {
+  display: inline-block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+input,
+button,
+textarea {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+input[type=text]::-ms-clear {
+  display: none;
+}
+input[type=password]::-ms-reveal {
+  display: none;
+}
+input[type='submit'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+::-webkit-input-placeholder {
+  color: #000;
+}
+::-moz-placeholder {
+  color: #000 /* firefox 19+ */;
+}
+:-ms-input-placeholder {
+  color: #000 /* ie */;
+}
+input:-moz-placeholder {
+  color: #000;
+}
+textarea:focus::-webkit-input-placeholder,
+textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+html,
+body {
+  background: #19171b;
+  font-family: 'Muli', sans-serif;
+  color: #868594;
+}
+.wrapper {
+  *zoom: 1;
+  display: flex;
+}
+.wrapper:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.content {
+  width: 100%;
+  padding: 30px;
+}
+.icon-menu {
+  float: right;
+  font-size: 26px;
+  padding-right: 5px;
+}
+.sidebar {
+  background: #36313b;
+  border-right: 1px solid #868594;
+  min-width: 170px;
+  min-height: 100%;
+  padding: 20px 0;
+  position: relative;
+}
+.sidebar__title {
+  font-size: 20px;
+  color: #bada55;
+  position: absolute;
+  top: 240px;
+  right: -25px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.sidebar__nav-item {
+  *zoom: 1;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: block;
+  color: #bada55;
+  background: #36313b;
+  border: 2px solid #868594;
+  line-height: 2em;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 10px 0 0 -80px;
+  padding-top: 50px;
+  padding-left: 10px;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+.sidebar__nav-item:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.sidebar__nav-item:hover {
+  background: #2e2a32;
+  border-color: #bada55;
+  margin-left: 0;
+  font-size: 16px;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.active__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.active__list-item {
+  *zoom: 1;
+  background: #36313b;
+  padding: 10px;
+  margin: 5px;
+  position: relative;
+}
+.active__list-item:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.active__list-item:hover .active__discr {
+  visibility: visible;
+  opacity: 0.98;
+}
+.active__info {
+  float: right;
+  *zoom: 1;
+  padding: 15px 0;
+  font-size: 13px;
+}
+.active__info:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.active__info-item {
+  padding: 3px 0;
+}
+.active__discr {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #bada55;
+  background: #36313b;
+  opacity: 0;
+  color: #868594;
+  padding: 20px;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  -moz-transition: visibility 0s, opacity 0.5s linear;
+  -ms-transition: visibility 0s, opacity 0.5s linear;
+  -o-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.progress {
+  float: left;
+  padding-right: 10px;
+}
+.progress .circle {
+  display: table;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 3px solid #868594;
+}
+.progress .percentage {
+  display: table-cell;
+  vertical-align: middle;
+  color: #bada55;
+  font-size: 30px;
+  font-weight: 300;
+}

@@ -1,0 +1,56 @@
+.active
+	&__list
+		display flex
+		flex-direction row
+		justify-content center
+		flex-wrap wrap
+	&__list-item
+		clearfix()
+		background $base-darkviolet
+		padding 10px
+		margin 5px
+		position relative
+		&:hover .active__discr
+			visibility visible
+			opacity 0.98
+	&__info
+		float right
+		clearfix()
+		padding 15px 0
+		font-size 13px
+
+	&__info-item
+		padding 3px 0
+		
+	&__discr
+		visibility hidden
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		border 1px solid $base-green
+		background $base-darkviolet
+		opacity 0
+		color $base-grey
+		padding 20px
+		transition visibility 0s, opacity 0.5s linear
+		
+.progress
+	float left
+	padding-right 10px
+	.circle
+		display table
+		text-align center
+		width 100px
+		height 100px
+		margin 0 auto
+		border-radius 50%
+		border 3px solid $base-grey
+	.percentage
+		display table-cell
+		vertical-align middle
+		color $base-green
+		font-size 30px
+		font-weight 300
+			

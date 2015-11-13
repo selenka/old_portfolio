@@ -1,0 +1,47 @@
+.icon-menu {
+  float: right;
+  font-size: 26px;
+  padding-right: 5px;
+}
+.sidebar {
+  background: $base-darkviolet;
+  border-right: 1px solid $base-grey;
+  min-width: 170px;
+  min-height: 100%;
+  padding: 20px 0;
+  position: relative;
+}
+.sidebar__title {
+  font-size: 20px;
+  color: $base-green;
+  position: absolute;
+  top: 240px;
+  right: -25px;
+  transform: rotate(-90deg);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.sidebar__nav-item {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: block;
+  color: $base-green;
+  background: $base-darkviolet;
+  border: 2px solid $base-grey;
+  line-height: 2em;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 10px 0 0 -80px;
+  padding-top: 50px;
+  padding-left: 10px;
+  transition: 1s;
+}
+.sidebar__nav-item:hover {
+  background: $base-darkviolet-hover;
+  border-color: $base-green;
+  margin-left: 0;
+  font-size: 16px;
+  transition: 0.6s;
+}
