@@ -34,7 +34,7 @@
   opacity: 0;
   color: $base-grey;
   padding: 20px;
-  transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.2s linear;
 }
 .progress {
   float: left;
