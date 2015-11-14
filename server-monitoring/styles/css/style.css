@@ -237,24 +237,11 @@ body {
 .sidebar {
   background: #36313b;
   border-right: 1px solid #868594;
-  min-width: 170px;
+  min-width: 80px;
+  max-width: 80px;
   min-height: 100%;
-  padding: 20px 0;
+  padding: 20px 15px 20px 0;
   position: relative;
-}
-.sidebar__title {
-  font-size: 20px;
-  color: #bada55;
-  position: absolute;
-  top: 240px;
-  right: -25px;
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  text-transform: uppercase;
-  letter-spacing: 4px;
 }
 .sidebar__nav-item {
   *zoom: 1;
