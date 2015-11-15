@@ -112,3 +112,45 @@ for (var i = 0; i < buttongroup.length; i++) {
 	})
 };
 
+
+// appearing extra info on table row click
+var table = document.getElementById('table-statistic');
+var rows = table.tBodies[0].rows;
+var cells = table.tBodies[0].rows[0].cells;
+
+for (var i = 0; i < rows.length; i++) {
+	// calculate colspan for extra cell
+	if(rows[i].rowIndex % 2 == 0) {
+		rows[i].cells[0].colSpan = cells.length;
+	}
+	rows[i].addEventListener('click', function (e) {
+
+		var target = e.target;
+
+		if (target != this) {
+			var ifSelected = target.parentElement.getAttribute('data-selected');
+			if (ifSelected == 'false') {
+				//make all odd rows not selected
+				for (var i = 0; i < rows.length; i++) {
+					if (rows[i].rowIndex % 2 != 0) {
+						rows[i].setAttribute('data-selected', 'false');	
+					}
+				};
+				// select the target row
+				target.parentElement.setAttribute('data-selected', 'true');
+				
+				// show row with extra info
+				var extra = target.parentElement.nextElementSibling;
+				//make all even rows closed
+				for (var i = 0; i < rows.length; i++) {
+					if (rows[i].rowIndex % 2 == 0) {
+						rows[i].setAttribute('data-extra', 'closed');	
+					}
+				}
+				extra.setAttribute('data-extra', 'opened');
+				
+			}
+		}
+	})
+}
+
