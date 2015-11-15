@@ -5,9 +5,11 @@
   flex-wrap: wrap;
 }
 .active__list-item {
-  background: $base-darkviolet;
+  background: $base-grey;
+  border-radius: 6px;
+  min-width: 250px;
   padding: 10px;
-  margin: 5px;
+  margin: 10px;
   position: relative;
 }
 .active__list-item:hover .active__discr {
@@ -29,30 +31,81 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 1px solid $base-green;
-  background: $base-darkviolet;
+  border-radius: 6px;
+  background: $base-grey;
   opacity: 0;
-  color: $base-grey;
+  color: $text;
   padding: 20px;
   transition: visibility 0s, opacity 0.2s linear;
+  z-index: 7;
 }
-.progress {
+.progress-bar {
   float: left;
-  padding-right: 10px;
-}
-.progress .circle {
-  display: table;
-  text-align: center;
+  margin-right: 10px;
   width: 100px;
   height: 100px;
-  margin: 0 auto;
-  border-radius: 50%;
-  border: 3px solid $base-grey;
+  position: relative;
 }
-.progress .percentage {
-  display: table-cell;
-  vertical-align: middle;
+.progress-bar .percentage {
+  position: absolute;
+  width: 100%;
   color: $base-green;
+  text-align: center;
+  z-index: 6;
   font-size: 30px;
   font-weight: 300;
+  top: 35px;
+}
+.progress-bar .progress {
+  width: 100px;
+  height: 100px;
+  background: $base-dark;
+  border: 2px solid $base-dark;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+}
+.progress-bar .progress:before {
+  content: '';
+  text-align: center;
+  color: $base-green;
+  width: 70px;
+  height: 70px;
+  background: $base-grey;
+  position: absolute;
+  border-radius: 50%;
+  left: 11px;
+  top: 11px;
+  z-index: 5;
+  border: 2px solid $base-dark;
+}
+.progress-bar .progress .hide {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  background: $base-dark;
+  z-index: 4;
+  transform-origin: left center;
+  transform: rotate(0deg);
+}
+.progress-bar .progress .active,
+.progress-bar .progress .active2 {
+  width: 50%;
+  height: 100%;
+  background: $base-green;
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 0;
+}
+.progress-bar .progress .active2 {
+  transform-origin: left center;
+  transform: rotate(0deg);
 }
