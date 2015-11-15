@@ -27,6 +27,13 @@
 		span
 			color $text-accent
 			padding-left 5px
+			
+	&__discr-item 
+		font-size 10px
+		padding 5px 0
+		span
+			color $text-accent
+			padding-left 5px
 		
 	&__discr
 		visibility hidden
@@ -117,4 +124,11 @@
 	.progress .active2
 		transform-origin left center
 		transform rotate(0deg)
+		
+	// styles for stuck items
+	&.stuck
+		.percentage
+			color $warning
+		.progress .active, .progress .active2
+			background $warning
 				
