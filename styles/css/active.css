@@ -28,6 +28,14 @@
   color: $text-accent;
   padding-left: 5px;
 }
+.active__discr-item {
+  font-size: 10px;
+  padding: 5px 0;
+}
+.active__discr-item span {
+  color: $text-accent;
+  padding-left: 5px;
+}
 .active__discr {
   visibility: hidden;
   position: absolute;
@@ -118,4 +126,11 @@
 .progress-bar .progress .active2 {
   transform-origin: left center;
   transform: rotate(0deg);
+}
+.progress-bar.stuck .percentage {
+  color: $warning;
+}
+.progress-bar.stuck .progress .active,
+.progress-bar.stuck .progress .active2 {
+  background: $warning;
 }

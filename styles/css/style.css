@@ -334,6 +334,14 @@ body {
   color: #becad8;
   padding-left: 5px;
 }
+.active__discr-item {
+  font-size: 10px;
+  padding: 5px 0;
+}
+.active__discr-item span {
+  color: #becad8;
+  padding-left: 5px;
+}
 .active__discr {
   visibility: hidden;
   position: absolute;
@@ -437,6 +445,13 @@ body {
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
 }
+.progress-bar.stuck .percentage {
+  color: #f95c5c;
+}
+.progress-bar.stuck .progress .active,
+.progress-bar.stuck .progress .active2 {
+  background: #f95c5c;
+}
 #statistic {
   display: none;
 }
@@ -478,10 +493,48 @@ body {
 .table table tr th,
 .table table tr td {
   padding: 12px 10px;
+  text-align: center;
+}
+.table table tr th {
+  position: relative;
+  color: #becad8;
+}
+.table table tr th:after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 18px;
+  width: 2px;
+  background: #3a424b;
+  right: 0;
+  bottom: 0;
+}
+.table table tr th:last-child:after {
+  content: none;
+}
+.table table tr td {
+  font-size: 14px;
 }
 .table table thead tr {
   border-bottom: 3px solid #3a424b;
 }
 .table table tbody tr {
   border-bottom: 1px solid #3a424b;
+}
+.table table tbody tr:hover {
+  border-bottom: 1px solid #bada55;
+}
+.table table tbody tr[data-extra="closed"] {
+  display: none;
+}
+.table table tbody tr[data-extra="opened"] {
+  display: table-row;
+  border-bottom: 1px solid #bada55;
+}
+.table table tbody tr[data-extra="opened"] td {
+  text-align: left;
+  padding: 15px;
+}
+.table table tbody tr[data-selected="true"] {
+  border-bottom: 1px solid transparent;
 }
