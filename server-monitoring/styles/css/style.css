@@ -210,7 +210,7 @@ body {
 }
 .content {
   width: 100%;
-  padding: 30px;
+  padding: 15px 40px;
 }
 .icon-menu {
   float: right;
@@ -439,4 +439,49 @@ body {
 }
 #statistic {
   display: none;
+}
+.buttongroup {
+  *zoom: 1;
+}
+.buttongroup:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.buttongroup .transparent-button {
+  float: left;
+  padding: 10px 26px;
+  color: #788ba0;
+  font-size: 14px;
+  border: 2px solid #3a424b;
+}
+.buttongroup .transparent-button.first {
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+}
+.buttongroup .transparent-button.last {
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+}
+.buttongroup .transparent-button:hover {
+  background: #2f3439;
+}
+.buttongroup .transparent-button[data-selected="true"] {
+  background: #2f3439;
+}
+.table {
+  padding-top: 25px;
+}
+.table table {
+  width: 100%;
+}
+.table table tr th,
+.table table tr td {
+  padding: 12px 10px;
+}
+.table table thead tr {
+  border-bottom: 3px solid #3a424b;
+}
+.table table tbody tr {
+  border-bottom: 1px solid #3a424b;
 }

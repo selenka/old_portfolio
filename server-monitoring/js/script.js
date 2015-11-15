@@ -96,4 +96,19 @@ navigation.addEventListener('click', function navActive (e) {
 });
 
 
+//button group active state
+var buttongroup = document.getElementsByClassName('buttongroup');
+
+for (var i = 0; i < buttongroup.length; i++) {
+	buttongroup[i].addEventListener('click', function (e) {
+		var target = e.target;
+
+		if (target != this) {
+			for (var i = 0; i < this.children.length; i++) {
+				this.children[i].setAttribute('data-selected', 'false');
+			}
+			target.setAttribute('data-selected', 'true');
+		}
+	})
+};
 
