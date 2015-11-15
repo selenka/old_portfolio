@@ -14,7 +14,7 @@
 		position relative
 		&:hover .active__discr
 			visibility visible
-			opacity 0.98
+			opacity 1
 	&__info
 		float right
 		clearfix()
@@ -36,8 +36,8 @@
 		opacity 0
 		color $text
 		padding 20px
-		transition visibility 0s, opacity 0.2s linear
-		z-index 7
+		transition visibility 0s linear
+		z-index 9
 		
 .progress-bar
 	float left
@@ -45,6 +45,19 @@
 	width 100px
 	height 100px
 	position relative
+	
+	&:after
+		content ''
+		width 96px
+		height 96px
+		background transparent
+		position absolute
+		border-radius 50%
+		left 0
+		top 0
+		z-index 8
+		border 2px solid $base-dark
+		
 	.percentage
 		position absolute
 		width 100%
@@ -58,16 +71,11 @@
 		width 100px
 		height 100px
 		background $base-dark
-		border 2px solid $base-dark
+		// border 2px solid $base-dark
 		border-radius 50%
-		position absolute
-		top 0
-		left 0
-		bottom 0
-		right 0
-		margin auto
+		position relative
 		overflow hidden
-	
+		
 	.progress:before
 		content ''
 		text-align center
@@ -77,8 +85,8 @@
 		background $base-grey
 		position absolute
 		border-radius 50%
-		left 11px
-		top 11px
+		left 13px
+		top 13px
 		z-index 5
 		border 2px solid $base-dark
 		

@@ -225,6 +225,7 @@ body {
   min-height: 100%;
   padding: 80px 0 80px;
   position: relative;
+  z-index: 100;
 }
 .sidebar__nav-item {
   *zoom: 1;
@@ -313,7 +314,7 @@ body {
 }
 .active__list-item:hover .active__discr {
   visibility: visible;
-  opacity: 0.98;
+  opacity: 1;
 }
 .active__info {
   float: right;
@@ -341,12 +342,12 @@ body {
   opacity: 0;
   color: #788ba0;
   padding: 20px;
-  -webkit-transition: visibility 0s, opacity 0.2s linear;
-  -moz-transition: visibility 0s, opacity 0.2s linear;
-  -ms-transition: visibility 0s, opacity 0.2s linear;
-  -o-transition: visibility 0s, opacity 0.2s linear;
-  transition: visibility 0s, opacity 0.2s linear;
-  z-index: 7;
+  -webkit-transition: visibility 0s linear;
+  -moz-transition: visibility 0s linear;
+  -ms-transition: visibility 0s linear;
+  -o-transition: visibility 0s linear;
+  transition: visibility 0s linear;
+  z-index: 9;
 }
 .progress-bar {
   float: left;
@@ -354,6 +355,18 @@ body {
   width: 100px;
   height: 100px;
   position: relative;
+}
+.progress-bar:after {
+  content: '';
+  width: 96px;
+  height: 96px;
+  background: transparent;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  z-index: 8;
+  border: 2px solid #292b2d;
 }
 .progress-bar .percentage {
   position: absolute;
@@ -369,14 +382,8 @@ body {
   width: 100px;
   height: 100px;
   background: #292b2d;
-  border: 2px solid #292b2d;
   border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
+  position: relative;
   overflow: hidden;
 }
 .progress-bar .progress:before {
@@ -388,8 +395,8 @@ body {
   background: #3a424b;
   position: absolute;
   border-radius: 50%;
-  left: 11px;
-  top: 11px;
+  left: 13px;
+  top: 13px;
   z-index: 5;
   border: 2px solid #292b2d;
 }
