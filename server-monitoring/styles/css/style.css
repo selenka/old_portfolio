@@ -330,6 +330,10 @@ body {
 .active__info-item {
   padding: 3px 0;
 }
+.active__info-item span {
+  color: #becad8;
+  padding-left: 5px;
+}
 .active__discr {
   visibility: hidden;
   position: absolute;
@@ -374,9 +378,9 @@ body {
   color: #bada55;
   text-align: center;
   z-index: 6;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 300;
-  top: 35px;
+  top: 40px;
 }
 .progress-bar .progress {
   width: 100px;

@@ -10,10 +10,10 @@
 	<body>
 		<div class="wrapper">
 			<div class="sidebar">
-				<nav class="sidebar__nav">
-					<a class="sidebar__nav-item active" href="">Active <i class="icon-menu icon-upload-cloud"></i></a>
-					<a class="sidebar__nav-item" href="">Statistic <i class="icon-menu icon-statistic"></i></a>
-					<a class="sidebar__nav-item" href="">Charts <i class="icon-menu icon-chart"></i></a>
+				<nav id="navigation" class="sidebar__nav">
+					<a class="sidebar__nav-item active" href="#">Active <i class="icon-menu icon-upload-cloud"></i></a>
+					<a class="sidebar__nav-item" href="#">Statistic <i class="icon-menu icon-statistic"></i></a>
+					<a class="sidebar__nav-item" href="#">Charts <i class="icon-menu icon-chart"></i></a>
 				</nav>
 			</div>
 			<div class="content">
@@ -22,61 +22,121 @@
 						<li class="active__list-item">
 							<div class="progress-bar">
 								<div class='progress'>
-									<div class='hide'></div>
+									<div data-progress="hide-panel" class='hide'></div>
 									<div class='active'></div>
-									<div class='active2'></div>
-									<span class='percentage'>20</span>
+									<div data-progress="active-panel" class='active2'></div>
+									<span class='percentage'>20%</span>
 								</div>
 							</div>
 							<div class="active__info">
-								<div class="active__info-item">Full size: 800mb</div>
-								<div class="active__info-item">Left size: 200mb</div>
-								<div class="active__info-item">Time1: 19:40:00</div>
-								<div class="active__info-item">Time2: 19:40:00</div>
+								<div class="active__info-item">Full size:<span> 800mb</span></div>
+								<div class="active__info-item">Left size:<span> 200mb</span></div>
+								<div class="active__info-item">Upload time:<span> 19:40:00</span></div>
+								<div class="active__info-item">Last Time:<span>19:40:00</span></div>
 							</div>
 							<div class="active__discr">
-								<span>bla bla bla</span>
-								<span>bla bla bla</span>
+								<div class="active__info-item">Title:<span>Here goes the title</span></div>
+								<div class="active__info-item">Key:<span>Here goes the key</span></div>
 							</div>
 						</li>
 						<li class="active__list-item">
 							<div class="progress-bar">
 								<div class='progress'>
-									<div class='hide'></div>
+									<div data-progress="hide-panel" class='hide'></div>
 									<div class='active'></div>
-									<div class='active2'></div>
-									<span class='percentage'>50</span>
+									<div data-progress="active-panel" class='active2'></div>
+									<span class='percentage'>36%</span>
 								</div>
 							</div>
 							<div class="active__info">
-								<div class="active__info-item">Full size: 800mb</div>
-								<div class="active__info-item">Left size: 200mb</div>
-								<div class="active__info-item">Time1: 19:40:00</div>
-								<div class="active__info-item">Time2: 19:40:00</div>
+								<div class="active__info-item">Full size:<span> 800mb</span></div>
+								<div class="active__info-item">Left size:<span> 200mb</span></div>
+								<div class="active__info-item">Upload time:<span> 19:40:00</span></div>
+								<div class="active__info-item">Last Time:<span>19:40:00</span></div>
 							</div>
 							<div class="active__discr">
-								<span>bla bla bla</span>
-								<span>bla bla bla</span>
+								<div class="active__info-item">Title:<span>Here goes the title</span></div>
+								<div class="active__info-item">Key:<span>Here goes the key</span></div>
 							</div>
 						</li>
 						<li class="active__list-item">
 							<div class="progress-bar">
 								<div class='progress'>
-									<div class='hide'></div>
+									<div data-progress="hide-panel" class='hide'></div>
 									<div class='active'></div>
-									<div class='active2'></div>
-									<span class='percentage'>80</span>
+									<div data-progress="active-panel" class='active2'></div>
+									<span class='percentage'>45%</span>
 								</div>
 							</div>
 							<div class="active__info">
-								<div class="active__info-item">Full size: 800mb</div>
-								<div class="active__info-item">Left size: 200mb</div>
-								<div class="active__info-item">Time1: 19:40:00</div>
-								<div class="active__info-item">Time2: 19:40:00</div>
+								<div class="active__info-item">Full size:<span> 800mb</span></div>
+								<div class="active__info-item">Left size:<span> 200mb</span></div>
+								<div class="active__info-item">Upload time:<span> 19:40:00</span></div>
+								<div class="active__info-item">Last Time:<span>19:40:00</span></div>
 							</div>
 							<div class="active__discr">
-								<span>bla bla bla</span>
-								<span>bla bla bla</span>
+								<div class="active__info-item">Title:<span>Here goes the title</span></div>
+								<div class="active__info-item">Key:<span>Here goes the key</span></div>
+							</div>
+						</li>
+						<li class="active__list-item">
+							<div class="progress-bar">
+								<div class='progress'>
+									<div data-progress="hide-panel" class='hide'></div>
+									<div class='active'></div>
+									<div data-progress="active-panel" class='active2'></div>
+									<span class='percentage'>50%</span>
+								</div>
+							</div>
+							<div class="active__info">
+								<div class="active__info-item">Full size:<span> 800mb</span></div>
+								<div class="active__info-item">Left size:<span> 200mb</span></div>
+								<div class="active__info-item">Upload time:<span> 19:40:00</span></div>
+								<div class="active__info-item">Last Time:<span>19:40:00</span></div>
+							</div>
+							<div class="active__discr">
+								<div class="active__info-item">Title:<span>Here goes the title</span></div>
+								<div class="active__info-item">Key:<span>Here goes the key</span></div>
+							</div>
+						</li>
+						<li class="active__list-item">
+							<div class="progress-bar">
+								<div class='progress'>
+									<div data-progress="hide-panel" class='hide'></div>
+									<div class='active'></div>
+									<div data-progress="active-panel" class='active2'></div>
+									<span class='percentage'>68%</span>
+								</div>
+							</div>
+							<div class="active__info">
+								<div class="active__info-item">Full size:<span> 800mb</span></div>
+								<div class="active__info-item">Left size:<span> 200mb</span></div>
+								<div class="active__info-item">Upload time:<span> 19:40:00</span></div>
+								<div class="active__info-item">Last Time:<span>19:40:00</span></div>
+							</div>
+							<div class="active__discr">
+								<div class="active__info-item">Title:<span>Here goes the title</span></div>
+								<div class="active__info-item">Key:<span>Here goes the key</span></div>
+							</div>
+						</li>
+						<li class="active__list-item">
+							<div class="progress-bar">
+								<div class='progress'>
+									<div data-progress="hide-panel" class='hide'></div>
+									<div class='active'></div>
+									<div data-progress="active-panel" class='active2'></div>
+									<span class='percentage'>100%</span>
+								</div>
+							</div>
+							<div class="active__info">
+								<div class="active__info-item">Full size:<span> 800mb</span></div>
+								<div class="active__info-item">Left size:<span> 200mb</span></div>
+								<div class="active__info-item">Upload time:<span> 19:40:00</span></div>
+								<div class="active__info-item">Last Time:<span>19:40:00</span></div>
+							</div>
+							<div class="active__discr">
+								<div class="active__info-item">Title:<span>Here goes the title</span></div>
+								<div class="active__info-item">Key:<span>Here goes the key</span></div>
 							</div>
 						</li>
 					</ul>
