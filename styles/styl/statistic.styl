@@ -1,0 +1,38 @@
+#statistic
+	display none
+	
+.buttongroup
+	clearfix()
+	.transparent-button
+		float left
+		padding 10px 26px
+		color $text
+		font-size 14px
+		border 2px solid $base-grey
+		&.first
+			border-right none
+			border-radius 4px 0 0 4px
+		&.last
+			border-left none
+			border-radius 0 4px 4px 0
+		&:hover
+			background $grafit
+			
+		&[data-selected="true"] {
+			background $grafit
+		}
+		
+.table
+	padding-top 25px
+	table
+		width 100%
+		
+		tr th,
+		tr td
+			padding 12px 10px
+			
+		thead tr
+			border-bottom 3px solid $base-grey
+			
+		tbody tr
+			border-bottom 1px solid $base-grey
