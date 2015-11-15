@@ -68,6 +68,9 @@ var activeDownloads = new ProgressBar({
 
 //navigation items active state
 var navigation = document.getElementById('navigation');
+var active = document.getElementById('active');
+var statistic = document.getElementById('statistic');
+
 navigation.addEventListener('click', function navActive (e) {
 	var target = e.target;
 	if (!target.classList.contains('active')) {
@@ -75,8 +78,22 @@ navigation.addEventListener('click', function navActive (e) {
 			navigation.children[i].classList.remove('active');
 		};
 		target.classList.add('active');
+
+		//temporaly content showing
+		switch(target.innerText) {
+			case 'ACTIVE':
+				active.style.display = "block";
+				statistic.style.display = "none";
+			break;
+
+			case 'STATISTIC':
+				active.style.display = "none";
+				statistic.style.display = "block";
+			break;
+		}
+
 	}
-	
 });
+
 
 
