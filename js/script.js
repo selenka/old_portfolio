@@ -37,7 +37,7 @@ function ProgressBar (options) {
 
 	//define progress, hide(dark) panel and active2 (green) panel of every bar
 	for (var i = 0; i < bar.length; i++) {
-		bar[i].progress = parseFloat(bar[i].children[0].innerText);
+		bar[i].progress = parseFloat(bar[i].children[0].textContent);
 		var panels = bar[i].children[0].children;
 		for (var j = 0; j < panels.length; j++) {
 			var attr = panels[j].getAttribute('data-progress');
