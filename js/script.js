@@ -64,7 +64,7 @@ function ProgressBar (options) {
 //navigation items active state
 var navigation = document.getElementById('navigation');
 var active = document.getElementById('active');
-var statistic = document.getElementById('statistic');
+var history = document.getElementById('history');
 
 navigation.addEventListener('click', function navActive (e) {
 	var target = e.target;
@@ -79,12 +79,12 @@ navigation.addEventListener('click', function navActive (e) {
 		switch (target.innerText) {
 			case 'ACTIVE':
 				active.style.display = "block";
-				statistic.style.display = "none";
+				history.style.display = "none";
 			break;
 
-			case 'STATISTIC':
+			case 'HISTORY':
 				active.style.display = "none";
-				statistic.style.display = "block";
+				history.style.display = "block";
 			break;
 		}
 
@@ -174,7 +174,7 @@ function buildActiveItem(item) {
 }
 
 // appearing extra info on table row click
-var table = document.getElementById('table-statistic');
+var table = document.getElementById('table-history');
 var rows = table.tBodies[0].rows;
 var cells = table.tBodies[0].rows[0].cells;
 
