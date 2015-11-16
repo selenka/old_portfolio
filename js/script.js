@@ -149,7 +149,7 @@ ws.onopen = function () {
 function buildActiveItem(item) {
 	var li = document.createElement('li');
 	li.className = 'active__list-item';
-	li.setAttribute('data-speed', item.speed + ' MB/s');
+	li.setAttribute('data-speed', normalizeSize(item.speed) + '/s');
 	var stuck = (new Date() - new Date(item.updated)) > 30000;
 	li.innerHTML = '\
 		<div class="progress-bar' + (stuck ? ' stuck' : '') + '">\
