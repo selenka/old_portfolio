@@ -64,7 +64,8 @@ function ProgressBar (options) {
 //navigation items active state
 var navigation = document.getElementById('navigation');
 var active = document.getElementById('active');
-var history = document.getElementById('history');
+var historyPage = document.getElementById('history-page');
+console.log(historyPage);
 
 navigation.addEventListener('click', function navActive (e) {
 	var target = e.target;
@@ -79,12 +80,12 @@ navigation.addEventListener('click', function navActive (e) {
 		switch (target.innerText) {
 			case 'ACTIVE':
 				active.style.display = "block";
-				history.style.display = "none";
+				historyPage.style.display = "none";
 			break;
 
 			case 'HISTORY':
 				active.style.display = "none";
-				history.style.display = "block";
+				historyPage.style.display = "block";
 			break;
 		}
 
