@@ -162,8 +162,8 @@ function buildActiveItem(item) {
 			</div>\
 		</div>\
 		<div class="active__info">\
-			<div class="active__info-item">Size:<span> ' + item.size + ' MB</span></div>\
-			<div class="active__info-item">Left:<span> ' + item.left + ' MB</span></div>\
+			<div class="active__info-item">Total:<span> ' + item.size + ' MB</span></div>\
+			<div class="active__info-item">Remaining:<span> ' + item.left + ' MB</span></div>\
 			<div class="active__info-item">Started:<span> ' + new Date(item.started).toLocaleString() + '</span></div>\
 			<div class="active__info-item">Updated:<span>' + new Date(item.updated).toLocaleString() + '</span></div>\
 		</div>\
