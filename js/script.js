@@ -150,7 +150,6 @@ function buildActiveItem(item) {
 	var li = document.createElement('li');
 	li.className = 'active__list-item';
 	li.setAttribute('data-speed', item.speed + ' MB/s');
-	console.log(item.speed + ' MB/s');
 	var stuck = (new Date() - new Date(item.updated)) > 30000;
 	li.innerHTML = '\
 		<div class="progress-bar' + (stuck ? ' stuck' : '') + '">\
@@ -162,8 +161,8 @@ function buildActiveItem(item) {
 			</div>\
 		</div>\
 		<div class="active__info">\
-			<div class="active__info-item">Total:<span> ' + item.size + ' MB</span></div>\
-			<div class="active__info-item">Remaining:<span> ' + item.left + ' MB</span></div>\
+			<div class="active__info-item">Total:<span> ' + normalizeSize(item.size) + '</span></div>\
+			<div class="active__info-item">Remaining:<span> ' + normalizeSize(item.left) + '</span></div>\
 			<div class="active__info-item">Started:<span> ' + new Date(item.started).toLocaleString() + '</span></div>\
 			<div class="active__info-item">Updated:<span>' + new Date(item.updated).toLocaleString() + '</span></div>\
 		</div>\
@@ -173,6 +172,20 @@ function buildActiveItem(item) {
 		</div>\
 	';
 	return li;
+}
+
+function normalizeSize(size) {
+	var
+		units = ['B', 'KB', 'MB', 'GB'],
+		curUnit = 0
+	;
+
+	while (size > 1000) {
+		curUnit++;
+		size = (size / 1000).toFixed(2);
+	}
+
+	return size + ' ' + units[curUnit];
 }
 
 // appearing extra info on table row click
