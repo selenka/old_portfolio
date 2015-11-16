@@ -316,6 +316,24 @@ body {
   visibility: visible;
   opacity: 0.9;
 }
+.active__list-item:after {
+  position: absolute;
+  content: attr(data-speed);
+  display: block;
+  display: block;
+  min-width: 30px;
+  height: 10px;
+  text-align: center;
+  color: #788ba0;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  font-size: 13px;
+  padding: 5px;
+  border-left: 1px solid #bada55;
+  border-bottom: 1px solid #bada55;
+  border-bottom-left-radius: 6px;
+}
 .active__info {
   float: right;
   *zoom: 1;
