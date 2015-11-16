@@ -65,7 +65,6 @@ function ProgressBar (options) {
 var navigation = document.getElementById('navigation');
 var active = document.getElementById('active');
 var historyPage = document.getElementById('history-page');
-console.log(historyPage);
 
 navigation.addEventListener('click', function navActive (e) {
 	var target = e.target;
