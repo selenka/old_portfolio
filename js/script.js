@@ -76,13 +76,13 @@ navigation.addEventListener('click', function navActive (e) {
 		target.classList.add('active');
 
 		//temporaly content showing
-		switch (target.innerText) {
-			case 'ACTIVE':
+		switch (target.textContent) {
+			case 'active':
 				active.style.display = "block";
 				historyPage.style.display = "none";
 			break;
 
-			case 'HISTORY':
+			case 'history':
 				active.style.display = "none";
 				historyPage.style.display = "block";
 			break;
