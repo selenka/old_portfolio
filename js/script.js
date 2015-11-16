@@ -108,7 +108,7 @@ for (var i = 0; i < buttongroup.length; i++) {
 	});
 }
 
-var ws = new WebSocket('ws://' + location.hostname + ':8081');
+var ws = new WebSocket('ws://' + location.hostname + ':8082');
 
 ws.onclose = function (event) {
 	if (!event.wasClean) {
