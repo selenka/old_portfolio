@@ -149,7 +149,7 @@ ws.onopen = function () {
 function buildActiveItem(item) {
 	var li = document.createElement('li');
 	li.className = 'active__list-item';
-	var stuck = new Date(item.started).getSeconds() < (new Date()).getSeconds() - 30;
+	var stuck = (new Date() - new Date(item)) > 30;
 	li.innerHTML = '\
 		<div class="progress-bar' + (stuck ? ' stuck' : '') + '">\
 			<div class="progress">\
