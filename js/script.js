@@ -31,7 +31,7 @@ function ProgressBar (options) {
 		panel.style.transform = 'rotate('+deg+'deg)'; 
 		panel.style.oTransform = 'rotate('+deg+'deg)'; 
 		panel.style.msTransform = 'rotate('+deg+'deg)'; 
-		panel.style.mozTransform = 'rotate('+deg+'deg)'; 
+		panel.style.MozTransform = 'rotate('+deg+'deg)'; 
 		panel.style.webkitTransform = 'rotate('+deg+'deg)';
 	};
 
