@@ -31,13 +31,13 @@ function ProgressBar (options) {
 		panel.style.transform = 'rotate('+deg+'deg)'; 
 		panel.style.oTransform = 'rotate('+deg+'deg)'; 
 		panel.style.msTransform = 'rotate('+deg+'deg)'; 
-		panel.style.mozTransform = 'rotate('+deg+'deg)'; 
+		panel.style.MozTransform = 'rotate('+deg+'deg)'; 
 		panel.style.webkitTransform = 'rotate('+deg+'deg)';
 	};
 
 	//define progress, hide(dark) panel and active2 (green) panel of every bar
 	for (var i = 0; i < bar.length; i++) {
-		bar[i].progress = parseFloat(bar[i].children[0].innerText);
+		bar[i].progress = parseFloat(bar[i].children[0].textContent);
 		var panels = bar[i].children[0].children;
 		for (var j = 0; j < panels.length; j++) {
 			var attr = panels[j].getAttribute('data-progress');
@@ -108,7 +108,7 @@ for (var i = 0; i < buttongroup.length; i++) {
 	});
 }
 
-var ws = new WebSocket('ws://' + location.hostname + ':8081');
+var ws = new WebSocket('ws://' + location.hostname + ':8082');
 
 ws.onclose = function (event) {
 	if (!event.wasClean) {
@@ -149,6 +149,7 @@ ws.onopen = function () {
 function buildActiveItem(item) {
 	var li = document.createElement('li');
 	li.className = 'active__list-item';
+	li.setAttribute('data-speed', normalizeSize(item.speed) + '/s');
 	var stuck = (new Date() - new Date(item.updated)) > 30000;
 	li.innerHTML = '\
 		<div class="progress-bar' + (stuck ? ' stuck' : '') + '">\
@@ -160,8 +161,8 @@ function buildActiveItem(item) {
 			</div>\
 		</div>\
 		<div class="active__info">\
-			<div class="active__info-item">Size:<span> ' + item.size + ' MB</span></div>\
-			<div class="active__info-item">Left:<span> ' + item.left + ' MB</span></div>\
+			<div class="active__info-item">Total:<span> ' + normalizeSize(item.size) + '</span></div>\
+			<div class="active__info-item">Remaining:<span> ' + normalizeSize(item.left) + '</span></div>\
 			<div class="active__info-item">Started:<span> ' + new Date(item.started).toLocaleString() + '</span></div>\
 			<div class="active__info-item">Updated:<span>' + new Date(item.updated).toLocaleString() + '</span></div>\
 		</div>\
@@ -171,6 +172,20 @@ function buildActiveItem(item) {
 		</div>\
 	';
 	return li;
+}
+
+function normalizeSize(size) {
+	var
+		units = ['B', 'KB', 'MB', 'GB'],
+		curUnit = 0
+	;
+
+	while (size > 1000) {
+		curUnit++;
+		size = (size / 1000).toFixed(2);
+	}
+
+	return size + ' ' + units[curUnit];
 }
 
 // appearing extra info on table row click
