@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "project",
   "version": "0.1.0",
   "devDependencies": {
@@ -9,5 +10,21 @@
     "grunt-spritesmith": "^3.1.1",
     "gulp": "^3.9.0",
     "jit-grunt": "^0.9.0"
+=======
+  "name": "server-monitoring",
+  "version": "1.0.0",
+  "description": "server monitoring",
+  "main": "index.js",
+  "scripts": {
+    "test": "testc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-stylus": "^2.1.0",
+    "gulp-watch": "^4.3.5"
+>>>>>>> 30aa31db3248a702af8fa6a841f8e9ccee4c32fc
   }
 }
