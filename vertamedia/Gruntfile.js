@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+    // функция для инициализации прописанных нами задач
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -78,10 +79,14 @@ module.exports = function(grunt) {
 			  }
         }       
     });
+
+    //функция загрузки модулей
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-spritesmith');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
+
+    // регистрация (запуск) задач
 
     grunt.registerTask('default', ['stylus','sprite','concat', 'watch']);
 };
