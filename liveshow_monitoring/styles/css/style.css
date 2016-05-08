@@ -184,9 +184,19 @@ body {
   font-family: 'Arial';
   color: #636363;
   font-size: 12px;
+  height: 100%;
 }
-body {
-  margin: 20px;
+.wrapper {
+  padding: 20px;
+  height: 100%;
+}
+.container {
+  min-height: 90%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #cfcfcf;
+  border-top: none;
+  border-radius: 0 0 3px 3px;
 }
 .tabbar {
   *zoom: 1;
@@ -231,10 +241,6 @@ body {
   font-family: 'ubuntubold';
 }
 .content {
-  padding: 20px;
-  border: 1px solid #cfcfcf;
-  border-top: none;
-  border-radius: 0 0 3px 3px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -433,4 +439,15 @@ a.item__action {
   float: left;
   word-break: break-word;
   max-width: 70%;
+}
+@media only screen and (max-width: 500px) {
+  .tabbar__list {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  .tabbar__info {
+    float: none;
+    display: block;
+  }
 }
