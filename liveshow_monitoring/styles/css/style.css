@@ -282,12 +282,23 @@ body {
   width: 70px;
   min-width: 70px;
   height: 70px;
-  border-radius: 50%;
-  overflow: hidden;
   margin-right: 20px;
+  position: relative;
+}
+.item__image.online:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #6cb758;
+  border-radius: 50%;
+  right: 7px;
+  top: 6px;
 }
 .item__image img {
   width: 100%;
+  border-radius: 50%;
 }
 .item__actiongroup {
   display: flex;

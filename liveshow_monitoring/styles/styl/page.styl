@@ -133,12 +133,22 @@ html, body
 		width 70px
 		min-width 70px
 		height 70px
-		border-radius 50%
-		overflow hidden
 		margin-right 20px
+		position relative
 
+		&.online:after
+			content ''
+			display block
+			position absolute
+			width 8px
+			height 8px
+			background #6cb758
+			border-radius 50%
+			right 7px
+			top 6px
 		img
 			width 100%
+			border-radius 50%
 
 	&__actiongroup
 		display flex
