@@ -49,6 +49,79 @@ html, body
 	font-size 12px
 	height 100%
 
+.mask
+	position fixed
+	display table
+	background $background-color
+	opacity 0.85
+	width 100%
+	height 100%
+	top 0
+	left 0
+	z-index 999
+
+.loader
+	display table-cell
+	vertical-align middle
+
+	.circle
+		margin 0 auto
+		width 130px
+		height 130px
+		font-size 14px
+		border-top 2px solid $text-color
+		border-bottom 2px solid $text-color
+		border-radius 50%
+		padding-top 55px
+		text-align center
+		position relative
+
+		&:after
+			content ''
+			position absolute
+			top 9%
+			left 9%
+			width 80%
+			height 80%
+			border-radius 50%
+			border-top 2px solid $border-color
+			border-bottom 2px solid $border-color
+			border-right 2px solid $background-color
+			border-left 2px solid $background-color
+			animation circle-green infinite
+			animation-duration 4s
+			animation-timing-function linear
+			transform rotate(0deg)
+
+		&:before
+			content ''
+			position absolute
+			top 4%
+			left 4%
+			width 90%
+			height 90%
+			border-radius 50%
+			border-top 2px solid $user-offline-text-color
+			border-bottom 2px solid $user-offline-text-color
+			border-right 2px solid $background-color
+			border-left 2px solid $background-color
+			animation circle-grey infinite
+			animation-duration 4s
+			animation-timing-function linear
+			transform rotate(0deg)
+
+@keyframes circle-green
+	from
+		transform rotate(0deg)
+	to
+		transform rotate(360deg)
+
+@keyframes circle-grey
+	from
+		transform rotate(0deg)
+	to
+		transform rotate(-360deg)
+
 .wrapper
 	padding 20px
 	height 100%
