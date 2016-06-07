@@ -1,3 +1,15 @@
-.test {
-  color: red;
+* {
+  outline: none;
+}
+.wrapper {
+  width: 900px;
+}
+.header {
+  height: 64px;
+}
+.header__nav {
+  height: 64px;
+}
+.header__nav li {
+  display: inline-block;
 }
