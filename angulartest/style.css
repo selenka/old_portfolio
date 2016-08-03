@@ -1,0 +1,37 @@
+body {
+    padding: 50px;
+    font-family: 'Verdana';
+}
+button {
+    font-family: 'Verdana';
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+}
+.button {
+    background: #5abec7;
+}
+.button.apply {
+    background: teal;
+}
+.button.abort {
+    background: orange;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table th,
+table td {
+    width: 25%;
+    vertical-align: middle;
+    text-align: center;
+    padding: 5px 0;
+}
+table th:last-child,
+table td:last-child {
+    min-width: 150px;
+}
+table tr {
+    border-bottom: 1px solid #c4c4c4
+}

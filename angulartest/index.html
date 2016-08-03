@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>table angular</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="myApp">
+
+<div class="table" ng-controller="MyTableController as table">
+    <button class="button" type="button" ng-click="addNewRow()">Add new row</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr  ng-controller="MyRowController" ng-repeat="user in data">
+                <td>
+                    <span ng-hide="editMode || user.newRow">{{ user.name }}</span>
+                    <input ng-show="editMode || user.newRow" type="text" ng-model="user.name">
+                </td>
+                <td>
+                    <span ng-hide="editMode || user.newRow">{{ user.surname }}</span>
+                    <input ng-show="editMode || user.newRow " type="text" ng-model="user.surname">
+                </td>
+                <td>
+                    <span ng-hide="editMode || user.newRow" >{{ user.age }}</span>
+                    <input ng-show="editMode || user.newRow" type="text" ng-model="user.age">
+                </td>
+                <td>
+                    <span ng-hide="editMode || user.newRow" >{{ user.email }}</span>
+                    <input ng-show="editMode || user.newRow" type="text" ng-model="user.email">
+                </td>
+                <td>
+                    <button class="button" ng-hide="editMode || user.newRow" type="button" ng-click="editRow(user)">Edit</button>
+                    <button class="button apply"  ng-show="editMode || user.newRow" type="button" ng-click="applyChanges(user)">Apply</button>
+                    <button class="button abort" ng-hide="editMode || (editMode && user.newRow)" type="button" ng-click="deleteRow($index)">Delete</button>
+                    <button class="button abort" ng-show="editMode || (editMode && user.newRow)" type="button" ng-click="cancelChanges(user)">Cancel</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
