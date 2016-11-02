@@ -81,6 +81,44 @@ a
 		height 25px
 		text-align right
 
+		&.one-mark span:nth-of-type(-n + 1)
+			&:before
+				content ''
+				position absolute
+				width 1px
+				height 15px
+				left 6px
+				background $base-color
+				transform rotate(45deg);
+
+			&:after
+				content ''
+				position absolute
+				width 1px
+				height 15px
+				right 8px
+				background $base-color
+				transform rotate(-45deg);
+
+		&.two-mark span:nth-of-type(-n + 2)
+			&:before
+				content ''
+				position absolute
+				width 1px
+				height 15px
+				left 6px
+				background $base-color
+				transform rotate(45deg);
+
+			&:after
+				content ''
+				position absolute
+				width 1px
+				height 15px
+				right 8px
+				background $base-color
+				transform rotate(-45deg);
+
 		&.three-mark span:nth-of-type(-n + 3)
 			&:before
 				content ''
@@ -101,6 +139,26 @@ a
 				transform rotate(-45deg);
 
 		&.four-mark span:nth-of-type(-n + 4)
+			&:before
+				content ''
+				position absolute
+				width 1px
+				height 15px
+				left 6px
+				background $base-color
+				transform rotate(45deg);
+
+			&:after
+				content ''
+				position absolute
+				width 1px
+				height 15px
+				right 8px
+				background $base-color
+				transform rotate(-45deg);
+
+
+		&.five-mark span:nth-of-type(-n + 5)
 			&:before
 				content ''
 				position absolute

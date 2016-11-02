@@ -79,6 +79,42 @@ a:hover {
   height: 25px;
   text-align: right;
 }
+.mark__board.one-mark span:nth-of-type(-n + 1):before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  left: 6px;
+  background: #595d5d;
+  transform: rotate(45deg);
+}
+.mark__board.one-mark span:nth-of-type(-n + 1):after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  right: 8px;
+  background: #595d5d;
+  transform: rotate(-45deg);
+}
+.mark__board.two-mark span:nth-of-type(-n + 2):before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  left: 6px;
+  background: #595d5d;
+  transform: rotate(45deg);
+}
+.mark__board.two-mark span:nth-of-type(-n + 2):after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  right: 8px;
+  background: #595d5d;
+  transform: rotate(-45deg);
+}
 .mark__board.three-mark span:nth-of-type(-n + 3):before {
   content: '';
   position: absolute;
@@ -107,6 +143,24 @@ a:hover {
   transform: rotate(45deg);
 }
 .mark__board.four-mark span:nth-of-type(-n + 4):after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  right: 8px;
+  background: #595d5d;
+  transform: rotate(-45deg);
+}
+.mark__board.five-mark span:nth-of-type(-n + 5):before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  left: 6px;
+  background: #595d5d;
+  transform: rotate(45deg);
+}
+.mark__board.five-mark span:nth-of-type(-n + 5):after {
   content: '';
   position: absolute;
   width: 1px;
